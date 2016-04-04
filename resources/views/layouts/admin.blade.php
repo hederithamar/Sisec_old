@@ -7,40 +7,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Sisec</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <title>Sisec</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Sisec" />
+  <script type="application/x-javascript"> 
+    addEventListener("load", 
+    function() 
+    { setTimeout(hideURLbar, 0); }, false); 
+    function hideURLbar(){ window.scrollTo(0,1); } 
+  </script>
 <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  {!!Html::style('css/bootstrap.css')!!}
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+  {!!Html::style('css/style.css')!!}
 <!-- font CSS -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+  {!!Html::style('css/font-awesome.css')!!}
 <!-- //font-awesome icons -->
  <!-- js-->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
+  {!!Html::script('js/jquery-1.11.1.min.js')!!}
+  {!!Html::script('js/modernizr.custom.js')!!}
 <!--webfonts-->
-<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  {!!Html::style('//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic')!!}
 <!--//webfonts--> 
 <!--animate-->
-<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
-<script src="js/wow.min.js"></script>
+  {!!Html::style('css/animate.css')!!}
+  {!!Html::script('js/wow.min.js')!!}
   <script>
      new WOW().init();
   </script>
 <!--//end-animate-->
 <!-- chart -->
-<script src="js/Chart.js"></script>
+  {!!Html::script('js/Chart.js')!!}
 <!-- //chart -->
 <!-- Metis Menu -->
-<script src="js/metisMenu.min.js"></script>
-<script src="js/custom.js"></script>
-<link href="css/custom.css" rel="stylesheet">
+  {!!Html::script('js/metisMenu.min.js')!!}
+  {!!Html::script('js/custom.js')!!}
+  {!!Html::style('css/custom.css')!!}
 <!--//Metis Menu -->
 </head> 
 <body class="cbp-spmenu-push">
@@ -51,7 +55,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
-              <a href="index.html" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
+              <a href="#" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
             </li>
             <li>
               <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
@@ -161,12 +165,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <!-- main content start-->
     <div id="page-wrapper">
       <div class="main-page">
-        
-        
-        
-          
-        
-      
+        @yield('content')
       </div>
     </div>
     <!--footer-->
@@ -176,7 +175,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         <!--//footer-->
   </div>
   <!-- Classie -->
-    <script src="js/classie.js"></script>
+   {!!Html::script('js/classie.js')!!}
     <script>
       var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
         showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -197,10 +196,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
       }
     </script>
   <!--scrolling js-->
-  <script src="js/jquery.nicescroll.js"></script>
-  <script src="js/scripts.js"></script>
+  {!!Html::script('js/jquery.nicescroll.js')!!}
+  {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
-   <script src="js/bootstrap.js"> </script>
+    {!!Html::script('js/bootstrap.js')!!}
 </body>
 </html>
