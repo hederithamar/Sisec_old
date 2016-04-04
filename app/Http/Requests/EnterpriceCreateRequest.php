@@ -26,10 +26,8 @@ class EnterpriceCreateRequest extends Request
         return [
             'rfc' => 'required|unique:enterprices',
             'name' => 'required',
-            'legal' => 'required',
-            'tipo' => 'required',
-            'celphone' => 'required',
-            'address' => 'required',
+            'type' => 'required',
+            'phone' => 'required',
             'email' => 'required',
             'status' => 'required',
         ];
