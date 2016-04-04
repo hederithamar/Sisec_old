@@ -14,7 +14,7 @@
 	<div class="col-md-6 form-group">
 		{!!Form::label('tipo','Tipo de empresa:')!!}
 		<br>
-		{!!Form::select('type', array('Supervisora' => 'Supervisora', 'Constructora' => 'Constructora'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('type', array('Supervisora' => 'Supervisora', 'Constructora' => 'Constructora'), null, ['class' => 'js-states form-control']);!!}
 	</div>
 	
 	<div class="col-md-6 form-group">
@@ -42,4 +42,3 @@
 	</div>
 
 
-	

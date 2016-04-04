@@ -9,17 +9,11 @@
 				<h4>Agregar nueva empresa: </h4>
 			</div>
 			<div class="form-body">
-				<div class="col-md-6">
-				hkjhskjh
-				</div>
-				<div class="col-md-6">
 				{!!Form::open(['route'=>'empresa.store', 'method'=>'POST'])!!}
 					@include('empresa.forms.emp')
-					
-						{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
-					
+					{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
 				{!!Form::close()!!}
-				</div>
+	
 			</div>
 		</div>
 	</div>
