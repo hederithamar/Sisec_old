@@ -10,7 +10,14 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//Ruta principal
+Route::get('/','FrontController@index');
+Route::get('contacto','FrontController@contacto');
+Route::get('reviews','FrontController@reviews');
+Route::get('admin','FrontController@admin');
+//Ruta de los controladores
+Route::resource('empresa','EmpresaController');
+Route::resource('rol','RolController');
+Route::resource('usuario','UsuarioController');
+Route::resource('log','LogController');
+Route::get('logout','LogController@logout');
