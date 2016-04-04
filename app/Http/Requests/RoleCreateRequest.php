@@ -24,7 +24,7 @@ class RoleCreateRequest extends Request
     public function rules()
     {
         return [
-            'description' => 'required',
+            'desc' => 'required',
         ];
     }
 }

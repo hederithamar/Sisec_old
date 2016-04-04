@@ -9,7 +9,7 @@
 				<h4>Agregar nuevo Rol: </h4>
 			</div>
 			<div class="form-body">
-				{!!Form::open(['route'=>'empresa.store', 'method'=>'POST'])!!}
+				{!!Form::open(['route'=>'rol.store', 'method'=>'POST'])!!}
 					@include('rol.forms.rol')
 					{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
 				{!!Form::close()!!}
