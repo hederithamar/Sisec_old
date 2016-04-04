@@ -1,19 +1,18 @@
-	<div class="col-md-6 form-group">
-		{!!Form::label('nombre','Nombre(s):')!!}
-		{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
+	<div class="form-group">
+		<div class="col-md-4 form-group">
+			{!!Form::label('nombre','Nombre(s):')!!}
+			{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
+		</div>
+		<div class="col-md-4 form-group">
+			{!!Form::label('firstlastname','Apellido Paterno:')!!}
+			{!!Form::text('firstlastname',null,['class'=>'form-control','placeholder'=>'Ingresa tu apellido paterno'])!!}
+		</div>
+		<div class="col-md-4 form-group">
+			{!!Form::label('secondlastname','Apellidos Materno:')!!}
+			{!!Form::text('secondlastname',null,['class'=>'form-control','placeholder'=>'Ingresa tu apellido materno'])!!}
+		</div>
 	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('lastname','Apellidos:')!!}
-		{!!Form::text('lastname',null,['class'=>'form-control','placeholder'=>'Ingresa tus apellidos'])!!}
-	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('email','Correo:')!!}
-		{!!Form::text('email',null,['class'=>'form-control','placeholder'=>'Ingresa tu correo electronico'])!!}
-	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('password','Contraseña:')!!}
-		{!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingresa tu password'])!!}
-	</div>
+
 	<div class="col-md-6 form-group">
 		{!!Form::label('celphone','Celular:')!!}
 		{!!Form::text('celphone',null,['class'=>'form-control','placeholder'=>'Ingresa un numero de celular'])!!}
@@ -22,6 +21,27 @@
 		{!!Form::label('phone','Telfono fijo:')!!}
 		{!!Form::text('phone',null,['class'=>'form-control','placeholder'=>'Ingresa un telefono fijo (opcional)'])!!}
 	</div>
+
+	<div class="col-md-6 form-group">
+		{!!Form::label('email','Correo:')!!}
+		{!!Form::text('email',null,['class'=>'form-control','placeholder'=>'Ingresa tu correo electronico'])!!}
+	</div>
+	<div class="col-md-6 form-group">
+		{!!Form::label('password','Contraseña:')!!}
+		{!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingresa tu password'])!!}
+	</div>
+
+	<div class="col-md-6 form-group">
+		{!!Form::label('rol','Rol:')!!}
+		<br>
+		{!!Form::select('rol', array('Administrador' => 'Administrador', 'Superintendente' => 'Superintendente', 'Residente' => 'Residente', 'Centro' => 'Centro SCT'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+	</div>
+	<div class="col-md-6 form-group">
+		{!!Form::label('enterprice_id','Empresa:')!!}
+		<br>
+		{!!Form::select('enterprice_id', $enterprices, null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+	</div>
+
 	<div class="col-md-6 form-group">
 		{!!Form::label('state','Estado:')!!}
 		<br>
@@ -60,17 +80,9 @@
 		'32' => 'Zacatecas'
 		), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-	<div class="col-md-6 form-group">
-		
-	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('rol','Rol:')!!}
-		<br>
-		{!!Form::select('rol', array('Administrador' => 'Administrador', 'Superintendente' => 'Superintendente', 'Residente' => 'Residente', 'Centro' => 'Centro SCT'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
-	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('enterprice_id','Empresa:')!!}
-		<br>
-		{!!Form::select('enterprice_id', $enterprices, null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 
+	<div class="col-md-6 form-group">
+		{!!Form::label('zone','Zona:')!!}
+		<br>
+		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>

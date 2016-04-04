@@ -31,6 +31,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--webfonts-->
   {!!Html::style('//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic')!!}
 <!--//webfonts--> 
+<!--select-->
+
+{!!Html::style('css/select2.min.css')!!}
+{!!Html::script('js/select2.full.min.js')!!}
+<script type="text/javascript">
+  $('select').select2();
+</script>
+<script type="text/javascript">
+            $(document).ready(function() {
+                $(".js-example-basic-single").select2();
+            });
+</script>
+<!--//select-->
+
 <!--animate-->
   {!!Html::style('css/animate.css')!!}
   {!!Html::script('js/wow.min.js')!!}

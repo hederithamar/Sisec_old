@@ -25,12 +25,17 @@ class UserCreateRequest extends Request
     {
         return [
             'name' => 'required',
-            'lastname' => 'required',
+            'firstlastname' => 'required',
+            'secondlastname' => 'required',
+            'celphone' => 'required',
+            'phone' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
-            'celphone' => 'required',
+            'state' => 'required',
+            'zone' => 'required',
             'rol' => 'required',
             'enterprice_id' => 'required',
+            'id_curp' => 'required',
         ];
     }
 }
