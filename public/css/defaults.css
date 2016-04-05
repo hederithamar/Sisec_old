@@ -8,11 +8,6 @@
 -------- UI
 \*------------------------------------*/
 /* line 2, ../scss/1-base/_extends.scss */
-.site-header:after, .main:after, .clearfix:after, .clearfix {
-  display: block;
-  clear: both;
-  content: '';
-}
 
 /* line 25, ../scss/1-base/_extends.scss */
 .fa-icon, [class^="fa-"]:before {
@@ -47,16 +42,39 @@ body, input {
 }
 
 /* line 5, ../scss/2-framework/_typography.scss */
-h1, h1 a,
-h2, h2 a,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a {
-  font-family: "Asap";
-  color: #262626;
-  line-height: 1.200em;
-  margin-bottom: 0px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* line 11, ../scss/2-framework/_typography.scss */
 h1 {
