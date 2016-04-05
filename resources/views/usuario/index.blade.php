@@ -7,6 +7,7 @@
 		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 			<div class="form-title ">
 				<h4>Catalógos Usuarios :</h4>
+					
 			</div>
 			<div class="form-body">
 				<table class="table">

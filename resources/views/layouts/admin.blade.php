@@ -55,16 +55,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
-              <a href="#" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
+              <a href="{!!URL::to('admin')!!}" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
+              <a href="#")!!}><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
                 <li>
-                  <a href="#">Usuarios</a>
+                  <a href="{!!URL::to('usuario')!!}">Usuarios</a>
                 </li>
                 <li>
-                  <a href="#">Empresas</a>
+                  <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
               </ul>
               <!-- /nav-second-level -->
@@ -121,9 +121,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--toggle button end-->
         <!--logo -->
         <div class="">
-          <a href="index.html">
+          <a href="{!!URL::to('admin')!!}">
             <img src="images/logo.png" width="220" height="75">
-            
           </a>
         </div>
         <div class="clearfix"> </div>
