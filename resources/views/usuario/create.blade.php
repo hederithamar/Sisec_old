@@ -11,7 +11,13 @@
 			<div class="form-body">
 				{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
 					@include('usuario.forms.usr')
-					{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
+					<div class="col-md-6 form-group">
+					</div>
+					
+					<div class="col-md-6 form-group">
+						{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
+					</div>
+
 				{!!Form::close()!!}
 	
 			</div>

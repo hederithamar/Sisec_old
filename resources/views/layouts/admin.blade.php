@@ -11,6 +11,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
+
+
   <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
@@ -31,6 +33,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--webfonts-->
   {!!Html::style('//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic')!!}
 <!--//webfonts--> 
+<!--select-->
+  {!!Html::style('css/select2.min.css')!!}
+  {!!Html::script('js/select2.full.min.js')!!}
+  <script type="text/javascript">
+    $('select').select2();
+  </script>
+  <script type="text/javascript">
+            $(document).ready(function() {
+                $(".js-example-basic-single").select2();
+            });
+  </script>
+<!--//select-->
+
 <!--animate-->
   {!!Html::style('css/animate.css')!!}
   {!!Html::script('js/wow.min.js')!!}
@@ -46,6 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   {!!Html::script('js/custom.js')!!}
   {!!Html::style('css/custom.css')!!}
 <!--//Metis Menu -->
+
 </head> 
 <body class="cbp-spmenu-push">
   <div class="main-content">
@@ -195,7 +211,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       }
     </script>
   <!--scrolling js-->
-  {!!Html::script('js/jquery.nicescroll.js')!!}
   {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
