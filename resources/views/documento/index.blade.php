@@ -254,4 +254,6 @@
 	<div class="grids widget-shadow">
 		
 	</div>
+		</div>
 	@endsection
+</div>
