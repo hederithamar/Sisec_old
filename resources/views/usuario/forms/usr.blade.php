@@ -32,9 +32,9 @@
 	</div>
 
 	<div class="col-md-6 form-group">
-		{!!Form::label('rol','Rol:')!!}
+		{!!Form::label('role_id','Rol:')!!}
 		<br>
-		{!!Form::select('rol', array('Administrador' => 'Administrador', 'Superintendente' => 'Superintendente', 'Residente' => 'Residente', 'Centro' => 'Centro SCT'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('role_id', $roles, null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('enterprice_id','Empresa:')!!}
@@ -85,4 +85,8 @@
 		{!!Form::label('zone','Zona:')!!}
 		<br>
 		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+	</div>
+	<div class="col-md-6 form-group">
+		{!!Form::label('id_curp','CURP:')!!}
+		{!!Form::text('id_curp',null,['class'=>'form-control','placeholder'=>'Curpcreada'])!!}
 	</div>
