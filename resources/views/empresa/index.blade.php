@@ -38,26 +38,35 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table id="table1" class="table">
+                  <table id="table1" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th width="20%">RFC</th>
-                      <th width="20%">Nombre</th>
-                      <th width="20%">Representante</th>
-                      <th width="20%">Celular</th>
-                      <th width="15%">Email</th>
-                      <th width="15%">Direccion</th>
-                      <th width="15%">Estatus</th>
-                      <th width="15%">Acción</th>
+                      <th >RFC</th>
+                      <th >Nombre</th>
+                      <th >Representante</th>
+                      <th >Celular</th>
+                      <th >Email</th>
+                      <th >Direccion</th>
+                      <th >Estatus</th>
+                      <th >Acción</th>
+                   <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
                   <tbody>
-                    <td width="20%">{{$enterprice->rfc}}</td>
-                    <td width="20%">{{$enterprice->name}}</td>
-                    <td width="20%">{{$enterprice->legalagent}}</td>
-                    <td width="15%">{{$enterprice->phone}}</td>
-                    <td width="15%">{{$enterprice->email}}</td>
-                    <td width="15%">{{$enterprice->address}}</td>
-                    <td width="15%">{{$enterprice->status}}</td>
+                    <td >{{$enterprice->rfc}}</td>
+                    <td >{{$enterprice->name}}</td>
+                    <td >{{$enterprice->legalagent}}</td>
+                    <td >{{$enterprice->phone}}</td>
+                    <td >{{$enterprice->email}}</td>
+                    <td >{{$enterprice->address}}</td>
+                    <td >{{$enterprice->status}}</td>
                     
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
@@ -92,32 +101,36 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table id="table2" border="1" cellpadding="30" cellspacing="2">
-                      <thead>
-                      <th>RFC</th>
-                      <th>Nombre</th>
-                      <th>Representante</th>
-                      <th>Tipo</th>
-                      <th>Celular</th>
-                      <th>Direccion</th>
-                      <th>Acción</th>
-                       <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    </tr>
+                  <table id="table2" border="1" cellpadding="25" cellspacing="2">
+                     <thead>
+                      <th >RFC</th>
+                      <th >Nombre</th>
+                      <th >Representante</th>
+                      <th >Celular</th>
+                      <th >Email</th>
+                      <th >Direccion</th>
+                      <th >Estatus</th>
+                      <th >Acción</th>
+                   <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
-                    @foreach($enterpricesCons as $enterprice)
+                    @foreach($enterpricesSup as $enterprice)
                   <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legal}}</td>
-                    <td>{{$enterprice->tipo}}</td>
-                    <td>{{$enterprice->celphone}}</td>
-                    <td>{{$enterprice->address}}</td>
+                    <td >{{$enterprice->rfc}}</td>
+                    <td >{{$enterprice->name}}</td>
+                    <td >{{$enterprice->legalagent}}</td>
+                    <td >{{$enterprice->phone}}</td>
+                    <td >{{$enterprice->email}}</td>
+                    <td >{{$enterprice->address}}</td>
+                    <td >{{$enterprice->status}}</td>
+                    
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
