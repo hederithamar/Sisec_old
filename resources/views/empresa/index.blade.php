@@ -10,7 +10,7 @@
   {!!Html::script('js/accordion.js')!!}
 
   <!--Filtrado de la tabla-->
-  <script src="js/tablefilter_all_min.js"></script>
+   {!!Html::script('js/tablefilter_all_min.js')!!}
   <link rel="stylesheet" href="js/filtergrid.css">
   <style type="text/css">
   <style type="text/css">
