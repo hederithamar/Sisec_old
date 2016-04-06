@@ -48,6 +48,7 @@
 	resources/views/rol/
 	resources/views/usuario/
 
+<<<<<<< HEAD
 #
 
 Miercoles/06/Abril
@@ -60,3 +61,7 @@ Miercoles/06/Abril
 ## Se agregaron Seeders
 	database/seeds/EnterpriceTableSeeder.php
 	database/seeds/UserTableSeeder.php
+=======
+### Se agrego una funcion en 
+	app/Enterprice.php
+>>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
