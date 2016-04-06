@@ -9,6 +9,18 @@
   {!!Html::script('js/modernizr.custom.js')!!}
   {!!Html::script('js/accordion.js')!!}
 
+  <!--Filtrado de la tabla-->
+   {!!Html::script('js/tablefilter_all_min.js')!!}
+  <link rel="stylesheet" href="js/filtergrid.css">
+  <style type="text/css">
+  <style type="text/css">
+    .texto_pag1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #000;
+    }
+  </style>
+
 
   @section('content')
   
@@ -26,26 +38,35 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table id="table1" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th>RFC</th>
-                      <th>Nombre</th>
-                      <th>Representante</th>
-                      <th>Celular</th>
-                      <th>Email</th>
-                      <th>Direccion</th>
-                      <th>Estatus</th>
-                      <th>Acción</th>
+                      <th >RFC</th>
+                      <th >Nombre</th>
+                      <th >Representante</th>
+                      <th >Celular</th>
+                      <th >Email</th>
+                      <th >Direccion</th>
+                      <th >Estatus</th>
+                      <th >Acción</th>
+                   <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
                   <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legalagent}}</td>
-                    <td>{{$enterprice->phone}}</td>
-                    <td>{{$enterprice->email}}</td>
-                    <td>{{$enterprice->address}}</td>
-                    <td>{{$enterprice->status}}</td>
+                    <td >{{$enterprice->rfc}}</td>
+                    <td >{{$enterprice->name}}</td>
+                    <td >{{$enterprice->legalagent}}</td>
+                    <td >{{$enterprice->phone}}</td>
+                    <td >{{$enterprice->email}}</td>
+                    <td >{{$enterprice->address}}</td>
+                    <td >{{$enterprice->status}}</td>
                     
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
@@ -53,7 +74,16 @@
                   </tbody>
                   @endforeach
                 </table>
-                {!!$enterpricesSup->render()!!}
+
+                 <script>
+                  var table1_Props = {
+                      col_0: "input",
+                      col_6: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table1", table1_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -72,30 +102,50 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
-                    <thead>
-                      <th>RFC</th>
-                      <th>Nombre</th>
-                      <th>Representante</th>
-                      <th>Tipo</th>
-                      <th>Celular</th>
-                      <th>Direccion</th>
-                      <th>Acción</th>
+                  <table id="table2" class="table-editable" >
+                     <thead>
+                      <th >RFC</th>
+                      <th >Nombre</th>
+                      <th >Representante</th>
+                      <th >Celular</th>
+                      <th >Email</th>
+                      <th >Direccion</th>
+                    
+                      <th >Acción</th>
+                   <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
-                    @foreach($enterpricesCons as $enterprice)
+                    @foreach($enterpricesSup as $enterprice)
                   <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legal}}</td>
-                    <td>{{$enterprice->tipo}}</td>
-                    <td>{{$enterprice->celphone}}</td>
-                    <td>{{$enterprice->address}}</td>
+                    <td >{{$enterprice->rfc}}</td>
+                    <td >{{$enterprice->name}}</td>
+                    <td >{{$enterprice->legalagent}}</td>
+                    <td >{{$enterprice->phone}}</td>
+                    <td >{{$enterprice->email}}</td>
+                    <td >{{$enterprice->address}}</td>
+                    
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                <script>
+                  var table2_Props = {
+                  col_0: "input",
+                  col_6: "none",
+                  display_all_text: " [ Show all ] ",
+                  sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table2", table2_Props);
+                </script>
                 </div>
                 {!!$enterpricesCons->render()!!}
               </div>
