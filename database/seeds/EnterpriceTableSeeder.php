@@ -25,19 +25,23 @@ class EnterpriceTableSeeder extends Seeder
         \DB::table('roles')->insert(array(
             'desc'           => 'Centro SCT'
             ));
+        \DB::table('roles')->insert(array(
+            'desc'           => 'Jefe de Oficina Tecnica'
+            ));
 
-        //
-        $role_id = Sisec\Role::where('id', '=', '1')->get();
+        \DB::table('roles')->insert(array(
+            'desc'           => 'Residente General'
+            ));
+        //$role_id = Sisec\Role::where('id', '=', '1')->get();
 
         //manda datos ficticios pero definidos manual 2
-        factory(Sisec\Enterprice::class)-> create([
-            'rfc'           =>'SCT123',
-            'name' => 'SCT'
+        factory(Sisec\Enterprice::class, 10)-> create([
+            'type' => 'Constructora'
             ]);
-        //10 datos fiticios moelo empresas
+        //10 datos fiticios de empresas supervisoras
         factory(Sisec\Enterprice::class, 10)->create();
 
-        $enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
+        //$enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
 
         factory(Sisec\User::class)-> create([
             'role_id' => '1',
