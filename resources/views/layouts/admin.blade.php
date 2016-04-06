@@ -40,10 +40,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     $('select').select2();
   </script>
   <script type="text/javascript">
-            $(document).ready(function() {
-                $(".js-example-basic-single").select2();
-            });
+    $(document).ready(function() {
+      $(".js-example-basic-single").select2();
+    });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".js-example-tags").select2({
+      tags: true
+      })
+    });
+</script>
 <!--//select-->
 
 <!--animate-->

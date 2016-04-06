@@ -41,7 +41,9 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('empresa.create');
+        $enterprices = Enterprice::lists('rfc', 'id');
+        return view('empresa.create',compact('enterprices'));
+
     }
 
     /**
