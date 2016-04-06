@@ -1,259 +1,174 @@
 @extends('layouts.admin')
 @include('alerts.success')
 
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+  <script src="js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/accordion.js"></script>
+
+
 	@section('content')
-	<div class="forms">
-		<h3 class="title1"> </h3>
-		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
-			<div class="form-title">
-				<h4>Catalógo de Documentos:</h4>
-			</div>
-			<div class="form-body">
-				<table class="table">
-					<thead>
-			<div class="main">
-		<div class="accordion">
-    <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-1">Empresas</a>
-        <div id="accordion-1" class="accordion-section-content">
+	<div clas="container" id="Layer1" overflow: scroll;>
+    <div class="main">
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-1">Propuesta ganadora de la obra</a>
+              <div id="accordion-1" class="accordion-section-content">
+              <p class="header-right">
+                <!-- crear el boton de nuevo {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}-->
+              </p>
+              
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                    <tr>
+                      <td> <th>Tipo de contrato</th>
+                      <th>Tipo de porceso</th>
+                      <th>Nombre</th>
+                      <th>Descripcion</th>
+                      <th>Formato</th>
+                      <th>Tamaño</th></td></tr>
+                  </thead>
+                  
+                  <tr>
+                  <td>
+                    Documentacion distinta
+                  </td>
+                  </tr>
 
-<h1>Catálogo Empresas</h1>
-  <div id="table" class="table-editable">
-    <span class="table-add glyphicon glyphicon-plus"></span>
-    <table class="table">
-      <tr>
-        <th>Tipo de Persona</th>
-        <th>Contratista</th>
-        <th>RFC</th>
-        <th>Representante legal</th>
-        <th>Domicilio</th>
-        <th>Télefono</th>
-        <th>Email</th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">Tipo de Persona</td>
-        <td contenteditable="true">Contratista</td>
-        <td contenteditable="true">RFC</td>
-        <td contenteditable="true">Representante legal</td>
-        <td contenteditable="true">Domicilio</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-      <!-- This is our clonable table line -->
-      <tr class="hide">
-        <td contenteditable="true">Tipo de Persona</td>
-        <td contenteditable="true">Contratista</td>
-        <td contenteditable="true">RFC</td>
-        <td contenteditable="true">Representante legal</td>
-        <td contenteditable="true">Domicilio</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-    </table>
+                  <tr>
+                  <td>
+                   Propuesta tecnica
+                  </td>
+                  </tr>
+
+                  <tr>
+                  <td>
+                   Propuesta economica
+                  </td>
+                  </tr>
+
+
+
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <!--Segunda tabla -->
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-2">Propuesta ganadora de supervision</a>
+              <div id="accordion-2" class="accordion-section-content">
+              <p class="header-right">
+              <!-- {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}-->
+              </p>
+              
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                     
+                      <tr>
+                      <td> <th>Tipo de contrato</th>
+                      <th>Tipo de porceso</th>
+                      <th>Nombre</th>
+                      <th>Descripcion</th>
+                      <th>Formato</th>
+                      <th>Tamaño</th></td></tr>
+                  </thead>
+                  
+                  <tr>
+                  <td>
+                    Documentacion distinta
+                  </td>
+                  </tr>
+
+                  <tr>
+                  <td>
+                   Propuesta tecnica
+                  </td>
+                  </tr>
+
+                  <tr>
+                  <td>
+                   Propuesta economica
+                  </td>
+                  </tr>
+                    </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <button id="export-btn" class="">Export Excel</button>
-  <p id="export"></p>
-        </div><!--end .accordion-section-content-->
-      </div><!--end .accordion-section-->
-		
-<!---TABLA2-->
-			<div class="accordion-section">
-				<a class="accordion-section-title" href="#accordion-2">Superintendentes</a>
-				<div id="accordion-2" class="accordion-section-content">
+  <!--Tercer tabla-->
+  <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-3">Proceso de licitacion de la supervisora</a>
+              <div id="accordion-3" class="accordion-section-content">
+              <p class="header-right">
+               <!--{!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}-->
+              </p>
+                            <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                      <td> <th>Tipo de contrato</th>
+                      <th>Tipo de porceso</th>
+                      <th>Nombre</th>
+                      <th>Descripcion</th>
+                      <th>Formato</th>
+                      <th>Tamaño</th></td></tr>
+                  </thead>
+                  
+                  <tr>
+                  <td>
+                    Junta de aclaraciones
+                  </td>
+                  </tr>
 
-<h1>Catálogo Superintendentes</h1>
-  <div id="table" class="table-editable">
-    <span class="table-add glyphicon glyphicon-plus"></span>
-    <table class="table">
-      <tr>
-        <th>Empresa</th>
-        <th>Nombre</th>
-        <th>Telefono</th>
-        <th>Email</th>
-        <th>Domicilio</th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">Empresa</td>
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Telefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Domicilio</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-      <!-- This is our clonable table line -->
-      <tr class="hide">
-        <td contenteditable="true">Empresa</td>
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Telefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Domicilio</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-    </table>
-  </div>
-  
-  <button id="export-btn" class="">Export Excel</button>
-  <p id="export"></p>
-				</div><!--end .accordion-section-content-->
-			</div><!--end .accordion-section-->
+                  <tr>
+                  <td>
+                   Apertura
+                  </td>
+                  </tr>
 
-			<div class="accordion-section">
-				<a class="accordion-section-title" href="#accordion-3">Perfiles</a>
-				<div id="accordion-3" class="accordion-section-content">
-					  <h1>Catálogo Perfiles</h1>
-  <div id="table" class="table-editable">
-    <span class="table-add glyphicon glyphicon-plus"></span>
-    <table class="table">
-      <tr>
-        <th>Nombre</th>
-        <th>Tipo de permiso</th>
-        <th>Télefono</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Tipo de permiso</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Password</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-      <!-- This is our clonable table line -->
-      <tr class="hide">
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Tipo de permiso</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Password</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-    </table>
-  </div>
-  
-  <button id="export-btn" class="">Export Data</button>
-  <p id="export"></p>
-				</div><!--end .accordion-section-content-->
-			</div><!--end .accordion-section-->
-
-
-      <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-4">Documentos Inicio Obra</a>
-        <div id="accordion-4" class="accordion-section-content">
-            <h1>Catálogo Documentos Inicio de Obra</h1>
-  <div id="table" class="table-editable">
-    <span class="table-add glyphicon glyphicon-plus"></span>
-    <table class="table">
-      <tr>
-        <th>Nombre</th>
-        <th>Tipo de permiso</th>
-        <th>Télefono</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th></th>
-        <th></th>
-      </tr>
-      <tr>
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Tipo de permiso</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Password</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-      <!-- This is our clonable table line -->
-      <tr class="hide">
-        <td contenteditable="true">Nombre</td>
-        <td contenteditable="true">Tipo de permiso</td>
-        <td contenteditable="true">Télefono</td>
-        <td contenteditable="true">Email</td>
-        <td contenteditable="true">Password</td>
-        <td>
-          <span class="table-remove glyphicon glyphicon-remove"></span>
-        </td>
-        <td>
-          <span class="table-up glyphicon glyphicon-arrow-up"></span>
-          <span class="table-down glyphicon glyphicon-arrow-down"></span>
-        </td>
-      </tr>
-    </table>
+                  <tr>
+                  <td>
+                   Acta de fallo
+                  </td>
+                  </tr>
+                    </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-						
-					</thead>
-				@foreach($enterprices as $enterprice)
-					<tbody>
-						<td>{{$enterprice->rfc}}</td>
-						<td>{{$enterprice->name}}</td>
-						<td>{{$enterprice->legal}}</td>
-						<td>{{$enterprice->tipo}}</td>
-						<td>{{$enterprice->celphone}}</td>
-						<td>{{$enterprice->address}}</td>
-						<td>
-							{!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
-						</td>
-					</tbody>
-				@endforeach
-				</table>
 
-				{!!$enterprices->render()!!}
-			</div>
-		</div>
-	</div>
-	<div class="grids widget-shadow">
-		
-	</div>
-		</div>
+
+    <script src="js/classie.js"></script>
+  <script src="js/borderMenu.js"></script>
+  <script src="js/index.js"></script>  
 	@endsection
-</div>
+</

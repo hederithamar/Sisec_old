@@ -82,7 +82,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <li>
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
+                <li>
+                  <a href="{!!URL::to('documento')!!}">Documentos</a>
+                </li>
               </ul>
+
               <!-- /nav-second-level -->
             </li>
             <li class="">
