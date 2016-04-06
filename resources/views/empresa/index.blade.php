@@ -74,6 +74,7 @@
                   </tbody>
                   @endforeach
                 </table>
+
                  <script>
                   var table1_Props = {
                       col_0: "input",
@@ -101,7 +102,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table id="table2" border="1" cellpadding="25" cellspacing="2">
+                  <table id="table2" class="table-editable" >
                      <thead>
                       <th >RFC</th>
                       <th >Nombre</th>
@@ -109,7 +110,7 @@
                       <th >Celular</th>
                       <th >Email</th>
                       <th >Direccion</th>
-                      <th >Estatus</th>
+                    
                       <th >Acción</th>
                    <tr>
                       <td></td>
@@ -129,7 +130,6 @@
                     <td >{{$enterprice->phone}}</td>
                     <td >{{$enterprice->email}}</td>
                     <td >{{$enterprice->address}}</td>
-                    <td >{{$enterprice->status}}</td>
                     
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
@@ -147,6 +147,7 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
+                {!!$enterpricesCons->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>

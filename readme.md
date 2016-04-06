@@ -48,7 +48,10 @@
 	resources/views/rol/
 	resources/views/usuario/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
 #
 
 Miercoles/06/Abril
@@ -64,3 +67,7 @@ Miercoles/06/Abril
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
