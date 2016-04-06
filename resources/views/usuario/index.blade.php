@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @include('alerts.success')
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/demo.css" />
   <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
@@ -7,6 +8,16 @@
   <script src="js/modernizr.custom.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/accordion.js"></script>
+=======
+
+	{!!Html::style('css/normalize.css')!!}
+  {!!Html::style('css/demo.css')!!}
+  {!!Html::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css')!!}
+  {!!Html::style('http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')!!}
+  {!!Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')!!}
+  {!!Html::script('js/modernizr.custom.js')!!}
+  {!!Html::script('js/accordion.js')!!}
+>>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
 
 
 @section('content')
