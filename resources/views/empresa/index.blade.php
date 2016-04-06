@@ -9,6 +9,18 @@
   {!!Html::script('js/modernizr.custom.js')!!}
   {!!Html::script('js/accordion.js')!!}
 
+  <!--Filtrado de la tabla-->
+  <script src="js/tablefilter_all_min.js"></script>
+  <link rel="stylesheet" href="js/filtergrid.css">
+  <style type="text/css">
+  <style type="text/css">
+    .texto_pag1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      color: #000;
+    }
+  </style>
+
 
   @section('content')
   
@@ -26,26 +38,26 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table id="table1" class="table">
                     <thead>
-                      <th>RFC</th>
-                      <th>Nombre</th>
-                      <th>Representante</th>
-                      <th>Celular</th>
-                      <th>Email</th>
-                      <th>Direccion</th>
-                      <th>Estatus</th>
-                      <th>Acción</th>
+                      <th width="20%">RFC</th>
+                      <th width="20%">Nombre</th>
+                      <th width="20%">Representante</th>
+                      <th width="20%">Celular</th>
+                      <th width="15%">Email</th>
+                      <th width="15%">Direccion</th>
+                      <th width="15%">Estatus</th>
+                      <th width="15%">Acción</th>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
                   <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legalagent}}</td>
-                    <td>{{$enterprice->phone}}</td>
-                    <td>{{$enterprice->email}}</td>
-                    <td>{{$enterprice->address}}</td>
-                    <td>{{$enterprice->status}}</td>
+                    <td width="20%">{{$enterprice->rfc}}</td>
+                    <td width="20%">{{$enterprice->name}}</td>
+                    <td width="20%">{{$enterprice->legalagent}}</td>
+                    <td width="15%">{{$enterprice->phone}}</td>
+                    <td width="15%">{{$enterprice->email}}</td>
+                    <td width="15%">{{$enterprice->address}}</td>
+                    <td width="15%">{{$enterprice->status}}</td>
                     
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
@@ -53,6 +65,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                 <script>
+                  var table1_Props = {
+                      col_0: "input",
+                      col_6: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table1", table1_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -71,8 +92,8 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
-                    <thead>
+                  <table id="table2" border="1" cellpadding="30" cellspacing="2">
+                      <thead>
                       <th>RFC</th>
                       <th>Nombre</th>
                       <th>Representante</th>
@@ -80,6 +101,14 @@
                       <th>Celular</th>
                       <th>Direccion</th>
                       <th>Acción</th>
+                       <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
                     </thead>
                     @foreach($enterpricesCons as $enterprice)
                   <tbody>
@@ -95,6 +124,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                <script>
+                  var table2_Props = {
+                  col_0: "input",
+                  col_6: "none",
+                  display_all_text: " [ Show all ] ",
+                  sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table2", table2_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
