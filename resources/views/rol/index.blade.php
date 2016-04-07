@@ -33,3 +33,7 @@
 		
 	</div>
 	@endsection
+
+	@section('scripts')
+		{!!Html::script('js/script2.js')!!}
+	@endsection

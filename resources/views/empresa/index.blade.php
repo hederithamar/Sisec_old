@@ -11,8 +11,9 @@
 
   <!--Filtrado de la tabla-->
    {!!Html::script('js/tablefilter_all_min.js')!!}
-  <link rel="stylesheet" href="js/filtergrid.css">
-  <style type="text/css">
+    {!!Html::link('js/filtergrid.css')!!}
+    {!!Html::style('text/css')!!}
+
   <style type="text/css">
     .texto_pag1 {
       font-family: Arial, Helvetica, sans-serif;
@@ -59,7 +60,6 @@
                    </tr>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
-
                   <tbody>
                     <td >{{$enterprice->rfc}}</td>
                     <td >{{$enterprice->name}}</td>
@@ -83,10 +83,11 @@
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
-                  var tf2 = setFilterGrid("table1", table1_Props);
+                  var tf1 = setFilterGrid("table1", table1_Props);
                 </script>
                 </div>
-                  {!!$enterpricesCons->render()!!}
+
+                {!!$enterpricesSup->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>
@@ -125,20 +126,22 @@
                    </tr>
                     </thead>
                     @foreach($enterpricesCons as $enterprice)
-                    <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legal}}</td>
-                    <td>{{$enterprice->tipo}}</td>
-                    <td>{{$enterprice->celphone}}</td>
-                    <td>{{$enterprice->address}}</td>
+
+                  <tbody>
+                    <td >{{$enterprice->rfc}}</td>
+                    <td >{{$enterprice->name}}</td>
+                    <td >{{$enterprice->legalagent}}</td>
+                    <td >{{$enterprice->phone}}</td>
+                    <td >{{$enterprice->email}}</td>
+                    <td >{{$enterprice->address}}</td>
+
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                     </tbody>
                   @endforeach
                 </table>
-
+                {!!$enterpricesCons->render()!!}
                 <script>
                   var table2_Props = {
                   col_0: "input",
@@ -149,7 +152,6 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
-                {!!$enterpricesCons->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>

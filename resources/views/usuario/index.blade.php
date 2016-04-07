@@ -8,7 +8,18 @@
   {!!Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')!!}
   {!!Html::script('js/modernizr.custom.js')!!}
   {!!Html::script('js/accordion.js')!!}
+  <!--Filtrado de la tabla-->
+   {!!Html::script('js/tablefilter_all_min.js')!!}
+    {!!Html::link('js/filtergrid.css')!!}
+   
 
+  <style type="text/css">
+    .texto_pag1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      color: #000;
+    }
+  </style>
 
 @section('content')
 	<div clas="container" id="Layer1" overflow: scroll;>
@@ -27,7 +38,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table class="table-editable" id="table1" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -39,6 +50,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                      <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersAdmin as $user)
                   <tbody>
@@ -57,6 +77,16 @@
                   </tbody>
                   @endforeach
                 </table>
+
+                 <script>
+                  var table1_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf1 = setFilterGrid("table1", table1_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -75,7 +105,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table class="table-editable" id="table2" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -87,6 +117,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                       <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersRGen as $user)
                   <tbody>
@@ -105,6 +144,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                 <script>
+                  var table2_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table2", table2_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -123,7 +171,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table  class="table-editable" id="table3" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -135,6 +183,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                        <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersServ as $user)
                   <tbody>
@@ -153,6 +210,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                 <script>
+                  var table3_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf3 = setFilterGrid("table3", table3_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -171,7 +237,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table  class="table-editable" id="table4" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -183,6 +249,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                        <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersRObr as $user)
                   <tbody>
@@ -201,6 +276,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                <script>
+                  var table4_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf4 = setFilterGrid("table4", table4_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -219,7 +303,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table  class="table-editable" id="table5" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -231,6 +315,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                        <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersCen as $user)
                   <tbody>
@@ -249,6 +342,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                 <script>
+                  var table5_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf5 = setFilterGrid("table5", table1_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -267,7 +369,7 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th>Nombre</th>
                       <th>Apellido P.</th>
@@ -279,6 +381,15 @@
                       <th>Telefono</th>
                       <th>Empresa</th>
                       <th>Acción</th>
+                        <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                   </tr>
                     </thead>
                     @foreach($usersJef as $user)
                   <tbody>
@@ -297,6 +408,15 @@
                   </tbody>
                   @endforeach
                 </table>
+                 <script>
+                  var table6_Props = {
+                      col_0: "input",
+                      col_9: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf6 = setFilterGrid("table6", table6_Props);
+                </script>
                 </div>
               </div>
               </div><!--end .accordion-section-->

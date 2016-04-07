@@ -40,10 +40,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     $('select').select2();
   </script>
   <script type="text/javascript">
-            $(document).ready(function() {
-                $(".js-example-basic-single").select2();
-            });
+    $(document).ready(function() {
+      $(".js-example-basic-single").select2();
+    });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".js-example-tags").select2({
+      tags: true
+      })
+    });
+</script>
 <!--//select-->
 
 <!--animate-->
@@ -212,9 +219,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       }
     </script>
   <!--scrolling js-->
+  
   {!!Html::script('js/scripts.js')!!}
+  {!!Html::script('js/script2.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
+    @section('scripts')
+    @show
+    @yield('scripts')
 </body>
 </html>
