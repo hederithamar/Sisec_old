@@ -59,6 +59,7 @@
                    </tr>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
+
                   <tbody>
                     <td >{{$enterprice->rfc}}</td>
                     <td >{{$enterprice->name}}</td>
@@ -85,6 +86,7 @@
                   var tf2 = setFilterGrid("table1", table1_Props);
                 </script>
                 </div>
+                  {!!$enterpricesCons->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>
@@ -122,21 +124,21 @@
                       <td></td>
                    </tr>
                     </thead>
-                    @foreach($enterpricesSup as $enterprice)
-                  <tbody>
-                    <td >{{$enterprice->rfc}}</td>
-                    <td >{{$enterprice->name}}</td>
-                    <td >{{$enterprice->legalagent}}</td>
-                    <td >{{$enterprice->phone}}</td>
-                    <td >{{$enterprice->email}}</td>
-                    <td >{{$enterprice->address}}</td>
-                    
+                    @foreach($enterpricesCons as $enterprice)
+                    <tbody>
+                    <td>{{$enterprice->rfc}}</td>
+                    <td>{{$enterprice->name}}</td>
+                    <td>{{$enterprice->legal}}</td>
+                    <td>{{$enterprice->tipo}}</td>
+                    <td>{{$enterprice->celphone}}</td>
+                    <td>{{$enterprice->address}}</td>
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
-                  </tbody>
+                    </tbody>
                   @endforeach
                 </table>
+
                 <script>
                   var table2_Props = {
                   col_0: "input",
@@ -155,7 +157,9 @@
       </div>
     </div>
   </div>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/index.js"></script>
+
+  {!!Html::script('js/classie.jss')!!}
+  {!!Html::script('js/borderMenu.js')!!}
+  {!!Html::script('js/index.js')!!}
+  
 @endsection

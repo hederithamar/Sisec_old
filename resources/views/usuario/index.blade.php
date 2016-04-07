@@ -15,12 +15,14 @@
     <div class="main">
       <div class="accordion">
           <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-1">Usuarios</a>
+              <a class="accordion-section-title" href="#accordion-1">Administradores</a>
               <div id="accordion-1" class="accordion-section-content">
               <p class="header-right">
-    			     {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
+
+    			     {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+
               </p>
-              <h4>Usuarios</h4>
+              <h4>Administradores</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">
@@ -35,10 +37,265 @@
                       <th>Zona</th>
                       <th>Celular</th>
                       <th>Telefono</th>
-                      <th>Rol</th>
                       <th>Empresa</th>
+                      <th>Acción</th>
                     </thead>
-          
+                    @foreach($usersAdmin as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
+              <div id="accordion-2" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>Residentes Generales</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>Nombre</th>
+                      <th>Apellido P.</th>
+                      <th>Apellido M.</th>
+                      <th>Email</th>
+                      <th>Estado</th>
+                      <th>Zona</th>
+                      <th>Celular</th>
+                      <th>Telefono</th>
+                      <th>Empresa</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($usersRGen as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
+              <div id="accordion-3" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>SuperIntedentes de Servicio</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>Nombre</th>
+                      <th>Apellido P.</th>
+                      <th>Apellido M.</th>
+                      <th>Email</th>
+                      <th>Estado</th>
+                      <th>Zona</th>
+                      <th>Celular</th>
+                      <th>Telefono</th>
+                      <th>Empresa</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($usersServ as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-4">Residentes de Obra</a>
+              <div id="accordion-4" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>Residentes de Obra</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>Nombre</th>
+                      <th>Apellido P.</th>
+                      <th>Apellido M.</th>
+                      <th>Email</th>
+                      <th>Estado</th>
+                      <th>Zona</th>
+                      <th>Celular</th>
+                      <th>Telefono</th>
+                      <th>Empresa</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($usersRObr as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-5">Centro SCT</a>
+              <div id="accordion-5" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>Centro SCT</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>Nombre</th>
+                      <th>Apellido P.</th>
+                      <th>Apellido M.</th>
+                      <th>Email</th>
+                      <th>Estado</th>
+                      <th>Zona</th>
+                      <th>Celular</th>
+                      <th>Telefono</th>
+                      <th>Empresa</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($usersCen as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-6">Jefes de Oficina Técnica</a>
+              <div id="accordion-6" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>Jefes de Oficina Técnica</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>Nombre</th>
+                      <th>Apellido P.</th>
+                      <th>Apellido M.</th>
+                      <th>Email</th>
+                      <th>Estado</th>
+                      <th>Zona</th>
+                      <th>Celular</th>
+                      <th>Telefono</th>
+                      <th>Empresa</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($usersJef as $user)
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['name']}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
                 </table>
                 </div>
               </div>
@@ -48,9 +305,9 @@
       </div>
     </div>
   </div>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/index.js"></script>		
 
+  {!!Html::script('js/classie.jss')!!}
+  {!!Html::script('js/borderMenu.js')!!}
+  {!!Html::script('js/index.js')!!}
 
 @endsection

@@ -49,9 +49,15 @@
 	resources/views/usuario/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
+=======
+### Se agrego una funcion en 
+	app/Enterprice.php
+=======
+>>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61
 #
 
 Miercoles/06/Abril
@@ -64,6 +70,7 @@ Miercoles/06/Abril
 ## Se agregaron Seeders
 	database/seeds/EnterpriceTableSeeder.php
 	database/seeds/UserTableSeeder.php
+<<<<<<< HEAD
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
@@ -71,3 +78,6 @@ Miercoles/06/Abril
 =======
 
 >>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
+=======
+>>>>>>> 47ba700037f01f50f61272ddde8b103c0294cde9
+>>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61

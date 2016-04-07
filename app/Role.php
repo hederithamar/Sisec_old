@@ -11,4 +11,9 @@ class Role extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = ['desc'];
+
+    public function scopeType($query, $desc)
+    {
+    	$query->where('desc', $desc);
+    }
 }
