@@ -27,10 +27,15 @@ class EmpresaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function listing(){
+        $enterprices = Enterprice::all();
+        return response()->json(
+                $enterprices->toArray()
+            );
+    }
+
     public function index()
     {
-
-         
         $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
         $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));

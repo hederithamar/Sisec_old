@@ -17,7 +17,7 @@
 
 				<input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
 					@include('rol.forms.rol')
-					{!!link_to('#', $title='Registrar', $attributes = ['id'=>'registrorol', 'class'=>'btn btn-primary'], $secure = null)!!}
+					{!!link_to('/rol', $title='Registrar', $attributes = ['id'=>'registrorol', 'class'=>'btn btn-primary'], $secure = null)!!}
 				{!!Form::close()!!}
 	
 			</div>
@@ -26,5 +26,5 @@
 	@endsection
 	
 	@section('scripts')
-		{!!Html::script('js/script.js')!!}
+		{!!Html::script('js/createrol.js')!!}
 	@endsection
