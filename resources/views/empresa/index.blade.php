@@ -38,7 +38,7 @@
                       <th>Acción</th>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
-                  <tbody>
+                    <tbody>
                     <td>{{$enterprice->rfc}}</td>
                     <td>{{$enterprice->name}}</td>
                     <td>{{$enterprice->legalagent}}</td>
@@ -46,13 +46,13 @@
                     <td>{{$enterprice->email}}</td>
                     <td>{{$enterprice->address}}</td>
                     <td>{{$enterprice->status}}</td>
-                    
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
-                  </tbody>
-                  @endforeach
-                </table>
+                    </tbody>
+                    @endforeach
+                  </table>
+               
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -82,7 +82,7 @@
                       <th>Acción</th>
                     </thead>
                     @foreach($enterpricesCons as $enterprice)
-                  <tbody>
+                    <tbody>
                     <td>{{$enterprice->rfc}}</td>
                     <td>{{$enterprice->name}}</td>
                     <td>{{$enterprice->legal}}</td>
@@ -92,9 +92,10 @@
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
-                  </tbody>
+                    </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -103,7 +104,9 @@
       </div>
     </div>
   </div>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/index.js"></script>
+
+  {!!Html::script('js/classie.jss')!!}
+  {!!Html::script('js/borderMenu.js')!!}
+  {!!Html::script('js/index.js')!!}
+  
 @endsection

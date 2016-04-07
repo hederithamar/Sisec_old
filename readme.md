@@ -3,6 +3,7 @@
 ## Se agregaron modelos
 	app/Enterprice.php
 	app/Role.php
+	app/User.php
 
 ## Se agregaron controladores
 	app/Http/Controllers/EmpresaController.php
@@ -11,10 +12,10 @@
 	app/Http/Controllers/RolController.php
 	app/Http/Controllers/UsuarioController.php
 
-## Se agrego un middleware, y se crearon funciones perono estan en uso se comentaron
+## Se agrego un middleware, y se crearon funciones pero no estan en uso se comentaron
 	app/Http/Middleware/Admin.php
 
-## Se agregaron request
+## Se agregaron request y se activaron en los controladores
 	app/Http/Requests/EnterpriceCreateRequest.php
 	app/Http/Requests/EnterpriceUpdateRequest.php
 	app/Http/Requests/LoginRequest.php
@@ -47,5 +48,20 @@
 	resources/views/rol/
 	resources/views/usuario/
 
+<<<<<<< HEAD
 ### Se agrego una funcion en 
 	app/Enterprice.php
+=======
+#
+
+Miercoles/06/Abril
+
+## Se agregaron ModelFactories
+	modified:   database/factories/ModelFactory.php
+	modified:   database/seeds/DatabaseSeeder.php
+
+
+## Se agregaron Seeders
+	database/seeds/EnterpriceTableSeeder.php
+	database/seeds/UserTableSeeder.php
+>>>>>>> 47ba700037f01f50f61272ddde8b103c0294cde9

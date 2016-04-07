@@ -4,8 +4,8 @@ namespace Sisec\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
-use Sisec\Http\Requests\EnterpriceCreateRequest;
-use Sisec\Http\Requests\EnterpriceUpdateRequest;
+use Sisec\Http\Requests\RoleCreateRequest;
+use Sisec\Http\Requests\RoleUpdateRequest;
 use Sisec\Http\Controllers\Controller;
 use Sisec\Role;
 use Session;
@@ -52,7 +52,7 @@ class RolController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoleCreateRequest $request)
     {
         Role::create($request->all());
         Session::flash('message','Rol Creado Correctamente');
@@ -88,7 +88,7 @@ class RolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoleUpdateRequest $request, $id)
     {
         $this->role->fill($request->all());
         $this->role->save();

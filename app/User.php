@@ -28,8 +28,8 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['id_curp', 'name', 'firstlastname', 'secondlastname', 'email', 'state', 'zone', 'cellphone', 'phone', 'password', 'role_id', 'enterprice_id'];
-
+    protected $fillable = ['id_curp', 'name', 'firstlastname', 'secondlastname', 'cellphone', 'phone','email', 'password', 'role_id', 'enterprice_id', 'state', 'zone', 'id_curp'];
+    
     /**
      * The attributes excluded from the model's JSON form.
      *
@@ -39,9 +39,28 @@ class User extends Model implements AuthenticatableContract,
 
     protected $dates = ['deleted_at'];
 
-    public function setPasswordAttribute($valor){
+    public function setPasswordAttribute($valor)
+    {
         if(!empty($valor)){
             $this->attributes['password'] = \Hash::make($valor);
         }
+    }
+
+    public function enterprice()
+    {
+        return $this->hasOne('Sisec\Enterprice','id');   
+    }
+
+    public function role()
+    {
+        return $this->hasOne('Sisec\Role','id');   
+    }
+
+    public function scopeRol($query, $desc)
+    {
+        return $query->whereHas('role', function($q) use ($desc)
+        {
+            $q->where('desc',$desc);
+        });
     }
 }

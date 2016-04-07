@@ -7,6 +7,7 @@ use Sisec\Http\Requests\UserCreateRequest;
 use Sisec\Http\Requests\UserUpdateRequest;
 use Sisec\Http\Controllers\Controller;
 use Sisec\User;
+use Sisec\Role;
 use Sisec\Enterprice;
 use Session;
 use Redirect;
@@ -28,9 +29,14 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
+        $usersAdmin = User::Rol('Administrador')->with('enterprice','role')->get();
+        $usersRGen = User::Rol('Residente General')->with('enterprice','role')->get();
+        $usersServ = User::Rol('SuperIntendente de Servicio')->with('enterprice','role')->get();
+        $usersRObr = User::Rol('Residente de obra')->with('enterprice','role')->get();
+        $usersCen = User::Rol('Centro SCT')->with('enterprice','role')->get();
+        $usersJef = User::Rol('Jefes de Oficina Técnica')->with('enterprice','role')->get();
         
-        return view('usuario.index',compact('users'));
+        return view('usuario.index',compact('usersAdmin','usersRGen','usersServ','usersRObr','usersCen','usersJef'));
     }
     /**
      * Show the form for creating a new resource.
@@ -38,9 +44,9 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   $roles = Role::lists('desc', 'id');
         $enterprices = Enterprice::lists('name', 'id');
-        return view('usuario.create',compact('enterprices'));
+        return view('usuario.create',compact('roles','enterprices'));
     }
     /**
      * Store a newly created resource in storage.
@@ -71,9 +77,10 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {   
+        $roles = Role::lists('desc', 'id');
         $enterprices = Enterprice::lists('name', 'id');
-        return view('usuario.edit',compact('enterprices'),['user'=>$this->user]);
+        return view('usuario.edit',compact('roles','enterprices'),['user'=>$this->user]);
     }
     /**
      * Update the specified resource in storage.

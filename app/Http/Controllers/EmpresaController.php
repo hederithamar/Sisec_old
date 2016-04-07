@@ -29,8 +29,8 @@ class EmpresaController extends Controller
 
     public function index()
     {
-        $enterpricesSup = Enterprice::Type("Supervisora")->paginate(5);
-        $enterpricesCons = Enterprice::Type("Constructora")->paginate(5);
+        $enterpricesSup = Enterprice::Type("Supervisora")->paginate(2);
+        $enterpricesCons = Enterprice::Type("Constructora")->paginate(2);
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
     }
 
