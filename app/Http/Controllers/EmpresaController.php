@@ -29,6 +29,7 @@ class EmpresaController extends Controller
 
     public function index()
     {
+
          
         $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
         $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);

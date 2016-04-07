@@ -123,7 +123,7 @@
                       <td></td>
                    </tr>
                     </thead>
-                    @foreach($enterpricesSup as $enterprice)
+                    @foreach($enterpricesCons as $enterprice)
                   <tbody>
                     <td >{{$enterprice->rfc}}</td>
                     <td >{{$enterprice->name}}</td>
@@ -131,11 +131,10 @@
                     <td >{{$enterprice->phone}}</td>
                     <td >{{$enterprice->email}}</td>
                     <td >{{$enterprice->address}}</td>
-                    
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
-                  </tbody>
+                    </tbody>
                   @endforeach
                 </table>
                 {!!$enterpricesCons->render()!!}
@@ -149,7 +148,6 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
-                {!!$enterpricesCons->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>
@@ -157,7 +155,9 @@
       </div>
     </div>
   </div>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/index.js"></script>
+
+  {!!Html::script('js/classie.jss')!!}
+  {!!Html::script('js/borderMenu.js')!!}
+  {!!Html::script('js/index.js')!!}
+  
 @endsection

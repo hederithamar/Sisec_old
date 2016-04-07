@@ -48,13 +48,11 @@
 	resources/views/rol/
 	resources/views/usuario/
 
-<<<<<<< HEAD
+### Se agrego una funcion en 
+	app/Enterprice.php
 
-=======
->>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
-#
 
-Miercoles/06/Abril
+##Miercoles/06/Abril
 
 ## Se agregaron ModelFactories
 	modified:   database/factories/ModelFactory.php
@@ -65,9 +63,6 @@ Miercoles/06/Abril
 	database/seeds/EnterpriceTableSeeder.php
 	database/seeds/UserTableSeeder.php
 
+
 ### Se agrego una funcion en 
 	app/Enterprice.php
-<<<<<<< HEAD
-=======
-
->>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
