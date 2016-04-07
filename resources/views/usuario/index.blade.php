@@ -18,7 +18,7 @@
               <a class="accordion-section-title" href="#accordion-1">Usuarios</a>
               <div id="accordion-1" class="accordion-section-content">
               <p class="header-right">
-    			 {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
+    			     {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
               </p>
               <h4>Usuarios</h4>
               <div id="table" class="table-editable">

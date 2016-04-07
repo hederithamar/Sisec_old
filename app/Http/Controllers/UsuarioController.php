@@ -50,8 +50,10 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(UserCreateRequest $request)
-    {
-        User::create($request->all());
+    {   $usuario = new User($request->all());
+        $usuario->id_curp=substr($usuario->name, 0, 2).$usuario->role_id.substr($usuario->firstlastname, 0, 2).$usuario->enterprice_id.substr($usuario->secondlastname, 0, 2);
+        $usuario->save();
+        
         Session::flash('message','Usuario Creado Correctamente');
         return Redirect::to('/usuario');
     }
