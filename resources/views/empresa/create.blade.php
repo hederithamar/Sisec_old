@@ -21,12 +21,10 @@
 				{!!Form::close()!!}
 		</div>
 	</div>
+	</div>
 
 	@endsection
 
 	@section('scripts')
-	<script>
-		{!!Html::script('js/script2.js')!!}
-	</script>
-	
+		{!!Html::script('js/createemp.js')!!}
 	@endsection

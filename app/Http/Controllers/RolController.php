@@ -28,11 +28,15 @@ class RolController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function listing(){
+        $roles = Role::all();
+        return response()->json(
+                $roles->toArray()
+            );
+    }
+
     public function index()
     {
-        //
-        $roles = Role::paginate(10);
-        
         return view('rol.index',compact('roles'));
     }
 
