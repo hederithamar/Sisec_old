@@ -1,11 +1,11 @@
 $(document).ready(function(){
-	var tablaDatos = $("#datos");
-	var route = "http://sisec.app/empresas/";
+	var tablaDatos = $("#table1");
+	var route = "http://sisec.app/enterprices/";
 
-	$("#datos").empty();
+	$("#table1").empty();
 	$.get(route, function(res){
 		$(res).each(function(key,value){
-			tablaDatos.append("<tr><td>"+value.id+"</td><td>"+value.desc+"</td><td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td></tr>");
+			tablaDatos.append("<tr><td>"+value.rfc+"</td><td>"+value.name+"</td><td>"+value.legalagent+"</td><td>"+value.phone+"</td><td>"+value.email+"</td><td>"+value.address+"</td><td><button class='btn btn-primary'>Editar</button><button class='btn btn-danger'>Eliminar</button></td></tr>");
 		});
 	});
 });

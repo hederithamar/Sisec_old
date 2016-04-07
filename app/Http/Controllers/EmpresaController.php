@@ -27,12 +27,12 @@ class EmpresaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function listing(){
+    /*public function listing(){
         $enterprices = Enterprice::all();
         return response()->json(
                 $enterprices->toArray()
             );
-    }
+    }*/
 
     public function index()
     {
