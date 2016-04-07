@@ -5,17 +5,26 @@
 	<div class="forms">
 		<h3 class="title1">Catalogos Roles</h3>
 		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
+		
 			<div class="form-title">
 				<h4>Agregar nuevo Rol: </h4>
 			</div>
 			<div class="form-body">
-				{!!Form::open(['route'=>'rol.store', 'method'=>'POST'])!!}
+				{!!Form::open()!!}
+				<div id="msj-success" class="alert alert-success alert-dismissible" role="alert" style="display:none">
+    				<strong> Rol Agregado Correctamente.</strong>
+				</div>
+
+				<input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
 					@include('rol.forms.rol')
-					{!!Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
+					{!!link_to('#', $title='Registrar', $attributes = ['id'=>'registrorol', 'class'=>'btn btn-primary'], $secure = null)!!}
 				{!!Form::close()!!}
 	
 			</div>
 		</div>
 	</div>
-
+	@endsection
+	
+	@section('scripts')
+		{!!Html::script('js/script.js')!!}
 	@endsection

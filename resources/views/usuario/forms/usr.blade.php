@@ -1,5 +1,5 @@
 	<div class="form-group">
-		<div class="col-md-4 form-group">
+		<div class="col-md-4 form-group changeState">
 			{!!Form::label('nombre','Nombre(s):')!!}
 			{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
 		</div>

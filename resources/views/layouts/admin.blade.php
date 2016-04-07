@@ -218,9 +218,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       }
     </script>
   <!--scrolling js-->
+  
   {!!Html::script('js/scripts.js')!!}
+  {!!Html::script('js/script2.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
+    @section('scripts')
+    @show
+    @yield('scripts')
 </body>
 </html>

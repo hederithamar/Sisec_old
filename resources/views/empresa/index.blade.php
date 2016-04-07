@@ -85,6 +85,7 @@
                   var tf2 = setFilterGrid("table1", table1_Props);
                 </script>
                 </div>
+                {!!$enterpricesSup->render()!!}
               </div>
               </div><!--end .accordion-section-->
           </div>
@@ -137,6 +138,7 @@
                   </tbody>
                   @endforeach
                 </table>
+                {!!$enterpricesCons->render()!!}
                 <script>
                   var table2_Props = {
                   col_0: "input",

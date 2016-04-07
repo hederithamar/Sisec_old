@@ -44,4 +44,8 @@ class User extends Model implements AuthenticatableContract,
             $this->attributes['password'] = \Hash::make($valor);
         }
     }
+    public function role()
+    {
+        return $this->hasOne('Sisec\Role','id');
+    }
 }

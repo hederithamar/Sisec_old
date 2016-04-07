@@ -31,7 +31,7 @@ class RolController extends Controller
     public function index()
     {
         //
-        $roles = Role::paginate(5);
+        $roles = Role::paginate(10);
         
         return view('rol.index',compact('roles'));
     }
@@ -54,9 +54,16 @@ class RolController extends Controller
      */
     public function store(RoleCreateRequest $request)
     {
-        Role::create($request->all());
-        Session::flash('message','Rol Creado Correctamente');
-        return Redirect::to('/rol');
+        $message = 'Rol Creada Correctamente';
+        if($request->ajax()){
+            Role::create($request->all());
+            return response()->json([
+                "mensaje" => $message
+            ]);
+        }else {
+                Session::flash('message','No se Guardo');
+                return Redirect::to('rol')->withErrors('Error');
+            }
     }
 
     /**

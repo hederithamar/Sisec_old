@@ -29,8 +29,9 @@ class EmpresaController extends Controller
 
     public function index()
     {
-        $enterpricesSup = Enterprice::Type("Supervisora")->paginate(5);
-        $enterpricesCons = Enterprice::Type("Constructora")->paginate(5);
+         
+        $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
+        $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
     }
 
@@ -54,9 +55,16 @@ class EmpresaController extends Controller
      */
     public function store(EnterpriceCreateRequest $request)
     {
-        Enterprice::create($request->all());
-        Session::flash('message','Empresa Creada Correctamente');
-        return Redirect::to('/empresa');
+        $message = 'Empresa Creada Correctamente';
+        if($request->ajax()){
+            Enterprice::create($request->all());
+            return response()->json([
+                "mensaje" => $message
+            ]);
+        }else {
+                Session::flash('message','No se Guardo');
+                return Redirect::to('rol')->withErrors('Error');
+            }
     }
 
     /**
