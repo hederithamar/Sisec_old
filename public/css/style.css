@@ -3981,5 +3981,9 @@ h4.title3 {
     width: 80%;
     margin: 1em auto 0;
 }
+
+.alin-right {
+    text-align: right;
+}
 }
 /*--//responsive-design---*/

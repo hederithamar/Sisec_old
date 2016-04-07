@@ -29,9 +29,9 @@ class EmpresaController extends Controller
 
     public function index()
     {
-        $enterprices = Enterprice::paginate(5);
-        
-        return view('empresa.index',compact('enterprices'));
+        $enterpricesSup = Enterprice::Type("Supervisora")->paginate(5);
+        $enterpricesCons = Enterprice::Type("Constructora")->paginate(5);
+        return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
     }
 
     /**
@@ -41,7 +41,9 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('empresa.create');
+        $enterprices = Enterprice::lists('rfc', 'id');
+        return view('empresa.create',compact('enterprices'));
+
     }
 
     /**
@@ -106,4 +108,8 @@ class EmpresaController extends Controller
         Session::flash('message','Empresa Eliminada Correctamente');
         return Redirect::to('/empresa');
     }
+
+    /**
+        *Aqui se crea el filtro de empresas
+    */
 }

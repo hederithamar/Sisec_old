@@ -1,10 +1,15 @@
+
+
 	<div class="col-md-6 form-group">
-		{!!Form::label('rfc','RFC:')!!}
-		{!!Form::text('rfc',null,['class'=>'form-control','placeholder'=>'Ingresa el RFC de la empresa'])!!}
+		{!!Form::label('enterprice_id','Escribe el RFC:')!!}
+		<br>
+		{!!Form::select('rfc', $enterprices, null, ['class' => 'js-example-tags js-states form-control']);!!}
 	</div>
-		<div class="col-md-6 form-group">
-		{!!Form::label('rfc','RFC:')!!}
-		{!!Form::text('rfc',null,['class'=>'form-control','placeholder'=>'Verifica el RFC de la empresa'])!!}
+
+	<div class="col-md-6 form-group">
+		{!!Form::label('enterprice_id','Vuelva a regtificar el RFC de la Empresa:')!!}
+		<br>
+		{!!Form::select('rfc', $enterprices, null, ['class' => 'js-example-tags js-states form-control']);!!}
 	</div>
 
 	<div class="col-md-6 form-group">

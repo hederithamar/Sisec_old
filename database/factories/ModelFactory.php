@@ -10,11 +10,34 @@
 | database. Just tell the factory how a default model should look.
 |
 */
+$factory->define(Sisec\Enterprice::class, function (Faker\Generator $faker) {
+    return [
+        'rfc' => $faker->swiftBicNumber,
+        'name' => $faker->company,
+        'legalagent' => $faker->name($gender = null|'male'|'female'),
+        'type' => 'Supervisora',
+        'status' => 'Activa',
+        'email' => $faker->email,
+        'address' => $faker->address,
+        'phone' => $faker->phoneNumber,
+        'remember_token' => str_random(10),
+    ];
+});
+
 
 $factory->define(Sisec\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'firstlastname' => $faker->lastname,
+        'secondlastname' => $faker->lastname,
         'email' => $faker->email,
+        'state' => $faker->state,
+        'zone' => $faker->regexify('Norte|Sur'),
+        'celphone' => $faker->phoneNumber,
+        'phone' => $faker->phoneNumber,
+        'role_id' => $faker->lastname,
+        'enterprice_id' => $faker->name,
+        'id_curp' => $faker->name,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];

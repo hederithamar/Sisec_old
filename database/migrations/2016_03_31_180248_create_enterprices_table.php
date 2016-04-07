@@ -19,7 +19,7 @@ class CreateEnterpricesTable extends Migration
             $table->string('name', 150);
             $table->string('legalagent', 100);
             $table->string('type', 20);
-            $table->string('status', 2);
+            $table->string('status', 20);
             $table->string('email', 50)->nullable();
             $table->string('address', 250)->nullable();
             $table->char('phone', 10)->nullable();
