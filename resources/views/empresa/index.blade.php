@@ -35,7 +35,7 @@
                 {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
               </p>
               <h4>Empresas Supervisoras</h4>
-              <div id="table" class="table-editable">
+              <div id="table" class="table-editable" >
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
