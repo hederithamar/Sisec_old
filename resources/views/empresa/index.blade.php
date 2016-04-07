@@ -83,16 +83,16 @@
         </div>
         <div class="accordion">
           <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
-              <div id="accordion-2" class="accordion-section-content">
+            <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
+            <div id="accordion-2" class="accordion-section-content">
               <p class="header-right">
                {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
               </p>
               <h4>Empresas Contructoras</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
-                <div class="form-body">
-                  <!--aqui va la tabla-->
+                  <div class="form-body">
+                    <!--aqui va la tabla-->
                   <table id="table2" class="table-editable" >
                      <thead>
                       <th >RFC</th>
@@ -103,47 +103,38 @@
                       <th >Direccion</th>
                     
                       <th >Acción</th>
-                   <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
                     </thead>
                     @foreach($enterpricesCons as $enterprice)
-                  <tbody>
-                    <td >{{$enterprice->rfc}}</td>
-                    <td >{{$enterprice->name}}</td>
-                    <td >{{$enterprice->legalagent}}</td>
-                    <td >{{$enterprice->phone}}</td>
-                    <td >{{$enterprice->email}}</td>
-                    <td >{{$enterprice->address}}</td>
-                    <td>
-                     {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
-                     </td>
-                    </tbody>
-                  @endforeach
-                </table>
-                {!!$enterpricesCons->render()!!}
-                <script>
-                  var table2_Props = {
-                  col_0: "input",
-                  col_6: "none",
-                  display_all_text: " [ Show all ] ",
-                  sort_select: true
-                  };
-                  var tf2 = setFilterGrid("table2", table2_Props);
-                </script>
+                    <tbody>
+                      <td >{{$enterprice->rfc}}</td>
+                      <td >{{$enterprice->name}}</td>
+                      <td >{{$enterprice->legalagent}}</td>
+                      <td >{{$enterprice->phone}}</td>
+                      <td >{{$enterprice->email}}</td>
+                      <td >{{$enterprice->address}}</td>
+                      <td>
+                       {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
+                       </td>
+                      </tbody>
+                    @endforeach
+                  </table>
+                  {!!$enterpricesCons->render()!!}
+                  <script>
+                    var table2_Props = {
+                    col_0: "input",
+                    col_6: "none",
+                    display_all_text: " [ Show all ] ",
+                    sort_select: true
+                    };
+                    var tf2 = setFilterGrid("table2", table2_Props);
+                  </script>
                 </div>
               </div>
-              </div><!--end .accordion-section-->
+            </div><!--end .accordion-section-->
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
 @endsection
