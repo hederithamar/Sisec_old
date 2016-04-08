@@ -44,6 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       $(".js-example-basic-single").select2();
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
@@ -51,6 +52,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       })
     });
 </script>
+  <!--libreria para manipular los select -->
+
+  <script type="text/javascript" src="dynamicoptionlist.js"></script>
+
 <!--//select-->
 
 <!--animate-->
@@ -90,11 +95,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
 
+
                 <li>
                   <a href="{!!URL::to('expediente')!!}">Integracion de </p>
                                                       Expedientes</a>
+
+                <li>
+                  <a href="{!!URL::to('documento')!!}">Documentos</a>
+
                 </li>
               </ul>
+
               <!-- /nav-second-level -->
             </li>
             <li class="">

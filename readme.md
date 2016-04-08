@@ -51,6 +51,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
@@ -59,6 +60,8 @@
 	app/Enterprice.php
 =======
 >>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61
+=======
+>>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee
 #
 =======
 ### Se agrego una funcion en 
@@ -93,4 +96,8 @@
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
+<<<<<<< HEAD
 >>>>>>> a4489617fc082bb8d90a51eced6ecdcb56d143cd
+=======
+>>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
+>>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee
