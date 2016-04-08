@@ -77,7 +77,6 @@
               </div>
             </div>
           </div><!--end .accordion-section-->
-            {!!$enterpricesSup->render()!!}
         </div>
       </div>
     </div>

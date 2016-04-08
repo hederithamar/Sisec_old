@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
-
-  <script type="application/x-javascript"> 
+ <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
     { setTimeout(hideURLbar, 0); }, false); 
@@ -37,7 +36,6 @@
       $(".js-example-basic-single").select2();
     });
   </script>
-
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
@@ -87,13 +85,12 @@
               <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
                 <li>
-                  <a href="{!!URL::to('usuario')!!}">Usuarios</a>
-                </li>
-                <li>
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
 
-
+                <li>
+                  <a href="{!!URL::to('usuario')!!}">Usuarios</a>
+                </li>
                 <li>
                   <a href="{!!URL::to('expediente')!!}">Integracion de </p>
                                                       Expedientes</a>
@@ -159,13 +156,13 @@
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="/images/LOGO.png" width="200" height="100"margin="10em">"75">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
           </a>
         </div>
         <div class="clearfix"> </div>
       </div>
       <div class="search-box">
-        <h3>Sistema de Seguimiento y Control de Carreteras</h3>
+       <center><h2>Sistema de Seguimiento y Control de Carreteras</h2></center></div>
         <span></span>
       </div>
 
