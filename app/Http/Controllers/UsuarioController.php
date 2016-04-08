@@ -33,11 +33,11 @@ class UsuarioController extends Controller
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersReG = User::Emp('2')->with(['enterprice','role' => function($query){
+        $usersSup = User::Emp('2')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersSup = User::Emp('3')->with(['enterprice','role' => function($query){
+        $usersReG = User::Emp('3')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
