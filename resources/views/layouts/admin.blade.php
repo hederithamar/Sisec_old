@@ -44,6 +44,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 $(".js-example-basic-single").select2();
             });
   </script>
+  <!--libreria para manipular los select -->
+
+  <script type="text/javascript" src="dynamicoptionlist.js"></script>
 <!--//select-->
 
 <!--animate-->
