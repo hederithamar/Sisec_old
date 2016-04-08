@@ -19,7 +19,8 @@
 						<th>Celular</th>
 						<th>Direccion</th>
 						<th>Operación</th>
-					</thead>
+					
+          </thead>
 				@foreach($enterprices as $enterprice)
 					<tbody>
 						<td>{{$enterprice->rfc}}</td>

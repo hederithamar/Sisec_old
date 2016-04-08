@@ -17,7 +17,7 @@ Route::get('reviews','FrontController@reviews');
 Route::get('admin','FrontController@admin');
 //Ruta de los controladores
 Route::resource('empresa','EmpresaController');
-Route::resource('expediente','ExpedienteController');
+Route::resource('expediente','IntegracionController');
 Route::resource('rol','RolController');
 Route::resource('usuario','UsuarioController');
 Route::resource('log','LogController');
