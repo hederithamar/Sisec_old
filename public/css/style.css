@@ -13,7 +13,7 @@ html, body{
   	font-family: 'Roboto Condensed', sans-serif;
     font-size: 100%;
   	overflow-x: hidden;
-	background: #fff;
+	background: #D6E2C7;
 }
 body a{
 	transition: 0.5s all ease;
@@ -31,7 +31,7 @@ p{
 	margin:0;
 }
 ul,label{
-	margin:0;
+	margin:1em;
 	padding:0;
 }
 body a:hover{
@@ -50,7 +50,7 @@ body a:hover{
     z-index: 100;
 }
 .header-section {
-    background:#CCC99C;
+    background:#E0DFD4;
     box-shadow:  1px 1px 4px rgba(0, 0, 0, 0.21);
     -webkit-box-shadow:  1px 1px 4px rgba(0, 0, 0, 0.21);
     -moz-box-shadow:  1px 1px 4px rgba(0, 0, 0, 0.21);
@@ -70,7 +70,7 @@ body a:hover{
 }
 /* ----menu-icon----*/
 button#showLeftPush {
-    font-size: 1.5em;
+    font-size: 2em;
     width: 80px;
     padding: 0.87em 0;
     text-align: center;
@@ -81,7 +81,7 @@ button#showLeftPush {
     -webkit-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
 	border: none;
-    background-color: #CCC99C;
+    background-color: #E0DFD4;
 	outline:none;
 }
 button#showLeftPush:hover {
@@ -92,9 +92,9 @@ button#showLeftPush:hover {
 	position: fixed;
 }
 .cbp-spmenu-vertical {
-    width: 200px;
+    width: 220px;
     height: 100%;
-    top: 76px;
+    top: 100px;
     z-index: 1000;
     background-color:#7AAF42;
 	padding: 2em 0;
@@ -149,8 +149,8 @@ button#showLeftPush:hover {
     float: right;
 }
 i.nav_icon {
-    margin-right: 1em;
-	font-size: 1.1em;
+    margin-right: .5em;
+	font-size: 1.4em;
 }
 .fa {
     display: inline-block;
@@ -214,11 +214,15 @@ ul.dropdown-menu{
     background: #6164C1;
     text-align: center;
     float: left;
+    width: 200px;
+    height: 200px;
 }
 .logo a{
     padding: 0.9em 3.3em .7em;
 	display: block;
 	text-decoration: none;
+  width: 200px;
+    height: 200px;
 }
 .logo a h1 {
     color: #fff;
@@ -231,6 +235,8 @@ ul.dropdown-menu{
     font-size: .7em;
     text-align: center;
     letter-spacing: 7px;
+    width: 200px;
+    height: 200px;
 }
 /* ----//Logo----*/
 /*start search*/
@@ -765,7 +771,7 @@ ul.dropdown-menu {
 }
 .user-name{
 	 float:left;
-	 margin-top:8px;
+	 margin-top:11px;
 	 margin-left:11px;
 	 height:35px;
 }
@@ -860,7 +866,7 @@ ul.dropdown-menu.drp-mnu li {
     float: right;
     width: 30%;
     text-align: center;
-	padding: 1.54em 1em;
+	padding: 1.5em 1em;
 	background-color: rgba(79, 82, 186, 0.88);
 }
 .stats-left h5 {
@@ -2659,7 +2665,7 @@ i.fa.fa-facebook.profile-icon {
 	padding: 6.5em 1.5em 2em;
 }
 .sidebar ul li {
-    margin-bottom: 0.8em;
+    margin-bottom: 13em;
 }
 .wid-social .social-info h3 {
     font-size: 1.1em;
@@ -3587,7 +3593,7 @@ li.dropdown.head-dpdn a.dropdown-toggle {
     padding: 0 1.5em 0 0;
 }
 .user-name p {
-    font-size: 0.9em;
+    font-size: 4em;
 }
 .profile_img span.prfil-img {
     width: 32%;

@@ -138,7 +138,7 @@
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="/images/logo.png" width="220" height="75">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
           </a>
         </div>
         <div class="clearfix"> </div>

@@ -86,7 +86,4 @@
 		<br>
 		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('id_curp','CURP:')!!}
-		{!!Form::text('id_curp',null,['class'=>'form-control','placeholder'=>'Curpcreada'])!!}
-	</div>
+	

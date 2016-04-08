@@ -48,8 +48,22 @@
 	resources/views/rol/
 	resources/views/usuario/
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
+=======
 ### Se agrego una funcion en 
 	app/Enterprice.php
+=======
+>>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61
+#
+=======
+### Se agrego una funcion en 
+	app/Enterprice.php
+>>>>>>> a4489617fc082bb8d90a51eced6ecdcb56d143cd
 
 
 ##Miercoles/06/Abril
@@ -62,7 +76,21 @@
 ## Se agregaron Seeders
 	database/seeds/EnterpriceTableSeeder.php
 	database/seeds/UserTableSeeder.php
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+### Se agrego una funcion en 
+	app/Enterprice.php
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
+=======
+>>>>>>> 47ba700037f01f50f61272ddde8b103c0294cde9
+>>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61
+=======
 
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
+>>>>>>> a4489617fc082bb8d90a51eced6ecdcb56d143cd
