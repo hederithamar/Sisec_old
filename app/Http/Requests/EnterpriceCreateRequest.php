@@ -25,7 +25,7 @@ class EnterpriceCreateRequest extends Request
     {
         return [
             'rfc' => 'required|unique:enterprices',
-            'name' => 'required',
+            'nameemp' => 'required',
             'type' => 'required',
             'phone' => 'required',
             'email' => 'required',

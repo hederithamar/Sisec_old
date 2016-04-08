@@ -40,7 +40,7 @@
                             @foreach($enterpricesSup as $enterprice)
                           <tbody>
                               <td >{{$enterprice->rfc}}</td>
-                              <td >{{$enterprice->name}}</td>
+                              <td >{{$enterprice->nameemp}}</td>
                               <td >{{$enterprice->legalagent}}</td>
                               <td >{{$enterprice->phone}}</td>
                               <td >{{$enterprice->email}}</td>
@@ -92,7 +92,7 @@
                       @foreach($enterpricesCons as $enterprice)
                       <tbody>
                         <td >{{$enterprice->rfc}}</td>
-                        <td >{{$enterprice->name}}</td>
+                        <td >{{$enterprice->nameemp}}</td>
                         <td >{{$enterprice->legalagent}}</td>
                         <td >{{$enterprice->phone}}</td>
                         <td >{{$enterprice->email}}</td>

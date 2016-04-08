@@ -1,3 +1,9 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -5,27 +11,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
- <script type="application/x-javascript"> 
+
+
+  <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
     { setTimeout(hideURLbar, 0); }, false); 
     function hideURLbar(){ window.scrollTo(0,1); } 
   </script>
-  <!-- Bootstrap Core CSS -->
+<!-- Bootstrap Core CSS -->
   {!!Html::style('css/bootstrap.css')!!}
-  <!-- Custom CSS -->
+<!-- Custom CSS -->
   {!!Html::style('css/style.css')!!}
-  <!-- font CSS -->
-  <!-- font-awesome icons -->
+<!-- font CSS -->
+<!-- font-awesome icons -->
   {!!Html::style('css/font-awesome.css')!!}
-  <!-- //font-awesome icons -->
-  <!-- js-->
+<!-- //font-awesome icons -->
+ <!-- js-->
   {!!Html::script('js/jquery-1.11.1.min.js')!!}
   {!!Html::script('js/modernizr.custom.js')!!}
-  <!--webfonts-->
+<!--webfonts-->
   {!!Html::style('//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic')!!}
-  <!--//webfonts--> 
-  <!--select-->
+<!--//webfonts--> 
+<!--select-->
   {!!Html::style('css/select2.min.css')!!}
   {!!Html::script('js/select2.full.min.js')!!}
   <script type="text/javascript">
@@ -36,13 +44,13 @@
       $(".js-example-basic-single").select2();
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
       tags: true
       })
     });
-
 </script>
   <!--libreria para manipular los select -->
 
@@ -50,32 +58,28 @@
 
 <!--//select-->
 
-  </script>
-  <!--//select-->
-
-
-  <!--animate-->
+<!--animate-->
   {!!Html::style('css/animate.css')!!}
   {!!Html::script('js/wow.min.js')!!}
   <script>
      new WOW().init();
   </script>
-  <!--//end-animate-->
-  <!-- chart -->
+<!--//end-animate-->
+<!-- chart -->
   {!!Html::script('js/Chart.js')!!}
-  <!-- //chart -->
-  <!-- Metis Menu -->
+<!-- //chart -->
+<!-- Metis Menu -->
   {!!Html::script('js/metisMenu.min.js')!!}
   {!!Html::script('js/custom.js')!!}
   {!!Html::style('css/custom.css')!!}
-  <!--//Metis Menu -->
-</head> 
+<!--//Metis Menu -->
 
+</head> 
 <body class="cbp-spmenu-push">
   <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
-        <div class="navbar-collapse">
+      <div class="navbar-collapse">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
@@ -85,12 +89,13 @@
               <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
                 <li>
+                  <a href="{!!URL::to('usuario')!!}">Usuarios</a>
+                </li>
+                <li>
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
 
-                <li>
-                  <a href="{!!URL::to('usuario')!!}">Usuarios</a>
-                </li>
+
                 <li>
                   <a href="{!!URL::to('expediente')!!}">Integracion de </p>
                                                       Expedientes</a>
@@ -162,7 +167,7 @@
         <div class="clearfix"> </div>
       </div>
       <div class="search-box">
-       <center><h2>Sistema de Seguimiento y Control de Carreteras</h2></center></div>
+        <h3>Sistema de Seguimiento y Control de Carreteras</h3>
         <span></span>
       </div>
 
@@ -229,13 +234,13 @@
         }
       }
     </script>
-    <!--scrolling js-->
+  <!--scrolling js-->
   
-    {!!Html::script('js/scripts.js')!!}
-    <!--//scrolling js-->
-    <!-- Bootstrap Core JavaScript -->
+  {!!Html::script('js/scripts.js')!!}
+  <!--//scrolling js-->
+  <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
     @section('scripts')
     @show
-  </body>
+</body>
 </html>
