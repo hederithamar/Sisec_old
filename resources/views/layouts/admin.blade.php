@@ -67,7 +67,7 @@
   <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
-      <div class="navbar-collapse">
+        <div class="navbar-collapse">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
@@ -138,7 +138,7 @@
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">"75">
           </a>
         </div>
         <div class="clearfix"> </div>
