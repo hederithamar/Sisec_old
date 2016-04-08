@@ -11,7 +11,6 @@
   {!!Html::script('js/accordion.js')!!}
   {!!Html::script('js/tablefilter_all_min.js')!!}
 
-
 @section('content')
 <style type="text/css">
 .container {
@@ -22,7 +21,7 @@
 </style>
 	<div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
-      <div class="accordion">
+        <div class="accordion">
           <div class="accordion-section">
               <a class="accordion-section-title" href="#accordion-1">Administradores</a>
               <div id="accordion-1" class="accordion-section-content">
