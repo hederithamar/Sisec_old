@@ -32,7 +32,7 @@ class EnterpriceTableSeeder extends Seeder
         //manda datos ficticios pero definidos manual 2
         factory(Sisec\Enterprice::class)-> create([
             'rfc'           =>'SCT123',
-            'name' => 'SCT'
+            'nameemp' => 'SCT'
             ]);
         //10 datos fiticios moelo empresas
         factory(Sisec\Enterprice::class, 10)->create();

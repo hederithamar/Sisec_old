@@ -9,7 +9,7 @@
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('name','Nombre:')!!}
-		{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
+		{!!Form::text('nameemp',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('tipo','Tipo de empresa:')!!}

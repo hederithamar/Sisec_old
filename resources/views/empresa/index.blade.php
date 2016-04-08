@@ -21,7 +21,7 @@
               <p class="header-right">
                 {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
               </p>
-              <h4>Empresas Supervisoras</h4>
+              <h4>Empresas Contructoras</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">
@@ -31,16 +31,15 @@
                       <th>RFC</th>
                       <th>Nombre</th>
                       <th>Representante</th>
+                      <th>Tipo</th>
                       <th>Celular</th>
-                      <th>Email</th>
                       <th>Direccion</th>
-                      <th>Estatus</th>
                       <th>Acción</th>
                     </thead>
                     @foreach($enterpricesSup as $enterprice)
                     <tbody>
                     <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
+                    <td>{{$enterprice->nameemp}}</td>
                     <td>{{$enterprice->legalagent}}</td>
                     <td>{{$enterprice->phone}}</td>
                     <td>{{$enterprice->email}}</td>
@@ -50,9 +49,9 @@
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                     </tbody>
-                    @endforeach
-                  </table>
-               
+                  @endforeach
+                </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -66,7 +65,7 @@
               <p class="header-right">
                {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
               </p>
-              <h4>Empresas Contructoras</h4>
+              <h4>Empresas Supervisoras</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">
@@ -84,11 +83,12 @@
                     @foreach($enterpricesCons as $enterprice)
                     <tbody>
                     <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legal}}</td>
-                    <td>{{$enterprice->tipo}}</td>
-                    <td>{{$enterprice->celphone}}</td>
+                    <td>{{$enterprice->nameemp}}</td>
+                    <td>{{$enterprice->legalagent}}</td>
+                    <td>{{$enterprice->phone}}</td>
+                    <td>{{$enterprice->email}}</td>
                     <td>{{$enterprice->address}}</td>
+                    <td>{{$enterprice->status}}</td>
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>

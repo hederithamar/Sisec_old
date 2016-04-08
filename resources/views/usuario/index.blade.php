@@ -48,13 +48,14 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -86,7 +87,7 @@
                       <th>Empresa</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($usersRGen as $user)
+                    @foreach($usersReG as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -96,7 +97,7 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -134,7 +135,7 @@
                       <th>Empresa</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($usersServ as $user)
+                    @foreach($usersSup as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -144,13 +145,14 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -182,7 +184,7 @@
                       <th>Empresa</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($usersRObr as $user)
+                    @foreach($usersResOb as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -192,13 +194,14 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -230,7 +233,7 @@
                       <th>Empresa</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($usersCen as $user)
+                    @foreach($usersCent as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -240,13 +243,14 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -255,12 +259,12 @@
       </div>
       <div class="accordion">
           <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-6">Jefes de Oficina Técnica</a>
+              <a class="accordion-section-title" href="#accordion-6">Jefe de Oficina Técnica</a>
               <div id="accordion-6" class="accordion-section-content">
               <p class="header-right">
                {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
               </p>
-              <h4>Jefes de Oficina Técnica</h4>
+              <h4>Jefe de Oficina Técnica</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">
@@ -278,7 +282,7 @@
                       <th>Empresa</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($usersJef as $user)
+                    @foreach($usersAdmin as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -288,13 +292,14 @@
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['name']}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
                   </tbody>
                   @endforeach
                 </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->

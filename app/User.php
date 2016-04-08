@@ -48,19 +48,17 @@ class User extends Model implements AuthenticatableContract,
 
     public function enterprice()
     {
-        return $this->hasOne('Sisec\Enterprice','id');   
+        return $this->belongsTo('Sisec\Enterprice');
     }
 
     public function role()
     {
-        return $this->hasOne('Sisec\Role','id');   
+        return $this->belongsTo('Sisec\Role');
     }
 
-    public function scopeRol($query, $desc)
+    public function scopeEmp($query, $desc)
     {
-        return $query->whereHas('role', function($q) use ($desc)
-        {
-            $q->where('desc',$desc);
-        });
+        $query->where('role_id', $desc);
     }
+
 }

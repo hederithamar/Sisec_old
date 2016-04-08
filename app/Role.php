@@ -12,8 +12,9 @@ class Role extends Model
 
     protected $fillable = ['desc'];
 
-    public function scopeType($query, $desc)
+    public function users()
     {
-    	$query->where('desc', $desc);
+    	return $this->HasMany('Sisec\User');
     }
+
 }

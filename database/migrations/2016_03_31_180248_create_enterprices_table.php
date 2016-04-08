@@ -16,7 +16,7 @@ class CreateEnterpricesTable extends Migration
             //Tabla Empresas
             $table->increments('id');
             $table->string('rfc', 16)->unique();
-            $table->string('name', 150);
+            $table->string('nameemp', 150);
             $table->string('legalagent', 100);
             $table->string('type', 20);
             $table->string('status', 2);
