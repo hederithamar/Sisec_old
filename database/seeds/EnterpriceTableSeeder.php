@@ -11,9 +11,13 @@ class EnterpriceTableSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         //
         
     	//Datos para la tabla rol secrean 4 roles manuales
+=======
+        //Datos para la tabla rol secrean 4 roles manuales
+>>>>>>> ded5e4663b0bb99bccc162b565b036a5b2a4c178
         \DB::table('roles')->insert(array(
             'desc'           => 'Administrador'
             ));
@@ -34,7 +38,7 @@ class EnterpriceTableSeeder extends Seeder
         //manda datos ficticios pero definidos manual 2
         factory(Sisec\Enterprice::class)-> create([
             'rfc'           =>'SCT123',
-            'name' => 'SCT'
+            'nameemp' => 'SCT'
             ]);
         //10 datos fiticios moelo empresas
         factory(Sisec\Enterprice::class, 10)->create();

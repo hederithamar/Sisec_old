@@ -21,51 +21,6 @@
               <p class="header-right">
                 {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
               </p>
-              <h4>Empresas Supervisoras</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
-                <div class="form-body">
-                  <!--aqui va la tabla-->
-                  <table class="table">
-                    <thead>
-                      <th>RFC</th>
-                      <th>Nombre</th>
-                      <th>Representante</th>
-                      <th>Celular</th>
-                      <th>Email</th>
-                      <th>Direccion</th>
-                      <th>Estatus</th>
-                      <th>Acción</th>
-                    </thead>
-                    @foreach($enterpricesSup as $enterprice)
-                  <tbody>
-                    <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legalagent}}</td>
-                    <td>{{$enterprice->phone}}</td>
-                    <td>{{$enterprice->email}}</td>
-                    <td>{{$enterprice->address}}</td>
-                    <td>{{$enterprice->status}}</td>
-                    
-                    <td>
-                     {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
-                     </td>
-                  </tbody>
-                  @endforeach
-                </table>
-                </div>
-              </div>
-              </div><!--end .accordion-section-->
-          </div>
-        </div>
-      </div>
-      <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
-              <div id="accordion-2" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
-              </p>
               <h4>Empresas Contructoras</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
@@ -81,20 +36,66 @@
                       <th>Direccion</th>
                       <th>Acción</th>
                     </thead>
-                    @foreach($enterpricesCons as $enterprice)
-                  <tbody>
+                    @foreach($enterpricesSup as $enterprice)
+                    <tbody>
                     <td>{{$enterprice->rfc}}</td>
-                    <td>{{$enterprice->name}}</td>
-                    <td>{{$enterprice->legal}}</td>
-                    <td>{{$enterprice->tipo}}</td>
-                    <td>{{$enterprice->celphone}}</td>
+                    <td>{{$enterprice->nameemp}}</td>
+                    <td>{{$enterprice->legalagent}}</td>
+                    <td>{{$enterprice->phone}}</td>
+                    <td>{{$enterprice->email}}</td>
                     <td>{{$enterprice->address}}</td>
+                    <td>{{$enterprice->status}}</td>
                     <td>
                      {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
-                  </tbody>
+                    </tbody>
                   @endforeach
                 </table>
+                
+                </div>
+              </div>
+              </div><!--end .accordion-section-->
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
+              <div id="accordion-2" class="accordion-section-content">
+              <p class="header-right">
+               {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
+              </p>
+              <h4>Empresas Supervisoras</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table">
+                    <thead>
+                      <th>RFC</th>
+                      <th>Nombre</th>
+                      <th>Representante</th>
+                      <th>Tipo</th>
+                      <th>Celular</th>
+                      <th>Direccion</th>
+                      <th>Acción</th>
+                    </thead>
+                    @foreach($enterpricesCons as $enterprice)
+                    <tbody>
+                    <td>{{$enterprice->rfc}}</td>
+                    <td>{{$enterprice->nameemp}}</td>
+                    <td>{{$enterprice->legalagent}}</td>
+                    <td>{{$enterprice->phone}}</td>
+                    <td>{{$enterprice->email}}</td>
+                    <td>{{$enterprice->address}}</td>
+                    <td>{{$enterprice->status}}</td>
+                    <td>
+                     {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                    </tbody>
+                  @endforeach
+                </table>
+                
                 </div>
               </div>
               </div><!--end .accordion-section-->
@@ -103,7 +104,9 @@
       </div>
     </div>
   </div>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/index.js"></script>
+
+  {!!Html::script('js/classie.jss')!!}
+  {!!Html::script('js/borderMenu.js')!!}
+  {!!Html::script('js/index.js')!!}
+  
 @endsection

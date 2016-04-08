@@ -29,9 +29,31 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(5);
-        
-        return view('usuario.index',compact('users'));
+        $usersAdmin = User::Emp('1')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        $usersReG = User::Emp('2')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        $usersSup = User::Emp('3')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        $usersResOb = User::Emp('4')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        $usersCent = User::Emp('5')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        $usersJef = User::Emp('6')->with(['enterprice','role' => function($query){
+                $query->with('users');
+            }])->Paginate(5);
+
+        return view('usuario.index',compact('usersAdmin','usersReG','usersSup','usersResOb','usersCent','usersJef'));
     }
     /**
      * Show the form for creating a new resource.
@@ -40,7 +62,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {   $roles = Role::lists('desc', 'id');
-        $enterprices = Enterprice::lists('name', 'id');
+        $enterprices = Enterprice::lists('nameemp', 'id');
         return view('usuario.create',compact('roles','enterprices'));
     }
     /**
@@ -74,7 +96,7 @@ class UsuarioController extends Controller
     public function edit($id)
     {   
         $roles = Role::lists('desc', 'id');
-        $enterprices = Enterprice::lists('name', 'id');
+        $enterprices = Enterprice::lists('nameemp', 'id');
         return view('usuario.edit',compact('roles','enterprices'),['user'=>$this->user]);
     }
     /**

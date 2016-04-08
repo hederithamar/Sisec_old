@@ -11,4 +11,10 @@ class Role extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = ['desc'];
+
+    public function users()
+    {
+    	return $this->HasMany('Sisec\User');
+    }
+
 }

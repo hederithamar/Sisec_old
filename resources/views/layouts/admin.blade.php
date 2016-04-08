@@ -74,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <a href="{!!URL::to('admin')!!}" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
             </li>
             <li>
-              <a href="#")!!}><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
+              <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
                 <li>
                   <a href="{!!URL::to('usuario')!!}">Usuarios</a>
@@ -101,7 +101,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </ul>
               <!-- /nav-second-level -->
             </li>
-            </li>
+         
             <li>
               <a href="#"><i class="fa fa-table nav_icon"></i>Tablero de Control<span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
@@ -142,7 +142,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="images/logo.png" width="220" height="75">
+            <img src="/images/logo.png" width="220" height="75">
           </a>
         </div>
         <div class="clearfix"> </div>
@@ -200,15 +200,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         showLeftPush = document.getElementById( 'showLeftPush' ),
         body = document.body;
         
-      showLeftPush.onclick = function() {
-        classie.toggle( this, 'active' );
-        classie.toggle( body, 'cbp-spmenu-push-toright' );
-        classie.toggle( menuLeft, 'cbp-spmenu-open' );
-        disableOther( 'showLeftPush' );
-      };
-      
-
-      function disableOther( button ) {
+        showLeftPush.onclick = function() 
+        {
+          classie.toggle( this, 'active' );
+          classie.toggle( body, 'cbp-spmenu-push-toright' );
+          classie.toggle( menuLeft, 'cbp-spmenu-open' );
+          disableOther( 'showLeftPush' );
+        };
+  
+      function disableOther( button ) 
+      {
         if( button !== 'showLeftPush' ) {
           classie.toggle( showLeftPush, 'disabled' );
         }
