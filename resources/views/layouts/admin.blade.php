@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,28 +6,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
 
-
   <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
     { setTimeout(hideURLbar, 0); }, false); 
     function hideURLbar(){ window.scrollTo(0,1); } 
   </script>
-<!-- Bootstrap Core CSS -->
+  <!-- Bootstrap Core CSS -->
   {!!Html::style('css/bootstrap.css')!!}
-<!-- Custom CSS -->
+  <!-- Custom CSS -->
   {!!Html::style('css/style.css')!!}
-<!-- font CSS -->
-<!-- font-awesome icons -->
+  <!-- font CSS -->
+  <!-- font-awesome icons -->
   {!!Html::style('css/font-awesome.css')!!}
-<!-- //font-awesome icons -->
- <!-- js-->
+  <!-- //font-awesome icons -->
+  <!-- js-->
   {!!Html::script('js/jquery-1.11.1.min.js')!!}
   {!!Html::script('js/modernizr.custom.js')!!}
-<!--webfonts-->
+  <!--webfonts-->
   {!!Html::style('//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic')!!}
-<!--//webfonts--> 
-<!--select-->
+  <!--//webfonts--> 
+  <!--select-->
   {!!Html::style('css/select2.min.css')!!}
   {!!Html::script('js/select2.full.min.js')!!}
   <script type="text/javascript">
@@ -51,6 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       tags: true
       })
     });
+
 </script>
   <!--libreria para manipular los select -->
 
@@ -58,28 +52,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!--//select-->
 
-<!--animate-->
+  </script>
+  <!--//select-->
+
+
+  <!--animate-->
   {!!Html::style('css/animate.css')!!}
   {!!Html::script('js/wow.min.js')!!}
   <script>
      new WOW().init();
   </script>
-<!--//end-animate-->
-<!-- chart -->
+  <!--//end-animate-->
+  <!-- chart -->
   {!!Html::script('js/Chart.js')!!}
-<!-- //chart -->
-<!-- Metis Menu -->
+  <!-- //chart -->
+  <!-- Metis Menu -->
   {!!Html::script('js/metisMenu.min.js')!!}
   {!!Html::script('js/custom.js')!!}
   {!!Html::style('css/custom.css')!!}
-<!--//Metis Menu -->
-
+  <!--//Metis Menu -->
 </head> 
+
 <body class="cbp-spmenu-push">
   <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
-      <div class="navbar-collapse">
+        <div class="navbar-collapse">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
@@ -161,7 +159,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">"75">
           </a>
         </div>
         <div class="clearfix"> </div>
@@ -234,13 +232,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
       }
     </script>
-  <!--scrolling js-->
+    <!--scrolling js-->
   
-  {!!Html::script('js/scripts.js')!!}
-  <!--//scrolling js-->
-  <!-- Bootstrap Core JavaScript -->
+    {!!Html::script('js/scripts.js')!!}
+    <!--//scrolling js-->
+    <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
     @section('scripts')
     @show
-</body>
+  </body>
 </html>

@@ -19,7 +19,7 @@
     white-space: nowrap;
 }
 </style>
-	<div clas="container" id="Layer1" overflow: scroll;>
+  <div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
         <div class="accordion">
           <div class="accordion-section">
@@ -27,7 +27,7 @@
               <div id="accordion-1" class="accordion-section-content">
               <p class="header-right">
 
-    			     {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
 
               </p>
               <h4>Administradores</h4>
@@ -77,6 +77,7 @@
               </div>
             </div>
           </div><!--end .accordion-section-->
+            {!!$enterpricesSup->render()!!}
         </div>
       </div>
     </div>
