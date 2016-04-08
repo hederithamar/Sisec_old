@@ -35,7 +35,7 @@ class UserCreateRequest extends Request
             'enterprice_id' => 'required',
             'state' => 'required',
             'zone' => 'required',
-            'id_curp' => 'required',
+           
         ];
     }
 }

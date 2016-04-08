@@ -27,7 +27,7 @@
 							<div class="forgot-grid">
 								<label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i></i>Recordar sesión</label>
 								<div class="forgot">
-									<a href="#">¿Olvido su contraseña?</a>
+									<a href="{!!URL::to('admin')!!}">¿Olvido su contraseña?</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>

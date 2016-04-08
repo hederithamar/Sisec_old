@@ -27,10 +27,22 @@ class EmpresaController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    /*public function listing(){
+        $enterprices = Enterprice::all();
+        return response()->json(
+                $enterprices->toArray()
+            );
+    }*/
+
     public function index()
     {
+<<<<<<< HEAD
         $enterpricesSup = Enterprice::Type("Supervisora")->paginate(5);
         $enterpricesCons = Enterprice::Type("Constructora")->paginate(5);
+=======
+        $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
+        $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);
+>>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
     }
 
@@ -41,7 +53,9 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('empresa.create');
+        $enterprices = Enterprice::lists('rfc', 'id');
+        return view('empresa.create',compact('enterprices'));
+
     }
 
     /**
@@ -52,9 +66,16 @@ class EmpresaController extends Controller
      */
     public function store(EnterpriceCreateRequest $request)
     {
-        Enterprice::create($request->all());
-        Session::flash('message','Empresa Creada Correctamente');
-        return Redirect::to('/empresa');
+        $message = 'Empresa Creada Correctamente';
+        if($request->ajax()){
+            Enterprice::create($request->all());
+            return response()->json([
+                "mensaje" => $message
+            ]);
+        }else {
+                Session::flash('message','No se Guardo');
+                return Redirect::to('rol')->withErrors('Error');
+            }
     }
 
     /**

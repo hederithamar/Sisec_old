@@ -28,10 +28,20 @@ class RolController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function listing(){
+        $roles = Role::all();
+        return response()->json(
+                $roles->toArray()
+            );
+    }
+
     public function index()
     {
+<<<<<<< HEAD
         //
         $roles = Role::paginate(5);
+=======
+>>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
         return view('rol.index',compact('roles'));
     }
 
@@ -53,9 +63,16 @@ class RolController extends Controller
      */
     public function store(RoleCreateRequest $request)
     {
-        Role::create($request->all());
-        Session::flash('message','Rol Creado Correctamente');
-        return Redirect::to('/rol');
+        $message = 'Rol Creada Correctamente';
+        if($request->ajax()){
+            Role::create($request->all());
+            return response()->json([
+                "mensaje" => $message
+            ]);
+        }else {
+                Session::flash('message','No se Guardo');
+                return Redirect::to('rol')->withErrors('Error');
+            }
     }
 
     /**

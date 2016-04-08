@@ -37,7 +37,7 @@ body {
 .accordion {
 	overflow:hidden;
 	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
-	border-radius:10px;
+	border-radius:3px;
 	background:#f7f7f7;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .accordion-section-title.active, .accordion-section-title:hover {
-	background:#7AAF42;
+	background:#A5A8A1;
 	/*Tipografia */
 	text-decoration:none;
 border-color: #fff;

@@ -1,5 +1,5 @@
 	<div class="form-group">
-		<div class="col-md-4 form-group">
+		<div class="col-md-4 form-group changeState">
 			{!!Form::label('nombre','Nombre(s):')!!}
 			{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
 		</div>
@@ -86,7 +86,4 @@
 		<br>
 		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-	<div class="col-md-6 form-group">
-		{!!Form::label('id_curp','CURP:')!!}
-		{!!Form::text('id_curp',null,['class'=>'form-control','placeholder'=>'Curpcreada'])!!}
-	</div>
+	

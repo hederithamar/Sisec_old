@@ -40,10 +40,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     $('select').select2();
   </script>
   <script type="text/javascript">
-            $(document).ready(function() {
-                $(".js-example-basic-single").select2();
-            });
+    $(document).ready(function() {
+      $(".js-example-basic-single").select2();
+    });
   </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".js-example-tags").select2({
+      tags: true
+      })
+    });
+</script>
 <!--//select-->
 
 <!--animate-->
@@ -67,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
-            <div class="navbar-collapse">
+      <div class="navbar-collapse">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
@@ -142,7 +149,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="/images/logo.png" width="220" height="75">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
           </a>
         </div>
         <div class="clearfix"> </div>
@@ -216,9 +223,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       }
     </script>
   <!--scrolling js-->
+  
   {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
+    @section('scripts')
+    @show
 </body>
 </html>
