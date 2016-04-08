@@ -1,27 +1,25 @@
 @extends('layouts.admin')
 @include('alerts.success')
 
-	{!!Html::style('css/normalize.css')!!}
+  {!!Html::style('css/normalize.css')!!}
   {!!Html::style('css/demo.css')!!}
+  {!!Html::style('css/filtergrid.css')!!}
   {!!Html::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css')!!}
   {!!Html::style('http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')!!}
   {!!Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')!!}
   {!!Html::script('js/modernizr.custom.js')!!}
   {!!Html::script('js/accordion.js')!!}
-  <!--Filtrado de la tabla-->
-   {!!Html::script('js/tablefilter_all_min.js')!!}
-    {!!Html::link('js/filtergrid.css')!!}
-   
+  {!!Html::script('js/tablefilter_all_min.js')!!}
 
-  <style type="text/css">
-    .texto_pag1 {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      color: #000;
-    }
-  </style>
 
 @section('content')
+<style type="text/css">
+.container {
+    width: 30em;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+</style>
 	<div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
       <div class="accordion">
@@ -40,25 +38,16 @@
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table1" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                      <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersAdmin as $user)
                   <tbody>
@@ -77,8 +66,7 @@
                   </tbody>
                   @endforeach
                 </table>
-
-                 <script>
+                <script>
                   var table1_Props = {
                       col_0: "input",
                       col_9: "none",
@@ -87,13 +75,13 @@
                   };
                   var tf1 = setFilterGrid("table1", table1_Props);
                 </script>
-                </div>
               </div>
-              </div><!--end .accordion-section-->
-          </div>
+            </div>
+          </div><!--end .accordion-section-->
         </div>
       </div>
-      <div class="accordion">
+    </div>
+    <div class="accordion">
           <div class="accordion-section">
               <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
               <div id="accordion-2" class="accordion-section-content">
@@ -106,26 +94,17 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table2" border="1" cellpadding="25" cellspacing="2">
-                    <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                       <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                      <thead>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersRGen as $user)
                   <tbody>
@@ -172,26 +151,17 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table3" border="1" cellpadding="25" cellspacing="2">
-                    <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                        <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                      <thead>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersServ as $user)
                   <tbody>
@@ -238,26 +208,17 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table4" border="1" cellpadding="25" cellspacing="2">
-                    <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                        <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                     <thead>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersRObr as $user)
                   <tbody>
@@ -305,25 +266,16 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table5" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                        <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersCen as $user)
                   <tbody>
@@ -371,25 +323,16 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th>Nombre</th>
-                      <th>Apellido P.</th>
-                      <th>Apellido M.</th>
-                      <th>Email</th>
-                      <th>Estado</th>
-                      <th>Zona</th>
-                      <th>Celular</th>
-                      <th>Telefono</th>
-                      <th>Empresa</th>
-                      <th>Acción</th>
-                        <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                   </tr>
+                      <th width="6">Nombre</th>
+                      <th width="6">Apellido P.</th>
+                      <th width="6">Apellido M.</th>
+                      <th width="6">Email</th>
+                      <th width="20">Estado</th>
+                      <th width="10">Zona</th>
+                      <th width="10">Celular</th>
+                      <th width="10">Telefono</th>
+                      <th width="6">Empresa</th>
+                      <th width="10">Accion</th>
                     </thead>
                     @foreach($usersJef as $user)
                   <tbody>
