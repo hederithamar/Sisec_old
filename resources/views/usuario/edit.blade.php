@@ -8,7 +8,7 @@
 				<h4>Actualizar usuario:</h4>
 			</div>
 			<div class="form-body">
-				{!!Form::model($user,['route'=>['usuario.update',$user],'method'=>'PUT'])!!}
+				{!!Form::model($user,['route'=>['usuario.update',$user],'method'=>'PUT'],array('onsubmit' => 'return false', 'id' => 'formulario_user', 'class'=>'valida'))!!}
 					@include('usuario.forms.usr')
 			</div>
 		</div>

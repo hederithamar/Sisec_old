@@ -11,8 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
-
-
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
@@ -167,7 +166,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="clearfix"> </div>
       </div>
       <div class="search-box">
-        <h3>Sistema de Seguimiento y Control de Carreteras</h3>
+
+        <center><h3>Sistema de Seguimiento y Control de Carreteras</h3></center>
         <span></span>
       </div>
 
@@ -234,7 +234,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
       }
     </script>
-  <!--scrolling js-->
   
   {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->

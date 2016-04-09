@@ -1,21 +1,21 @@
 	<div class="form-group">
 		<div class="col-md-4 form-group changeState">
 			{!!Form::label('nombre','Nombre(s):')!!}
-			{!!Form::text('name',null,['class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
+			{!!Form::text('name',null,['id' => 'name','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa el Nombre del usuario'])!!}
 		</div>
 		<div class="col-md-4 form-group">
 			{!!Form::label('firstlastname','Apellido Paterno:')!!}
-			{!!Form::text('firstlastname',null,['class'=>'form-control','placeholder'=>'Ingresa tu apellido paterno'])!!}
+			{!!Form::text('firstlastname',null,['id' => 'firstlastname','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa tu apellido paterno'])!!}
 		</div>
 		<div class="col-md-4 form-group">
 			{!!Form::label('secondlastname','Apellidos Materno:')!!}
-			{!!Form::text('secondlastname',null,['class'=>'form-control','placeholder'=>'Ingresa tu apellido materno'])!!}
+			{!!Form::text('secondlastname',null,['id' => 'secondlastname','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa tu apellido materno'])!!}
 		</div>
 	</div>
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('celphone','Celular:')!!}
-		{!!Form::text('celphone',null,['class'=>'form-control','placeholder'=>'Ingresa un numero de celular'])!!}
+		{!!Form::text('celphone',null,['id' => 'celphone','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa un numero de celular'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('phone','Telfono fijo:')!!}
@@ -24,11 +24,11 @@
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('email','Correo:')!!}
-		{!!Form::text('email',null,['class'=>'form-control','placeholder'=>'Ingresa tu correo electronico'])!!}
+		{!!Form::text('email',null,['id' => 'email','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa tu correo electronico'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('password','Contraseña:')!!}
-		{!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingresa tu password'])!!}
+		{!!Form::password('password',['id' => 'password','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa tu password'])!!}
 	</div>
 
 	<div class="col-md-6 form-group">
