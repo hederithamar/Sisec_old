@@ -36,13 +36,13 @@ class EmpresaController extends Controller
 
     public function index()
     {
-<<<<<<< HEAD
+
         $enterpricesSup = Enterprice::Type("Supervisora")->paginate(5);
         $enterpricesCons = Enterprice::Type("Constructora")->paginate(5);
-=======
+
         $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
         $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);
->>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
+
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
     }
 

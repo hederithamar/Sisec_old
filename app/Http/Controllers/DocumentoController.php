@@ -3,23 +3,25 @@
 namespace Sisec\Http\Controllers;
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
-use Sisec\Http\Requests\EnterpriceCreateRequest;
-use Sisec\Http\Requests\EnterpriceUpdateRequest;
+use Sisec\Http\Requests\DocCreateRequest;
+use Sisec\Http\Requests\DocUpdateRequest;
 use Sisec\Http\Controllers\Controller;
+use Sisec\Doc;
 use Sisec\Enterprice;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
+
 
 class DocumentoController extends Controller
 {
     public function __construct(){
         //$this->middleware('auth');
         //$this->middleware('admin');
-        $this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
+        $this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
     }
     public function find(Route $route){
-        $this->enterprice = Enterprice::find($route->getParameter('documento'));
+        $this->doc = Doc::find($route->getParameter('documento'));
     }
     /**
      * Display a listing of the resource.
@@ -29,9 +31,11 @@ class DocumentoController extends Controller
 
     public function index()
     {
-        $enterprices = Enterprice::paginate(5);
+        $docs = Doc::Type("Propuesta Ganadora de la obra")->paginate(5);
+        $docg = Doc::Type("Propuesta Ganadora de Supervisión")->paginate(5);
+        $docl = Doc::Type("Proceso de Licitación de la Supervisión")->paginate(5);
         
-        return view('documento.index',compact('enterprices'));
+        return view('documento.index',compact('docs',"docg",'docl'));
     }
 
     /**
@@ -41,20 +45,23 @@ class DocumentoController extends Controller
      */
     public function create()
     {
-        return view('empresa.create');
-    }
 
-    /**
+        return view('documento.create');
+    }
+        /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EnterpriceCreateRequest $request)
+    public function store(DocCreateRequest $request)
     {
-        Enterprice::create($request->all());
-        Session::flash('message','Empresa Creada Correctamente');
-        return Redirect::to('/empresa');
+        /**Docs::create($request->all());
+        Session::flash('message','Documentos creados ');
+        return Redirect::to('/documento');**/
+        Doc::create($request->all());
+        Session::flash('message','Documento Creado Correctamente');
+        return Redirect::to('/documento');
     }
 
     /**
@@ -65,7 +72,10 @@ class DocumentoController extends Controller
      */
     public function show($id)
     {
-        //
+        
+
+
+        
     }
 
     /**
@@ -76,7 +86,7 @@ class DocumentoController extends Controller
      */
     public function edit($id)
     {
-        return view('empresa.edit',['enterprice'=>$this->enterprice]);
+        return view('documento.edit',['doc'=>$this->doc]);
     }
 
     /**
@@ -86,12 +96,12 @@ class DocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EnterpriceUpdateRequest $request, $id)
+    public function update(DocUpdateRequest $request, $id)
     {
-        $this->enterprice->fill($request->all());
-        $this->enterprice->save();
-        Session::flash('message','Empresa Actualizada Correctamente');
-        return Redirect::to('/empresa');
+        $this->doc->fill($request->all());
+        $this->doc->save();
+        Session::flash('message',' Documento Actualizado');
+        return Redirect::to('/documento');
     }
 
     /**
@@ -102,8 +112,8 @@ class DocumentoController extends Controller
      */
     public function destroy($id)
     {
-        $this->enterprice->delete();
-        Session::flash('message','Empresa Eliminada Correctamente');
-        return Redirect::to('/empresa');
+        $this->doc->delete();
+        Session::flash('message','Docuemento borrado Correctamente');
+        return Redirect::to('/documento');
     }
 }

@@ -16,9 +16,9 @@
   <div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
       <div class="accordion">
-<<<<<<< HEAD
+
           <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-1">Empresas Supervisoras</a>
+              <a class="accordion-section-title" href="#accordion-1">Empresas</a>
               <div id="accordion-1" class="accordion-section-content">
               <p class="header-right">
                 {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
@@ -54,7 +54,7 @@
                   @endforeach
                 </table>
                 
-=======
+
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-1">Empresas Supervisoras</a>
             <div id="accordion-1" class="accordion-section-content">
@@ -102,7 +102,7 @@
                       </div>    
                     {!!$enterpricesSup->render()!!}
                   </div>
->>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
+
                 </div>
             </div>
         </div><!--end .accordion-section-->
@@ -117,7 +117,7 @@
               <h4>Empresas Supervisoras</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
-<<<<<<< HEAD
+
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table class="table">
@@ -146,7 +146,7 @@
                   @endforeach
                 </table>
                 
-=======
+
                   <div class="form-body">
                       <!--aqui va la tabla-->
                     <table id="table2" class="table-editable" >
@@ -183,7 +183,7 @@
                       };
                       var tf2 = setFilterGrid("table2", table2_Props);
                     </script>
->>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
+                    
                 </div>
                  {!!$enterpricesCons->render()!!}
               </div>

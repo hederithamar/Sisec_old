@@ -13,11 +13,10 @@
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('name','Nombre:')!!}
-<<<<<<< HEAD
+
 		{!!Form::text('nameemp',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
-=======
-		{!!Form::text('name',null,['id'=>'name','class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
->>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
+
+		
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('tipo','Tipo de empresa:')!!}

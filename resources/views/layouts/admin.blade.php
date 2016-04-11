@@ -44,6 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       $(".js-example-basic-single").select2();
     });
   </script>
+<<<<<<< HEAD
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
@@ -51,6 +52,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       })
     });
 </script>
+=======
+  <!--libreria para manipular los select -->
+
+  <script type="text/javascript" src="dynamicoptionlist.js"></script>
+>>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee
 <!--//select-->
 
 <!--animate-->
