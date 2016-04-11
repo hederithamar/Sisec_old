@@ -61,7 +61,10 @@ class EmpresaController extends Controller
      */
     public function store(EnterpriceCreateRequest $request)
     {
-        $message = 'Empresa Creada Correctamente';
+         Enterprice::create($request->all());
+        Session::flash('message','Empresa Creada Correctamente');
+        return Redirect::to('/empresa'); 
+        /*$message = 'Empresa Creada Correctamente';
         if($request->ajax()){
             Enterprice::create($request->all());
             return response()->json([
@@ -70,7 +73,7 @@ class EmpresaController extends Controller
         }else {
                 Session::flash('message','No se Guardo');
                 return Redirect::to('rol')->withErrors('Error');
-            }
+            }*/
     }
 
     /**
@@ -92,7 +95,9 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        return view('empresa.edit',['enterprice'=>$this->enterprice]);
+        $enterprices = Enterprice::lists('nameemp', 'id');
+        return view('empresa.edit',compact('enterprices'),['enterprice'=>$this->enterprice]);
+        
     }
 
     /**

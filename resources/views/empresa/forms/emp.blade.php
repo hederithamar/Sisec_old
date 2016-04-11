@@ -7,13 +7,15 @@
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('enterprice_id','Vuelva a regtificar el RFC de la Empresa:')!!}
+		
 		<br>
-		{!!Form::select('rfc', $enterprices, null, ['id'=>'rfc','class' => 'js-example-tags js-states form-control']);!!}
+		{!!Form::text('rfc',null,['id' => 'rfc','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
+	</div>
 	</div>
 
 	<div class="col-md-6 form-group">
 		{!!Form::label('name','Nombre:')!!}
-		{!!Form::text('nameemp',null,['class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
+		{!!Form::text('nameemp',null,['id' => 'nameemp','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa el nombre de la empresa'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('tipo','Tipo de empresa:')!!}
@@ -23,15 +25,16 @@
 	
 	<div class="col-md-6 form-group">
 		{!!Form::label('address','Dirección:')!!}
-		{!!Form::text('address',null,['id'=>'address','class'=>'form-control','placeholder'=>'Ingresa la Dirección de la empresa'])!!}
+		{!!Form::text('address',null,['id' => 'address','required' => 'true','id'=>'address','class'=>'form-control','placeholder'=>'Ingresa la Dirección de la empresa'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('legal','Representante legal:')!!}
-		{!!Form::text('legalagent',null,['id'=>'legalagent','class'=>'form-control','placeholder'=>'Ingresa el representante legal de la empresa'])!!}
+		{!!Form::text('legalagent',null,['id' => 'legalagent','required' => 'true','class'=>'form-control','placeholder'=>'Ingresa el representante legal de la empresa'])!!}
 	</div>
+	
 	<div class="col-md-6 form-group">
 		{!!Form::label('email','Email:')!!}
-		{!!Form::text('email',null,['id'=>'email','class'=>'form-control','placeholder'=>'Ingresa un correo electronico'])!!}
+		{!!Form::text('email',null,['id'=>'email','filter'=>'email','required'=>'true','class'=>'form-control','placeholder'=>'Ingresa un correo electronico'])!!}
 	</div>
 	<div class="col-md-6 form-group">
 		{!!Form::label('phone','Celular:')!!}
