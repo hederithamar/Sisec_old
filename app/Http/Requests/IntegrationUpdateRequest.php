@@ -4,7 +4,7 @@ namespace Sisec\Http\Requests;
 
 use Sisec\Http\Requests\Request;
 
-class ExpUpdateRequest extends Request
+class IntegrationUpdateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,7 +21,7 @@ class ExpUpdateRequest extends Request
      *
      * @return array
      */
-    public function rules()
+    public function integrations()
     {
        
     }

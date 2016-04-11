@@ -24,12 +24,13 @@ class IntegrationCreateRequest extends Request
     public function rules()
     {
         return [
-            'typecontract' => 'required',
+            'ep' => 'required',
+            'type' => 'required',
             'name' => 'required',
             'description' => 'required',
-            'ep' => 'required',
-            'fort' => 'required',
-            'weigth' => 'required'
+            'format'=> 'required',
+            'weigth' => 'required',
+            'route' => 'required',
         ];
     }
 }

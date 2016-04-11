@@ -29,7 +29,7 @@ class IntegracionController extends Controller
      */
     public function index()
     {
-        $integrations = Integration::paginate(25);
+        $integrations = Integration::paginate(5);
         
         return view('integra.index',compact('integrations'));
         

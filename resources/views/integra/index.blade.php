@@ -29,24 +29,26 @@
                   <table class="table">
                     <thead>
                      
-										<TH>Tipo de Doc.</TH>
-                    <!--TH>Tipo de Proceso</TH-->
+						
+                    
                     <th>E.P.</th>
+                    <TH>Tipo de Doc.</TH>
                     <TH>Nombre</TH>
                     <TH>Descripcion</TH>
                     <th>Formato</th>
                     <th>Peso</th>
+                    <TH>Ruta</TH>
 
 												</thead>
 
            @foreach($integrations as $integration)
 									<tbody>
 										
-										<td>{{$integration->typecontract}}</td>
-                    <td>{{$integration->ep}}</td>
-										<td>{{$integration->name}}</td>
+										<td>{{$integration->ep}}</td>
+                    <td>{{$integration->type}}</td>
+                    <td>{{$integration->name}}</td>
 										<td>{{$integration->description}}</td>
-										<td>{{$integration->fort}}</td>
+										<td>{{$integration->format}}</td>
 										<td>{{$integration->weight}}</td>
                     <td>{{$integration->route}}</td>                  
 										<td>
