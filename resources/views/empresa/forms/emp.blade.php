@@ -2,7 +2,7 @@
 	<div class="col-md-6 form-group">
 		{!!Form::label('enterprice_id','Escribe el RFC:')!!}
 		<br>
-		{!!Form::select('rfc1', $enterprices, null, ['id'=>'rfc1','class' => 'js-example-tags js-states form-control']);!!}
+		{!!Form::select('rfc', $enterprices, null, ['id'=>'rfc1','class' => 'js-example-tags js-states form-control']);!!}
 	</div>
 
 	<div class="col-md-6 form-group">
