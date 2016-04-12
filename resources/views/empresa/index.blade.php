@@ -22,6 +22,7 @@
   </style>
 
   @section('content')
+  <div class="graph">
   <!--/sub-heard-part-->
   <div class="sub-heard-part">
     <ol class="breadcrumb m-b-0">
@@ -136,5 +137,5 @@
       </div>
     </div><!--end .accordion-section-->
   </div>
-
+  </div>
 @endsection

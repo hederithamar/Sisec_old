@@ -246,8 +246,6 @@
         </header>
       <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
       <!--/down-->
-
-
               <div class="down">  
                     <a href="{!!URL::to('admin')!!}"><img src="/images/in10.jpg"></a>
                     <a href="{!!URL::to('admin')!!}"><span class=" name-caret">Usuario 1</span></a>
@@ -322,6 +320,8 @@
   
   {!!Html::script('js/scripts.js')!!}
   {!!Html::script('js/bootstrap.min.js')!!}
+  @section('scripts')
+  @show
   <!-- Bootstrap Core JavaScript -->
   
 </body>

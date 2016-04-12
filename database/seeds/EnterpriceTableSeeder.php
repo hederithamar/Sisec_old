@@ -44,24 +44,33 @@ class EnterpriceTableSeeder extends Seeder
 
         //$enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
 
-        factory(Sisec\User::class, 5)-> create([
+        factory(Sisec\User::class, 15)-> create([
             'role_id' => '1',
             'enterprice_id' => '1',
-            'name'           =>'Heder Ithamar',
             ]);
 
-        factory(Sisec\User::class, 5)-> create([
+        factory(Sisec\User::class, 15)-> create([
             'role_id' => '2',
             'enterprice_id' => '2',
-            'name'           =>'Heder Ithamar',
             ]);
         
-        factory(Sisec\User::class, 5)-> create([
+        factory(Sisec\User::class, 15)-> create([
             'role_id' => '3',
             'enterprice_id' => '3',
-            'name'           =>'Heder Ithamar',
             ]);
 
+        factory(Sisec\User::class, 15)-> create([
+            'role_id' => '4',
+            'enterprice_id' => '4',
+            ]);
+        factory(Sisec\User::class, 15)-> create([
+            'role_id' => '5',
+            'enterprice_id' => '5',
+            ]);
+        factory(Sisec\User::class, 15)-> create([
+            'role_id' => '6',
+            'enterprice_id' => '6',
+            ]);
         /*\DB::table('users')->insert(array(
             'name' => ,
             'firstlastname' => $faker->lastname,
