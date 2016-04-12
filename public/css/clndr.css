@@ -18,11 +18,11 @@
     font-size: 1em;
 }
 .cal1 .clndr .clndr-controls {
-    display: inline-block;
+        display: inline-block;
     width: 100%;
     position: relative;
     padding: 1em;
-    background-color: #4F52BA;
+    background-color: #052963;
     margin: 0;
 }
 .cal1 .clndr .clndr-controls .month {
@@ -33,11 +33,12 @@
     color: #fff;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button {
-  float: left;
-  width: 33%;
-  font-size: 1em;
+    float: left;
+    width: 33%;
+    font-size: 1em;
     color: #fff;
-	margin-top: 0.4em;
+    margin-top: 0.4em;
+    text-transform: capitalize;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button.rightalign {
   text-align: right;
@@ -52,7 +53,7 @@
   /* IE10+ */
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
-  color: #F2B33F;
+ color: #00C6D7;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive {
   opacity: 0.5;
@@ -71,7 +72,7 @@
   /* IE10+ */
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
-  color: #F2B33F;
+      color: #00C6D7;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive {
   opacity: 0.5;
@@ -85,16 +86,16 @@
   width: 100%;
 }
 .cal1 .clndr .clndr-table .header-days {
-    height: 40px;
+       height: 60px;
     font-size: 1em;
-    background: #A9A9A9;
+        background-color: #052963;
 }
 .cal1 .clndr .clndr-table .header-days .header-day {
   vertical-align: middle;
   text-align: center;
   border-left: 1px solid #D8D8D8;
   border-top: 1px solid #D8D8D8;
-  color: #fff;
+  color:#00C6D7;
 }
 .cal1 .clndr .clndr-table .header-days .header-day:last-child {
   border-right: 1px solid #D8D8D8;
@@ -116,12 +117,12 @@
 }
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
-  background: rgba(97, 100, 193, 0.57);
+     background: rgb(0, 198, 215);
     color: #fff;
 }
 .cal1 .clndr .clndr-table tr .day.today:hover,
 .cal1 .clndr .clndr-table tr .day.my-today:hover {
-  background:rgba(97, 100, 193, 0.57);
+ background: #ea4c89;
 }
 .cal1 .clndr .clndr-table tr .day.today.event,
 .cal1 .clndr .clndr-table tr .day.my-today.event {
@@ -129,8 +130,8 @@
 }
 .cal1 .clndr .clndr-table tr .day.event,
 .cal1 .clndr .clndr-table tr .day.my-event {
-  color: #D81B60;
-  font-weight: 600;
+	color: #00C6D7;
+    font-weight: 400;
 }
 .cal1 .clndr .clndr-table tr .day.event:hover,
 .cal1 .clndr .clndr-table tr .day.my-event:hover {

@@ -581,6 +581,9 @@
 .fa-arrows-h:before {
   content: "\f07e";
 }
+.fa-bar-chart-o:before {
+  content: "\f0f6";
+}
 .fa-twitter-square:before {
   content: "\f081";
 }
@@ -1358,10 +1361,4 @@
 }
 .fa-plus-square-o:before {
   content: "\f196";
-}
-.fa-bar-chart:before {
-    content: "\f080";
-}
-.fa-send-o:before, .fa-paper-plane-o:before {
-    content: "\f1d9";
 }

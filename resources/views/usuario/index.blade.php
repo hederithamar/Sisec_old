@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @include('alerts.success')
 
-
+  <!--libreria para manipular los acordeones -->
   {!!Html::style('css/normalize.css')!!}
   {!!Html::style('css/demo.css')!!}
   {!!Html::style('css/filtergrid.css')!!}
@@ -12,16 +12,24 @@
   {!!Html::script('js/accordion.js')!!}
   {!!Html::script('js/tablefilter_all_min.js')!!}
 
-@section('content')
-<style type="text/css">
-.container {
+
+  <style type="text/css">
+  .container {
     width: 30em;
     overflow-x: auto;
     white-space: nowrap;
-}
-</style>
+  }
+  </style>
 
-@section('content')
+  @section('content')
+  <!--/sub-heard-part-->
+  <div class="sub-heard-part">
+    <ol class="breadcrumb m-b-0">
+      <li><a href="{!!URL::to('admin')!!}">Home</a></li>
+      <li class="active">Usuarios</li>
+    </ol>
+  </div>  
+  <!--/sub-heard-part-->  
   <div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
         <div class="accordion">
@@ -60,12 +68,11 @@
                     <td>{{$user->enterprice['nameemp']}}</td>
                     <td>{{$user->status}}</td>
                     <td>
-                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                     </td>
+                    {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                    </td>
                   </tbody>
                   @endforeach
                 </table>
-
                 <script>
                   var table1_Props = {
                       col_0: "input",
@@ -75,26 +82,26 @@
                   };
                   var tf1 = setFilterGrid("table1", table1_Props);
                 </script>
-               </div>
               </div>
             </div>
-          </div><!--end .accordion-section-->
+          </div>
         </div>
       </div>
-    </div>
+    </div><!--end .accordion-section-->
     <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
-              <div id="accordion-2" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
-              <h4>Residentes Generales</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
+      <div class="accordion-section">
+        <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
+        <div id="accordion-2" class="accordion-section-content">
+          <p class="header-right">
+          {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+          </p>
+          <h4>Residentes Generales</h4>
+            <div id="table" class="table-editable">
+              <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table2" border="1" cellpadding="25" cellspacing="2">
+
                      <thead>
                       <th width="20">Nombre</th>
                       <th width="7">Email</th>
@@ -134,24 +141,24 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
-              </div>
               </div><!--end .accordion-section-->
+            </div>
           </div>
         </div>
-      </div>
       <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
-              <div id="accordion-3" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
-              <h4>SuperIntedentes de Servicio</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
+        <div class="accordion-section">
+          <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
+          <div id="accordion-3" class="accordion-section-content">
+            <p class="header-right">
+              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+            </p>
+            <h4>SuperIntedentes de Servicio</h4>
+            <div id="table" class="table-editable">
+              <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table3" border="1" cellpadding="25" cellspacing="2">
+
                      <thead>
                       <th width="7">Nombre</th>
                       <th width="7">Apellido P.</th>
@@ -194,20 +201,20 @@
                 </script>
                 </div>
               </div>
-              </div><!--end .accordion-section-->
+            </div><!--end .accordion-section-->
           </div>
         </div>
       </div>
       <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-4">Residentes de Obra</a>
-              <div id="accordion-4" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
-              <h4>Residentes de Obra</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
+        <div class="accordion-section">
+          <a class="accordion-section-title" href="#accordion-4">Residentes de Obra</a>
+          <div id="accordion-4" class="accordion-section-content">
+            <p class="header-right">
+              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+            </p>
+            <h4>Residentes de Obra</h4>
+            <div id="table" class="table-editable">
+              <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table4" border="1" cellpadding="25" cellspacing="2">
@@ -225,6 +232,7 @@
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersResOb as $user)
+
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -253,20 +261,20 @@
                 </script>
                 </div>
               </div>
-              </div><!--end .accordion-section-->
+            </div>
           </div>
         </div>
-      </div>
+      </div><!--end .accordion-section-->
       <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-5">Centro SCT</a>
-              <div id="accordion-5" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
-              <h4>Centro SCT</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
+        <div class="accordion-section">
+          <a class="accordion-section-title" href="#accordion-5">Centro SCT</a>
+          <div id="accordion-5" class="accordion-section-content">
+            <p class="header-right">
+              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+            </p>
+            <h4>Centro SCT</h4>
+            <div id="table" class="table-editable">
+              <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table5" border="1" cellpadding="25" cellspacing="2">
@@ -284,6 +292,7 @@
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersCent as $user)
+
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -310,24 +319,25 @@
                   };
                   var tf5 = setFilterGrid("table5", table1_Props);
                 </script>
-                </div>
               </div>
-              </div><!--end .accordion-section-->
-          </div>
+            </div>
+          </div><!--end .accordion-section-->
         </div>
       </div>
-      <div class="accordion">
-          <div class="accordion-section">
-              <a class="accordion-section-title" href="#accordion-6">Jefe de Oficina Técnica</a>
-              <div id="accordion-6" class="accordion-section-content">
-              <p class="header-right">
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
-              <h4>Jefe de Oficina Técnica</h4>
-              <div id="table" class="table-editable">
-                <div class="forms">
-                <div class="form-body">
+    </div>
+    <div class="accordion">
+      <div class="accordion-section">
+          <a class="accordion-section-title" href="#accordion-6">Jefe de Oficina Técnica</a>
+        <div id="accordion-6" class="accordion-section-content">
+            <p class="header-right">
+              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+            </p>
+          <h4>Jefe de Oficina Técnica</h4>
+          <div id="table" class="table-editable">
+            <div class="forms">
+              <div class="form-body">
                   <!--aqui va la tabla-->
+
                   <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
                     <thead>
                       <th width="7">Nombre</th>
@@ -360,8 +370,9 @@
                   </tbody>
                   @endforeach
                 </table>
-                 <script>
+                <script>
                   var table6_Props = {
+
                       col_0: "input",
                       col_10: "none",
                       display_all_text: " [ Show all ] ",
@@ -369,13 +380,13 @@
                   };
                   var tf6 = setFilterGrid("table6", table6_Props);
                 </script>
-                </div>
               </div>
-              </div><!--end .accordion-section-->
-          </div>
+            </div>
+          </div><!--end .accordion-section-->
         </div>
       </div>
     </div>
   </div>
+  
 
 @endsection
