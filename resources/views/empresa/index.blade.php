@@ -51,6 +51,8 @@
                           </tbody>
                           @endforeach
                         </table>
+                      
+    
                         <script>
                             var table1_Props = {
                                 col_0: "input",
@@ -61,7 +63,6 @@
                             var tf2 = setFilterGrid("table1", table1_Props);
                         </script>
                       </div>    
-                    {!!$enterpricesSup->render()!!}
                   </div>
                 </div>
             </div>
@@ -102,8 +103,10 @@
                          </td>
                         </tbody>
                       @endforeach
-                    </table>
-                   
+                      </table>
+                       <?php echo str_replace('/?','?', $enterpricesCons->render());
+                       ?>
+
                     <script>
                       var table2_Props = {
                       col_0: "input",
@@ -114,7 +117,7 @@
                       var tf2 = setFilterGrid("table2", table2_Props);
                     </script>
                 </div>
-                 {!!$enterpricesCons->render()!!}
+                 
               </div>
             </div>
           </div>

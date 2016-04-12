@@ -25,3 +25,6 @@ Route::resource('rol','RolController');
 Route::resource('usuario','UsuarioController');
 Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
+
+
+

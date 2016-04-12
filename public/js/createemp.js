@@ -1,7 +1,7 @@
 $("#registroemp").click(function(){
     var rfc = $("#rfc2").val();
     var rfc = $("#rfc").val();
-    var name = $("#name").val();
+    var name = $("#nameemp").val();
     var legalagent = $("#legalagent").val();
     var type = $("#type").val();
     var status = $("#status").val();
@@ -10,9 +10,11 @@ $("#registroemp").click(function(){
     var phone = $("#phone").val();
     var route = "/empresa";
     var token = $("#token").val();
+    
+
     var dato = {
             rfc: rfc,
-            name: name,
+            name: nameemp,
             legalagent: legalagent,
             type: type,
             status: status,
@@ -20,6 +22,7 @@ $("#registroemp").click(function(){
             address: address,
             phone: phone
         };
+
 
     $.ajax({
         url: route,

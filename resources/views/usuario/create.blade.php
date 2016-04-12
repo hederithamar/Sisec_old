@@ -9,7 +9,7 @@
 				<h4>Agregar nuevo usuario: </h4>
 			</div>
 			<div class="form-body">
-				{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'])!!}
+				{!!Form::open(['route'=>'usuario.store', 'method'=>'POST'],array('onsubmit' => 'return false', 'id' => 'formulario_busqueda', 'class'=>'valida'))!!}
 					@include('usuario.forms.usr')
 					<div class="col-md-6 form-group">
 					</div>
