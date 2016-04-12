@@ -21,8 +21,13 @@ class IntegrationUpdateRequest extends Request
      *
      * @return array
      */
-    public function integrations()
+   
+    public function rules()
     {
-       
+        return [
+            
+            
+        ];
     }
 }
+

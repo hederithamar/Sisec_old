@@ -1,46 +1,41 @@
 <?php
 
 namespace Sisec\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
-use Sisec\Http\Requests\RoleCreateRequest;
-use Sisec\Http\Requests\RoleUpdateRequest;
+use Sisec\Http\Requests\DocCreateRequest;
+use Sisec\Http\Requests\DocUpdateRequest;
 use Sisec\Http\Controllers\Controller;
-use Sisec\Role;
+use Sisec\Doc;
+use Sisec\Enterprice;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
 
-class RolController extends Controller
+
+class DocumentoController extends Controller
 {
-    
     public function __construct(){
         //$this->middleware('auth');
         //$this->middleware('admin');
-        $this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
+        $this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
     }
     public function find(Route $route){
-        $this->role = Role::find($route->getParameter('rol'));
-    }   
+        $this->doc = Doc::find($route->getParameter('documento'));
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function listing(){
-        $roles = Role::all();
-        return response()->json(
-                $roles->toArray()
-            );
-    }
 
     public function index()
     {
-
-        //
-        $roles = Role::paginate(5);
-        return view('rol.index',compact('roles'));
+        $docs = Doc::Type("Propuesta Ganadora de la obra")->paginate(5);
+        $docg = Doc::Type("Propuesta Ganadora de Supervisión")->paginate(5);
+        $docl = Doc::Type("Proceso de Licitación de la Supervisión")->paginate(5);
+        
+        return view('documento.index',compact('docs',"docg",'docl'));
     }
 
     /**
@@ -50,27 +45,23 @@ class RolController extends Controller
      */
     public function create()
     {
-        return view('rol.create');
-    }
 
-    /**
+        return view('documento.create');
+    }
+        /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RoleCreateRequest $request)
+    public function store(DocCreateRequest $request)
     {
-        $message = 'Rol Creada Correctamente';
-        if($request->ajax()){
-            Role::create($request->all());
-            return response()->json([
-                "mensaje" => $message
-            ]);
-        }else {
-                Session::flash('message','No se Guardo');
-                return Redirect::to('rol')->withErrors('Error');
-            }
+        /**Docs::create($request->all());
+        Session::flash('message','Documentos creados ');
+        return Redirect::to('/documento');**/
+        Doc::create($request->all());
+        Session::flash('message','Documento Creado Correctamente');
+        return Redirect::to('/documento');
     }
 
     /**
@@ -81,7 +72,10 @@ class RolController extends Controller
      */
     public function show($id)
     {
-        //
+        
+
+
+        
     }
 
     /**
@@ -92,7 +86,7 @@ class RolController extends Controller
      */
     public function edit($id)
     {
-        return view('rol.edit',['role'=>$this->role]);
+        return view('documento.edit',['doc'=>$this->doc]);
     }
 
     /**
@@ -102,12 +96,12 @@ class RolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RoleUpdateRequest $request, $id)
+    public function update(DocUpdateRequest $request, $id)
     {
-        $this->role->fill($request->all());
-        $this->role->save();
-        Session::flash('message','Rol Actualizado Correctamente');
-        return Redirect::to('/rol');
+        $this->doc->fill($request->all());
+        $this->doc->save();
+        Session::flash('message',' Documento Actualizado');
+        return Redirect::to('/documento');
     }
 
     /**
@@ -118,9 +112,8 @@ class RolController extends Controller
      */
     public function destroy($id)
     {
-        
-        $this->role->delete();
-        Session::flash('message','Rol Eliminado Correctamente');
-        return Redirect::to('/rol');
+        $this->doc->delete();
+        Session::flash('message','Docuemento borrado Correctamente');
+        return Redirect::to('/documento');
     }
 }

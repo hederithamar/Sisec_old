@@ -32,8 +32,8 @@
 	
 	
 	<div class="col-md-6 form-group">
-		{!!Form::label('weigth','Tamaño del Archivo')!!}
-		{!!Form::text('weigth',null,['class'=>'form-control','placeholder'=>'Ingresa el Tamaño del archivo mb'])!!}
+		{!!Form::label('weight','Tamaño del Archivo')!!}
+		{!!Form::text('weight',null,['class'=>'form-control','placeholder'=>'Ingresa el Tamaño del archivo mb'])!!}
 				
 	</div>
 	

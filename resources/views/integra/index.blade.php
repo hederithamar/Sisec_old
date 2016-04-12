@@ -16,12 +16,9 @@
           <div class="accordion-section">
               <a class="accordion-section-title" href="#accordion-1">E.P. 01</a>
               <div id="accordion-1" class="accordion-section-content">
-              <p class="header-right">
-              		<p class="header-right">
-                 {!!link_to_route('expediente.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
-               </p>
-
-              </p>
+         <p class="header-right">
+                  {!!link_to_route('expediente.create', $title = 'Nuevo', $parameters = "", $attributes =  ['class'=>'btn btn-primary'])!!}
+                </p>
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">

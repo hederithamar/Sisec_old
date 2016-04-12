@@ -13,7 +13,7 @@
 $factory->define(Sisec\Enterprice::class, function (Faker\Generator $faker) {
     return [
         'rfc' => $faker->swiftBicNumber,
-        'name' => $faker->company,
+        'nameemp' => $faker->company,
         'legalagent' => $faker->name($gender = null|'male'|'female'),
         'type' => 'Supervisora',
         'status' => 'Activa',

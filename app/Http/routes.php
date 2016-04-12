@@ -15,9 +15,12 @@ Route::get('/','FrontController@index');
 Route::get('contacto','FrontController@contacto');
 Route::get('reviews','FrontController@reviews');
 Route::get('admin','FrontController@admin');
+Route::get('roles','RolController@listing');
+Route::get('enterprices','EmpresaController@listing');
 //Ruta de los controladores
 Route::resource('empresa','EmpresaController');
 Route::resource('expediente','IntegracionController');
+Route::resource('documento','DocumentoController');
 Route::resource('rol','RolController');
 Route::resource('usuario','UsuarioController');
 Route::resource('log','LogController');

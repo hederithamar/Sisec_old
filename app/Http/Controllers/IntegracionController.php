@@ -6,7 +6,6 @@ use Sisec\Http\Requests;
 use Sisec\Http\Requests\IntegrationCreateRequest;
 use Sisec\Http\Requests\IntegrationUpdateRequest;
 use Sisec\Http\Controllers\Controller;
-use Sisec\User;
 use Sisec\Integration;
 use Session;
 use Redirect;
@@ -20,7 +19,7 @@ class IntegracionController extends Controller
         $this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
     }
     public function find(Route $route){
-        $this->integrations = Integration::find($route->getParameter('integra'));
+        $this->integration = Integration::find($route->getParameter('expediente'));
     }
     /**
      * Display a listing of the resource.
@@ -29,7 +28,7 @@ class IntegracionController extends Controller
      */
     public function index()
     {
-        $integrations = Integration::paginate(5);
+        $integrations = Integration::paginate(10);
         
         return view('integra.index',compact('integrations'));
         
@@ -75,7 +74,8 @@ class IntegracionController extends Controller
      */
     public function edit($id)
     {
-          return view('integra.edit',['Integration'=>$this->Integration]);
+          return view('integra.edit',compact('integrations'),['integration'=>$this->integration]);
+          
     }
     /**
      * Update the specified resource in storage.
@@ -86,22 +86,13 @@ class IntegracionController extends Controller
      */
     public function update(IntegrationUpdateRequest $request, $id)
     {
+
         $this->integration->fill($request->all());
         $this->integration->save();
         Session::flash('message','E.P. Actualizada');
         return Redirect::to('/expediente');
+
     }
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $this->integration->delete();
-        Session::flash('message','Usuario Eliminado Correctamente');
-        return Redirect::to('/expediente');
-    }
-    
+   
+
 }

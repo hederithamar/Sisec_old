@@ -39,9 +39,26 @@ class User extends Model implements AuthenticatableContract,
 
     protected $dates = ['deleted_at'];
 
-    public function setPasswordAttribute($valor){
+    public function setPasswordAttribute($valor)
+    {
         if(!empty($valor)){
             $this->attributes['password'] = \Hash::make($valor);
         }
     }
+
+    public function enterprice()
+    {
+        return $this->belongsTo('Sisec\Enterprice');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo('Sisec\Role');
+    }
+
+    public function scopeEmp($query, $desc)
+    {
+        $query->where('role_id', $desc);
+    }
+
 }

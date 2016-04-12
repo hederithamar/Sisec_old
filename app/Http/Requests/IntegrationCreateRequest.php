@@ -29,7 +29,7 @@ class IntegrationCreateRequest extends Request
             'name' => 'required',
             'description' => 'required',
             'format'=> 'required',
-            'weigth' => 'required',
+            'weight' => 'required',
             'route' => 'required',
         ];
     }

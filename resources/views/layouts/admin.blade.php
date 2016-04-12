@@ -11,8 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
-
-
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
@@ -44,6 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       $(".js-example-basic-single").select2();
     });
   </script>
+
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
@@ -51,6 +51,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       })
     });
 </script>
+  <!--libreria para manipular los select -->
+
+  <script type="text/javascript" src="dynamicoptionlist.js"></script>
+
 <!--//select-->
 
 <!--animate-->
@@ -74,14 +78,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="main-content">
     <!--left-fixed -navigation-->
     <div class=" sidebar" role="navigation">
-            <div class="navbar-collapse">
+      <div class="navbar-collapse">
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
           <ul class="nav" id="side-menu">
             <li>
               <a href="{!!URL::to('admin')!!}" class="active"><i class="fa fa-home nav_icon"></i>Inicio</a>
             </li>
             <li>
-              <a href="#")!!}><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
+              <a href="#"><i class="fa fa-book nav_icon"></i>Catalogos<span class=""></span> <span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
                 <li>
                   <a href="{!!URL::to('usuario')!!}">Usuarios</a>
@@ -90,11 +94,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
 
+
                 <li>
                   <a href="{!!URL::to('expediente')!!}">Integracion de </p>
                                                       Expedientes</a>
+
+                <li>
+                  <a href="{!!URL::to('documento')!!}">Documentos</a>
+
                 </li>
               </ul>
+
               <!-- /nav-second-level -->
             </li>
             <li class="">
@@ -109,7 +119,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               </ul>
               <!-- /nav-second-level -->
             </li>
-            </li>
+         
             <li>
               <a href="#"><i class="fa fa-table nav_icon"></i>Tablero de Control<span class="fa arrow"></span></a>
               <ul class="nav nav-second-level collapse">
@@ -150,13 +160,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--logo -->
         <div class="">
           <a href="{!!URL::to('admin')!!}">
-            <img src="images/logo.png" width="220" height="75">
+            <img src="/images/LOGO.png" width="200" height="100"margin="10em">
           </a>
         </div>
         <div class="clearfix"> </div>
       </div>
       <div class="search-box">
-        <h3>Sistema de Seguimiento y Control de Carreteras</h3>
+
+        <center><h3>Sistema de Seguimiento y Control de Carreteras</h3></center>
         <span></span>
       </div>
 
@@ -208,24 +219,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         showLeftPush = document.getElementById( 'showLeftPush' ),
         body = document.body;
         
-      showLeftPush.onclick = function() {
-        classie.toggle( this, 'active' );
-        classie.toggle( body, 'cbp-spmenu-push-toright' );
-        classie.toggle( menuLeft, 'cbp-spmenu-open' );
-        disableOther( 'showLeftPush' );
-      };
-      
-
-      function disableOther( button ) {
+        showLeftPush.onclick = function() 
+        {
+          classie.toggle( this, 'active' );
+          classie.toggle( body, 'cbp-spmenu-push-toright' );
+          classie.toggle( menuLeft, 'cbp-spmenu-open' );
+          disableOther( 'showLeftPush' );
+        };
+  
+      function disableOther( button ) 
+      {
         if( button !== 'showLeftPush' ) {
           classie.toggle( showLeftPush, 'disabled' );
         }
       }
     </script>
-  <!--scrolling js-->
+  
   {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->
   <!-- Bootstrap Core JavaScript -->
     {!!Html::script('js/bootstrap.js')!!}
+    @section('scripts')
+    @show
 </body>
 </html>
