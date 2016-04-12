@@ -46,38 +46,38 @@
 		{!!Form::label('state','Estado:')!!}
 		<br>
 		{!!Form::select('state', array(
-		'1' => 'Aguascalientes', 
-		'2' => 'Baja California', 
-		'3' => 'Baja California Sur', 
-		'4' => 'Campeche',
-		'5' => 'Coahouila de Zaragoza',
-		'6' => 'Colima',
-		'7' => 'Chiapas',
-		'8' => 'Chihuahua',
-		'9' => 'Distrito Federal',
-		'10' => 'Durango',
-		'11' => 'Guanajuato', 
-		'12' => 'Guerrero', 
-		'13' => 'Hidalgo', 
-		'14' => 'Jalisco',
-		'15' => 'México',
-		'16' => 'Michoacán de Ocampo',
-		'17' => 'Morelos',
-		'18' => 'Nayarit',
-		'19' => 'Nuevo León',
-		'20' => 'Oaxaca',
-		'21' => 'Puebla', 
-		'22' => 'Querétaro', 
-		'23' => 'Quintana Roo', 
-		'24' => 'San Luis Potosí',
-		'25' => 'Sinaloa',
-		'26' => 'Sonora',
-		'27' => 'Tabasco',
-		'28' => 'Tamaulipas',
-		'29' => 'Tlaxcala',
-		'30' => 'Veracruz de Ignacio de llave',
-		'31' => 'Yucatán', 
-		'32' => 'Zacatecas'
+		'Aguascalientes' => 'Aguascalientes', 
+		'Baja California' => 'Baja California', 
+		'Baja California Sur' => 'Baja California Sur', 
+		'Campeche' => 'Campeche',
+		'Coahouila de Zaragoza' => 'Coahouila de Zaragoza',
+		'Colima' => 'Colima',
+		'Chiapas' => 'Chiapas',
+		'Chihuahua' => 'Chihuahua',
+		'Distrito Federal' => 'Distrito Federal',
+		'Durango' => 'Durango',
+		'Guanajuato' => 'Guanajuato', 
+		'Guerrero' => 'Guerrero', 
+		'Hidalgo' => 'Hidalgo', 
+		'Jalisco' => 'Jalisco',
+		'México' => 'México',
+		'Michoacán de Ocampo' => 'Michoacán de Ocampo',
+		'Morelos' => 'Morelos',
+		'Nayarit' => 'Nayarit',
+		'Nuevo León' => 'Nuevo León',
+		'Oaxaca' => 'Oaxaca',
+		'Puebla' => 'Puebla', 
+		'Querétaro' => 'Querétaro', 
+		'Quintana Roo' => 'Quintana Roo', 
+		'San Luis Potosí' => 'San Luis Potosí',
+		'Sinaloa' => 'Sinaloa',
+		'Sonora' => 'Sonora',
+		'Tabasco' => 'Tabasco',
+		'Tamaulipas' => 'Tamaulipas',
+		'Tlaxcala' => 'Tlaxcala',
+		'Veracruz de Ignacio de llave' => 'Veracruz de Ignacio de llave',
+		'Yucatán' => 'Yucatán', 
+		'Zacatecas' => 'Zacatecas'
 		), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 
@@ -86,4 +86,10 @@
 		<br>
 		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
+	<div class="col-md-6 form-group">
+		{!!Form::label('status','Estado:')!!}
+		<br>
+		{!!Form::select('status', array('Activo' => 'Activo', 'Bloqueado' => 'Bloqueado'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+	</div>
+	
 	

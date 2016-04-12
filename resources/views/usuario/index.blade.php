@@ -39,28 +39,26 @@
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table1" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="20">Nombre</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersAdmin as $user)
                   <tbody>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->firstlastname}}</td>
-                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->name." ".$user->firstlastname." ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->state}}</td>
                     <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -71,7 +69,7 @@
                 <script>
                   var table1_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -97,16 +95,15 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table2" border="1" cellpadding="25" cellspacing="2">
-                      <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                     <thead>
+                      <th width="20">Nombre</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersReG as $user)
@@ -120,6 +117,7 @@
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -129,7 +127,7 @@
                  <script>
                   var table2_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -154,16 +152,17 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table3" border="1" cellpadding="25" cellspacing="2">
-                      <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                     <thead>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersSup as $user)
@@ -177,6 +176,7 @@
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -186,7 +186,7 @@
                  <script>
                   var table3_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -212,15 +212,16 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table4" border="1" cellpadding="25" cellspacing="2">
                      <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersResOb as $user)
@@ -234,6 +235,7 @@
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -243,7 +245,7 @@
                 <script>
                   var table4_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -269,15 +271,16 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table5" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersCent as $user)
@@ -291,6 +294,7 @@
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -300,7 +304,7 @@
                  <script>
                   var table5_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -326,18 +330,19 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
-                    @foreach($usersAdmin as $user)
+                    @foreach($usersJef as $user)
                   <tbody>
                     <td>{{$user->name}}</td>
                     <td>{{$user->firstlastname}}</td>
@@ -348,6 +353,7 @@
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                      </td>
@@ -357,7 +363,7 @@
                  <script>
                   var table6_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
