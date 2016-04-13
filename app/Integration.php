@@ -10,7 +10,6 @@ class Integration extends Model
 
 	protected $dates = ['deleted_at'];
 
- 	protected $fillable = ['typecontract','ep','name','description','fort','weight'];
+ 	protected $fillable = ['ep','type','name','description','format','weight','route'];
 
- 	
 }
