@@ -32,7 +32,6 @@ class UserCreateRequest extends Request
             'role_id' => 'required',
             'enterprice_id' => 'required',
             'state' => 'required',
-            'zone' => 'required',
            
         ];
     }

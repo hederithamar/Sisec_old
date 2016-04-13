@@ -29,7 +29,7 @@ class AddColumnUsersStatus extends Migration
         //
           Schema::table('users', function (Blueprint $table) {
             //Nuevo campo Usuarios para ver el estado
-            $table->dropColumn('status', 10);
+            $table->dropColumn('status');
         });
     }
 }

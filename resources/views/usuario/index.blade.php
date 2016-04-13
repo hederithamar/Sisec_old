@@ -48,16 +48,11 @@
     </div>
     <!--//custom-ruta-->    
   <div clas="container" id="Layer1" overflow: scroll;>
-<<<<<<< HEAD
     <div class="main">
         <div class="accordion">
           <div class="accordion-section">
               <a class="accordion-section-title" href="#accordion-1">Administradores</a>
               <div id="accordion-1" class="accordion-section-content">
-              <p class="header-right">
-
-               {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-              </p>
               <h4>Administradores</h4>
               <div id="table" class="table-editable">
                 <div class="forms">
@@ -67,20 +62,16 @@
                     <thead>
                       <th width="20">Nombre</th>
                       <th width="7">Email</th>
-                      <th width="15">Estado</th>
-                      <th width="10">Zona</th>
                       <th width="10">Celular</th>
                       <th width="8">Telefono</th>
                       <th width="7">Empresa</th>
-                      <th width="6">Estado</th>
+                      <th width="7">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersAdmin as $user)
                   <tbody>
-                    <td>{{$user->name." ".$user->firstlastname." ".$user->secondlastname}}</td>
+                    <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->state}}</td>
-                    <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
@@ -94,7 +85,7 @@
                 <script>
                   var table1_Props = {
                       col_0: "input",
-                      col_10: "none",
+                      col_6: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -119,8 +110,7 @@
                      <thead>
                       <th width="20">Nombre</th>
                       <th width="7">Email</th>
-                      <th width="15">Estado</th>
-                      <th width="10">Zona</th>
+                      <th width="15">Centro SCT</th>
                       <th width="10">Celular</th>
                       <th width="8">Telefono</th>
                       <th width="7">Empresa</th>

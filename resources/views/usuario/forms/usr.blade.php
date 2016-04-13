@@ -77,40 +77,7 @@
 	<div id="centros" class="col-md-6 form-group" style='display:none;'>
 		{!!Form::label('state','Centro SCT:')!!}
 		<br>
-		{!!Form::select('state', array(
-		'Aguascalientes' => 'Aguascalientes', 
-		'Baja California' => 'Baja California', 
-		'Baja California Sur' => 'Baja California Sur', 
-		'Campeche' => 'Campeche',
-		'Coahouila de Zaragoza' => 'Coahouila de Zaragoza',
-		'Colima' => 'Colima',
-		'Chiapas' => 'Chiapas',
-		'Chihuahua' => 'Chihuahua',
-		'Distrito Federal' => 'Distrito Federal',
-		'Durango' => 'Durango',
-		'Guanajuato' => 'Guanajuato', 
-		'Guerrero' => 'Guerrero', 
-		'Hidalgo' => 'Hidalgo', 
-		'Jalisco' => 'Jalisco',
-		'México' => 'México',
-		'Michoacán de Ocampo' => 'Michoacán de Ocampo',
-		'Morelos' => 'Morelos',
-		'Nayarit' => 'Nayarit',
-		'Nuevo León' => 'Nuevo León',
-		'Oaxaca' => 'Oaxaca',
-		'Puebla' => 'Puebla', 
-		'Querétaro' => 'Querétaro', 
-		'Quintana Roo' => 'Quintana Roo', 
-		'San Luis Potosí' => 'San Luis Potosí',
-		'Sinaloa' => 'Sinaloa',
-		'Sonora' => 'Sonora',
-		'Tabasco' => 'Tabasco',
-		'Tamaulipas' => 'Tamaulipas',
-		'Tlaxcala' => 'Tlaxcala',
-		'Veracruz de Ignacio de llave' => 'Veracruz de Ignacio de llave',
-		'Yucatán' => 'Yucatán', 
-		'Zacatecas' => 'Zacatecas'
-		), null, ['id' => 'state','class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('state', $namestates, null, ['id' => 'state','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 
 	
