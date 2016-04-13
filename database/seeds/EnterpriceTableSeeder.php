@@ -13,6 +13,7 @@ class EnterpriceTableSeeder extends Seeder
 
     {
         //Datos para la tabla rol secrean 4 roles manuales
+
         \DB::table('roles')->insert(array(
             'desc'           => 'Administrador'
             ));

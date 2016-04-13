@@ -32,6 +32,7 @@
           <div class="col-md-3 widget states-last"></div>
           <div class="col-md-3 widget states-thrd">
             {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
+            <a href="excel">Exportar excel</a>
             <div class="clearfix"> </div> 
           </div>
         <div class="clearfix"> </div> 

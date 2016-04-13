@@ -39,6 +39,7 @@ class RolController extends Controller
     {
 
         //
+
         $roles = Role::get();
         return view('rol.index',compact('roles'));
     }
