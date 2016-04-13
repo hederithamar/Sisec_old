@@ -22,7 +22,7 @@ class CreateEnterpricesTable extends Migration
             $table->string('status', 20);
             $table->string('email', 50)->nullable();
             $table->string('address', 250)->nullable();
-            $table->char('phone', 10)->nullable();
+            $table->char('phone', 20)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

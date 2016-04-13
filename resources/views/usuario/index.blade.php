@@ -22,15 +22,33 @@
   </style>
 
   @section('content')
-  <!--/sub-heard-part-->
-  <div class="sub-heard-part">
-    <ol class="breadcrumb m-b-0">
-      <li><a href="{!!URL::to('admin')!!}">Home</a></li>
-      <li class="active">Usuarios</li>
-    </ol>
-  </div>  
-  <!--/sub-heard-part-->  
+  <div class="graph">
+  <!--custom-rata-->
+    <div class="custom-widgets">
+      <div class="row-one">
+          <div class="col-md-3 widget">
+            <!--/sub-heard-part-->
+            <div class="sub-heard-part">
+              <ol class="breadcrumb m-b-0">
+                <li><a href="{!!URL::to('admin')!!}">Home</a></li>
+                <li class="active">Usuarios</li>
+              </ol>
+            </div>
+            <!--/sub-heard-part-->  
+            <div class="clearfix"> </div> 
+          </div>
+          <div class="col-md-3 widget states-last"></div>
+          <div class="col-md-3 widget states-last"></div>
+          <div class="col-md-3 widget states-thrd">
+            {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
+            <div class="clearfix"> </div> 
+          </div>
+        <div class="clearfix"> </div> 
+      </div>
+    </div>
+    <!--//custom-ruta-->    
   <div clas="container" id="Layer1" overflow: scroll;>
+<<<<<<< HEAD
     <div class="main">
         <div class="accordion">
           <div class="accordion-section">
@@ -92,10 +110,6 @@
       <div class="accordion-section">
         <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
         <div id="accordion-2" class="accordion-section-content">
-          <p class="header-right">
-          {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-          </p>
-          <h4>Residentes Generales</h4>
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -150,10 +164,6 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
           <div id="accordion-3" class="accordion-section-content">
-            <p class="header-right">
-              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-            </p>
-            <h4>SuperIntedentes de Servicio</h4>
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -210,10 +220,6 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-4">Residentes de Obra</a>
           <div id="accordion-4" class="accordion-section-content">
-            <p class="header-right">
-              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-            </p>
-            <h4>Residentes de Obra</h4>
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -270,10 +276,6 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-5">Centro SCT</a>
           <div id="accordion-5" class="accordion-section-content">
-            <p class="header-right">
-              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-            </p>
-            <h4>Centro SCT</h4>
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -330,10 +332,6 @@
       <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-6">Jefe de Oficina Técnica</a>
         <div id="accordion-6" class="accordion-section-content">
-            <p class="header-right">
-              {!!link_to_route('usuario.create', $title = 'Nuevo', $parameters = "", $attributes = ['class'=>'btn btn-primary'])!!}
-            </p>
-          <h4>Jefe de Oficina Técnica</h4>
           <div id="table" class="table-editable">
             <div class="forms">
               <div class="form-body">
@@ -388,6 +386,7 @@
       </div>
     </div>
   </div>
+</div>
   
 
 @endsection

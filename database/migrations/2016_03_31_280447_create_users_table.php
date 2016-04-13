@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('email', 50)->unique();
             $table->string('state', 30);
             $table->string('zone', 7);
-            $table->char('celphone', 10);
-            $table->char('phone', 15)->nullable();
+            $table->char('celphone', 20);
+            $table->char('phone', 20)->nullable();
             $table->string('password', 60);
             //Claves foranea referencia al modelo roles
             $table->integer('role_id')->unsigned();

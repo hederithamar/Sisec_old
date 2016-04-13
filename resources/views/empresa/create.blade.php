@@ -2,7 +2,7 @@
 	
 	@include('alerts.request')
 	@section('content')
-
+<div class="graph">
 	<!--//outer-wp-->
 	<div class="outter-wp">
 		<!--/sub-heard-part-->
@@ -17,7 +17,6 @@
 		<!--/forms-->
 		<div class="forms-main">
 			<h2 class="inner-tittle">Crear Empresa</h2>
-
 				<div class="validation-form">
 					<!---->
 				{!!Form::open(['route'=>'empresa.store', 'method'=>'POST'],array('onsubmit' => 'return false', 'id' => 'formulario_busqueda'))!!}
@@ -34,6 +33,7 @@
 		<div class="clearfix"></div>
 		<!--//forms-->											   
 	</div>
+</div>
 	<!--//outer-wp-->
 	@endsection
 
