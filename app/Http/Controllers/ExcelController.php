@@ -33,7 +33,7 @@ Excel::create('Laravel Excel', function($excel) {
                 $cells->setFontColor('#000000');
 
                     // Set font family
-                $cells->setFontFamily('Arial');
+                $cells->setFontFamily('Calibri');
 
                     // Set font size
                 $cells->setFontSize(12);
@@ -45,7 +45,7 @@ Excel::create('Laravel Excel', function($excel) {
 
                 // Set font
                 $cells->setFont(array(
-                  'family'     => 'Arial',
+                  'family'     => 'Calibri',
                     'size'       => '12',
                     'bold'       =>  true
                                 ));
