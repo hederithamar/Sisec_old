@@ -48,7 +48,6 @@
     </div>
     <!--//custom-ruta-->    
   <div clas="container" id="Layer1" overflow: scroll;>
-
     <div class="main">
         <div class="accordion">
           <div class="accordion-section">
