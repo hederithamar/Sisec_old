@@ -74,7 +74,7 @@ class IntegracionController extends Controller
      */
     public function edit($id)
     {
-          return view('integra.edit',compact('integrations'),['integration'=>$this->integration]);
+          return view('integra.edit',['integration'=>$this->integration]);
           
     }
     /**

@@ -31,7 +31,7 @@ class UsuarioController extends Controller
     {
         $usersAdmin = User::Emp('1')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->get();
 
         $usersSup = User::Emp('2')->with(['enterprice','role' => function($query){
                 $query->with('users');

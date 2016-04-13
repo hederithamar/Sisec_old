@@ -1,6 +1,14 @@
 @extends('layouts.admin')
 	@section('content')
 	@include('alerts.request')
+	<!--/sub-heard-part-->
+  <div class="sub-heard-part">
+    <ol class="breadcrumb m-b-0">
+      <li><a href="{!!URL::to('admin')!!}">Home</a></li>
+      <li class="active">Roles</li>
+    </ol>
+  </div>  
+  <!--/sub-heard-part-->  
 
 	<div class="forms">
 		<h3 class="title1">Catalogos Roles</h3>
