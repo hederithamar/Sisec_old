@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStateTable extends Migration
+class CreateStatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,6 @@ class CreateStateTable extends Migration
     public function up()
     {
         Schema::create('states', function (Blueprint $table) {
-            //Tabla Roles
             $table->increments('id');
             $table->string('namestate', 30);
             $table->timestamps();
