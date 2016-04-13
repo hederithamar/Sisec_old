@@ -141,10 +141,11 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
-              </div><!--end .accordion-section-->
-            </div>
+              </div>
+            </div><!--end .accordion-section-->
           </div>
-        </div>
+      </div>
+    </div>
       <div class="accordion">
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>

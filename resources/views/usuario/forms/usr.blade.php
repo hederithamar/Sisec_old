@@ -1,3 +1,31 @@
+<script>
+	function habilitarCombo(valor)
+	{
+		if(valor==3||valor==4||valor==5||valor==6){
+			
+			document.getElementById('empresas').style.display = 'none';
+			document.getElementById('centros').style.display = 'block';
+		}
+		else {
+			if(valor==1){
+			document.getElementById('empresas').style.display = 'none';
+			document.getElementById('centros').style.display = 'none';
+			}
+			else {
+				if(valor==2){
+					document.getElementById('empresas').style.display = 'block';
+					document.getElementById('centros').style.display = 'none';
+				}
+				else {
+					document.getElementById('empresas').style.display = 'none';
+					document.getElementById('centros').style.display = 'none';
+					}
+
+			}
+			
+		}
+	}
+</script>
 <div class="vali-form form-group1">
 	<!--Nombre del usuario-->
 	<div class="form-group">
@@ -37,17 +65,17 @@
 	<div class="col-md-6 form-group">
 		{!!Form::label('role_id','Rol:')!!}
 		<br>
-		{!!Form::select('role_id', $roles, null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('role_id', $roles, null, ['onchange'=>'habilitarCombo(this.value)','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-
-	<div class="col-md-6 form-group">
+	<!--Empresa a la que pertenece usuario-->
+	<div id="empresas"class="col-md-6 form-group" style='display:none;'>
 		{!!Form::label('enterprice_id','Empresa:')!!}
 		<br>
-		{!!Form::select('enterprice_id', $enterprices, null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('enterprice_id', $enterprices, null, ['id' => 'enterprice_id','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-
-	<div class="col-md-6 form-group">
-		{!!Form::label('state','Estado:')!!}
+<!--Estado al que pertenece el usuario-->
+	<div id="centros" class="col-md-6 form-group" style='display:none;'>
+		{!!Form::label('state','Centro SCT:')!!}
 		<br>
 		{!!Form::select('state', array(
 		'Aguascalientes' => 'Aguascalientes', 
@@ -82,14 +110,10 @@
 		'Veracruz de Ignacio de llave' => 'Veracruz de Ignacio de llave',
 		'Yucatán' => 'Yucatán', 
 		'Zacatecas' => 'Zacatecas'
-		), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
+		), null, ['id' => 'state','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
-	<!--Zona a la que pertenece-->
-	<div class="col-md-6 form-group">
-		{!!Form::label('zone','Zona:')!!}
-		<br>
-		{!!Form::select('zone', array('Norte' => 'Norte', 'Sur' => 'Sur'), null, ['class' => 'js-example-basic-single js-states form-control']);!!}
-	</div>
+
+	
 	<div class="col-md-6 form-group">
 		{!!Form::label('status','Estado:')!!}
 		<br>
