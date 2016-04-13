@@ -18,7 +18,7 @@ class EnterpriceTableSeeder extends Seeder
             ));
 
         \DB::table('roles')->insert(array(
-            'desc'           => 'SuperIntendente de Servicio'
+            'desc'           => 'Superintendente de Servicio'
             ));
         \DB::table('roles')->insert(array(
             'desc'           => 'Residente de Obra'
@@ -27,14 +27,30 @@ class EnterpriceTableSeeder extends Seeder
             'desc'           => 'Centro SCT'
             ));
         \DB::table('roles')->insert(array(
-            'desc'           => 'Jefe de Oficina Tecnica'
+            'desc'           => 'Jefe de Oficina Técnica'
             ));
 
         \DB::table('roles')->insert(array(
             'desc'           => 'Residente General'
             ));
         //$role_id = Sisec\Role::where('id', '=', '1')->get();
+        //Datos para la tabla estado secrean 4 roles manuales
+        \DB::table('states')->insert(array(
+            'namestate'           => 'Aguascalientes'
+            ));
+        \DB::table('states')->insert(array(
+            'namestate'           => 'Baja California'
+            ));
+        \DB::table('states')->insert(array(
+            'namestate'           => 'Baja California Sur'
+            ));
+        \DB::table('states')->insert(array(
+            'namestate'           => 'Campeche'
+            ));
 
+        \DB::table('states')->insert(array(
+            'namestate'           => 'Chiapas'
+            ));
         //manda datos ficticios pero definidos manual 2
         factory(Sisec\Enterprice::class, 10)-> create([
             'type' => 'Constructora'
