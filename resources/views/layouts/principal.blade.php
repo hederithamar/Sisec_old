@@ -1,75 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>SISEC</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- Custom Theme files -->
-<script src="js/jquery.min.js"></script>
-<!-- Custom Theme files -->
+<title>Sistema de Seguimiento y Control</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="Sistema de Seguimiento y control" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+ 
+  <!-- Bootstrap Core CSS -->
+  {!!Html::style('css/bootstrap.min.css')!!}
+  <!-- Custom CSS -->
+  {!!Html::style('css/style.css')!!}
+  <!-- Graph CSS -->
+  {!!Html::style('css/font-awesome.css')!!}  
+  <!-- jQuery -->
+  <!--webfonts-->
+  {!!Html::style('//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400')!!}
+  <!-- lined-icons -->
+  {!!Html::style('css/icon-font.min.css')!!}
+  <!-- /js -->
+  {!!Html::script('js/jquery-1.10.2.min.js')!!}
 </head>
 <body>
-	<!-- header-section-starts -->
-	<div class="full">
-			<div class="menu">
-				<ul>
-					<li><a class="active" href="index.html"><i class="home"></i></a></li>
-					<li><a href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
-					<li><a href="contact.html"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
-				</ul>
+	<!--/login-->
+	<div class="error_page">
+		<!--/login-top-->
+		<div class="error-top">
+			<h2 class="inner-tittle page">Sisec</h2>
+				<div class="login">
+					<h3 class="inner-tittle t-inner">Login</h3>
+						@yield('content')
+				</div>											
 			</div>
-		<div class="main">
-		
-		@yield('content')
-		
-		
-		
-	<div class="footer">
-		<h6>Disclaimer : </h6>
-		<p class="claim">This is a freebies and not an official website, I have no intention of disclose any movie, brand, news.My goal here is to train or excercise my skill and share this freebies.</p>
-		<a href="example@mail.com">example@mail.com</a>
-		<div class="copyright">
-			<p> Template by  <a href="http://w3layouts.com">  W3layouts</a></p>
 		</div>
-	</div>	
-	</div>
-	</div>
-			<script type="text/javascript">
-		$(window).load(function() {
-			
-		  $("#flexiselDemo1").flexisel({
-				visibleItems: 6,
-				animationSpeed: 1000,
-				autoPlay: true,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: false,
-				enableResponsiveBreakpoints: true,
-				responsiveBreakpoints: { 
-					portrait: { 
-						changePoint:480,
-						visibleItems: 2
-					}, 
-					landscape: { 
-						changePoint:640,
-						visibleItems: 3
-					},
-					tablet: { 
-						changePoint:768,
-						visibleItems: 4
-					}
-				}
-			});
-			});
-		</script>
-		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-	<div class="clearfix"></div>
+		<div class="footer">
+			<div class="error-btn">
+				<a class="read fourth" href="index.html">Return to Home</a>
+			</div>
+			<p>SISEC</p>
+		</div>
+		<!--footer section end-->
+		<!--/404-->
+<!--js -->
+
+  {!!Html::script('js/jquery.nicescroll.js')!!}
+  {!!Html::script('js/scripts.js')!!}
+  {!!Html::script('js/bootstrap.min.js')!!}
 </body>
 </html>

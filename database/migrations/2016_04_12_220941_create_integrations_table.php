@@ -12,8 +12,7 @@ class CreateIntegrationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('integrations', function (Blueprint $table) 
-        {
+        Schema::create('integrations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('typecontract', 35);
             $table->string('ep', 70);
