@@ -50,16 +50,27 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
 >>>>>>> 14ca05fabd83f56606642edb5d25adba521407cc
+>>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
 =======
 ### Se agrego una funcion en 
 	app/Enterprice.php
 =======
+<<<<<<< HEAD
+>>>>>>> ded5e4663b0bb99bccc162b565b036a5b2a4c178
+=======
 >>>>>>> 4ba2ee2151305cdb30341834fbb42f6adab41d61
+>>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
 =======
 >>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee
 #
@@ -81,6 +92,16 @@
 	database/seeds/UserTableSeeder.php
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+### Se agrego una funcion en 
+	app/Enterprice.php
+>>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
+<<<<<<< HEAD
+=======
+>>>>>>> 47ba700037f01f50f61272ddde8b103c0294cde9
+>>>>>>> ded5e4663b0bb99bccc162b565b036a5b2a4c178
+=======
+<<<<<<< HEAD
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
@@ -97,7 +118,14 @@
 ### Se agrego una funcion en 
 	app/Enterprice.php
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
 >>>>>>> a4489617fc082bb8d90a51eced6ecdcb56d143cd
+>>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
 >>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee

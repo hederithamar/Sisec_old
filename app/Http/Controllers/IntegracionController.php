@@ -28,7 +28,7 @@ class IntegracionController extends Controller
      */
     public function index()
     {
-        $integrations = Integration::paginate(25);
+        $integrations = Integration::paginate(10);
         
         return view('integra.index',compact('integrations'));
         
@@ -53,7 +53,7 @@ class IntegracionController extends Controller
     {
         Integration::create($request->all());
         Session::flash('message','E.P. Creada Correctamente');
-        return Redirect::to('/integra'); 
+        return Redirect::to('/expediente'); 
             
     }
     /**
@@ -94,17 +94,5 @@ class IntegracionController extends Controller
 
     }
    
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $this->integration->delete();
-        Session::flash('message','Usuario Eliminado Correctamente');
-        return Redirect::to('/expediente');
-    }
-    
+
 }
