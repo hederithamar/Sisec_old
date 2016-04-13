@@ -1,82 +1,61 @@
 <?php
 
 namespace Sisec\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
-use Sisec\Http\Requests\RoleCreateRequest;
-use Sisec\Http\Requests\RoleUpdateRequest;
+use Sisec\Http\Requests\IntegrationCreateRequest;
+use Sisec\Http\Requests\IntegrationUpdateRequest;
 use Sisec\Http\Controllers\Controller;
-use Sisec\Role;
+use Sisec\Integration;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
 
-class RolController extends Controller
+class IntegracionController extends Controller
 {
-    
     public function __construct(){
         //$this->middleware('auth');
         //$this->middleware('admin');
         $this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
     }
     public function find(Route $route){
-        $this->role = Role::find($route->getParameter('rol'));
-    }   
+        $this->integration = Integration::find($route->getParameter('expediente'));
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function listing(){
-        $roles = Role::all();
-        return response()->json(
-                $roles->toArray()
-            );
-    }
-
     public function index()
     {
-
-        //
-        $roles = Role::paginate(5);
-
-        //
-        $roles = Role::paginate(5);
-
-        return view('rol.index',compact('roles'));
+        $integrations = Integration::paginate(25);
+        
+        return view('integra.index',compact('integrations'));
+        
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */         
     public function create()
     {
-        return view('rol.create');
+        
+        return view('integra.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(RoleCreateRequest $request)
+    public function store(IntegrationCreateRequest $request)
     {
-        $message = 'Rol Creada Correctamente';
-        if($request->ajax()){
-            Role::create($request->all());
-            return response()->json([
-                "mensaje" => $message
-            ]);
-        }else {
-                Session::flash('message','No se Guardo');
-                return Redirect::to('rol')->withErrors('Error');
-            }
+        Integration::create($request->all());
+        Session::flash('message','E.P. Creada Correctamente');
+        return Redirect::to('/integra'); 
+            
     }
-
     /**
      * Display the specified resource.
      *
@@ -87,7 +66,6 @@ class RolController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -96,9 +74,9 @@ class RolController extends Controller
      */
     public function edit($id)
     {
-        return view('rol.edit',['role'=>$this->role]);
+          return view('integra.edit',['integration'=>$this->integration]);
+          
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -106,14 +84,16 @@ class RolController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(RoleUpdateRequest $request, $id)
+    public function update(IntegrationUpdateRequest $request, $id)
     {
-        $this->role->fill($request->all());
-        $this->role->save();
-        Session::flash('message','Rol Actualizado Correctamente');
-        return Redirect::to('/rol');
-    }
 
+        $this->integration->fill($request->all());
+        $this->integration->save();
+        Session::flash('message','E.P. Actualizada');
+        return Redirect::to('/expediente');
+
+    }
+   
     /**
      * Remove the specified resource from storage.
      *
@@ -122,9 +102,9 @@ class RolController extends Controller
      */
     public function destroy($id)
     {
-        
-        $this->role->delete();
-        Session::flash('message','Rol Eliminado Correctamente');
-        return Redirect::to('/rol');
+        $this->integration->delete();
+        Session::flash('message','Usuario Eliminado Correctamente');
+        return Redirect::to('/expediente');
     }
+    
 }

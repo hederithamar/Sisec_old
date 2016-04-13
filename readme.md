@@ -50,6 +50,10 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,7 +117,15 @@
 
 ### Se agrego una funcion en 
 	app/Enterprice.php
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
 >>>>>>> a4489617fc082bb8d90a51eced6ecdcb56d143cd
 >>>>>>> 37d102b3656b15ba4675eb73b42410d36b2e818f
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 76cfc9a587a3cb923fcf4e558cb3f746a5cf0694
+>>>>>>> 0c5fcef0dff5820cdfc5c038929ba855b3f01d10
 >>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee

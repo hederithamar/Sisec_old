@@ -143,12 +143,14 @@ return [
         Sisec\Providers\AppServiceProvider::class,
         Sisec\Providers\AuthServiceProvider::class,
         Sisec\Providers\EventServiceProvider::class,
-        Sisec\Providers\RouteServiceProvider::class,
-
+        Sisec\Providers\RouteServiceProvider::class,	
+	    
+       
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         /*
          * Laravel Collective Service Providers...
          */
-        Collective\Html\HtmlServiceProvider::class,
+       Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -200,7 +202,10 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+    
 
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+	
 
     ],
 

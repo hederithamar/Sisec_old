@@ -33,23 +33,23 @@ class UsuarioController extends Controller
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersReG = User::Emp('2')->with(['enterprice','role' => function($query){
+        $usersSup = User::Emp('2')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersSup = User::Emp('3')->with(['enterprice','role' => function($query){
+        $usersReG = User::Emp('6')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersResOb = User::Emp('4')->with(['enterprice','role' => function($query){
+        $usersResOb = User::Emp('3')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersCent = User::Emp('5')->with(['enterprice','role' => function($query){
+        $usersCent = User::Emp('4')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 
-        $usersJef = User::Emp('6')->with(['enterprice','role' => function($query){
+        $usersJef = User::Emp('5')->with(['enterprice','role' => function($query){
                 $query->with('users');
             }])->Paginate(5);
 

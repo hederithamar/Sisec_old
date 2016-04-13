@@ -1,18 +1,18 @@
 @extends('layouts.admin')
 @include('alerts.success')
 
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/demo.css" />
-  <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
-  <script src="js/modernizr.custom.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/accordion.js"></script>
-
+ {!!Html::style('css/normalize.css')!!}
+  {!!Html::style('css/demo.css')!!}
+  {!!Html::style('css/filtergrid.css')!!}
+  {!!Html::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css')!!}
+  {!!Html::style('http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')!!}
+  {!!Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')!!}
+  {!!Html::script('js/modernizr.custom.js')!!}
+  {!!Html::script('js/accordion.js')!!}
 
 	@section('content')
+
 	<div clas="container" id="Layer1" overflow: scroll;>
-  
     <div class="main">
       <div class="accordion">
           <div class="accordion-section">
@@ -26,12 +26,10 @@
                 <div class="forms">
                 <div class="form-body">
                   <!--aqui va la tabla-->
-                  <table class="table">
+                    <table id="table1" class='table'>
                     <thead>
                     <tr>
-                      <td> 
                       <th>Tipo de contrato</th>
-                     
                       <th>Nombre</th>
                       <th>Descripcion</th>
                       <th>Formato</th>
@@ -39,9 +37,7 @@
                   </thead>
                    @foreach($docs as $doc)
                   <tbody>
-                    <td></td>
                     <td>{{$doc->typecontract}}</td>
-                    
                     <td>{{$doc->name}}</td>
                     <td>{{$doc->description}}</td>
                     <td>{{$doc->format}}</td>
@@ -49,17 +45,14 @@
                     <td>
                      {!!link_to_route('documento.edit', $title = 'Editar', $parameters = $doc, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>
-                    <td>
-                      {!!Form::open(['route'=>['documento.destroy', $doc], 'method' => 'DELETE'])!!}
-                      {!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
-                      {!!Form::close()!!}
-                    </td>
+                    
                   </tbody>
                   @endforeach
                 </table>
                 </div>
               </div>
               </div><!--end .accordion-section-->
+              
           </div>
         </div>
       </div>
@@ -100,11 +93,7 @@
                     <td>
                      {!!link_to_route('documento.edit', $title = 'Editar', $parameters = $doc, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>
-                    <td>
-                      {!!Form::open(['route'=>['documento.destroy', $doc], 'method' => 'DELETE'])!!}
-                      {!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
-                      {!!Form::close()!!}
-                    </td>
+                   
                   </tbody>
                   @endforeach
                     </table>
@@ -150,11 +139,7 @@
                     <td>
                      {!!link_to_route('documento.edit', $title = 'Editar', $parameters = $doc, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>
-                    <td>
-                      {!!Form::open(['route'=>['documento.destroy', $doc], 'method' => 'DELETE'])!!}
-                      {!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
-                      {!!Form::close()!!}
-                    </td>
+                    
                   </tbody>
                   @endforeach
                     </table>

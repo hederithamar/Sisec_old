@@ -11,8 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="keywords" content="Sisec" />
-
-
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
   <script type="application/x-javascript"> 
     addEventListener("load", 
     function() 
@@ -44,7 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       $(".js-example-basic-single").select2();
     });
   </script>
-<<<<<<< HEAD
+
   <script type="text/javascript">
     $(document).ready(function() {
       $(".js-example-tags").select2({
@@ -52,11 +51,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       })
     });
 </script>
-=======
   <!--libreria para manipular los select -->
 
   <script type="text/javascript" src="dynamicoptionlist.js"></script>
->>>>>>> c5f04fee530d8cb68ebd69b0eeb64506fefea7ee
+
 <!--//select-->
 
 <!--animate-->
@@ -95,8 +93,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <li>
                   <a href="{!!URL::to('empresa')!!}">Empresas</a>
                 </li>
+
+
+                <li>
+                  <a href="{!!URL::to('expediente')!!}">Integracion de </p>
+                                                      Expedientes</a>
+
                 <li>
                   <a href="{!!URL::to('documento')!!}">Documentos</a>
+
                 </li>
               </ul>
 
@@ -161,7 +166,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="clearfix"> </div>
       </div>
       <div class="search-box">
-        <h3>Sistema de Seguimiento y Control de Carreteras</h3>
+
+        <center><h3>Sistema de Seguimiento y Control de Carreteras</h3></center>
         <span></span>
       </div>
 
@@ -228,7 +234,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
       }
     </script>
-  <!--scrolling js-->
   
   {!!Html::script('js/scripts.js')!!}
   <!--//scrolling js-->
