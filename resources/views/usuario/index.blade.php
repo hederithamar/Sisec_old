@@ -48,38 +48,34 @@
     </div>
     <!--//custom-ruta-->    
   <div clas="container" id="Layer1" overflow: scroll;>
-    <div class="accordion">
-      <div class="accordion-section">
-        <a class="accordion-section-title" href="#accordion-1">Administradores</a>
-        <div id="accordion-1" class="accordion-section-content">
-          <div id="table" class="table-editable">
-            <div class="forms">
-              <div class="form-body">
-                <!--aqui va la tabla-->
-                <table class="table-editable" id="table1" border="1" cellpadding="25" cellspacing="2">
-                  <thead>
-                    <th width="6">Nombre</th>
-                    <th width="6">Apellido P.</th>
-                    <th width="6">Apellido M.</th>
-                    <th width="6">Email</th>
-                    <th width="20">Estado</th>
-                    <th width="10">Zona</th>
-                    <th width="10">Celular</th>
-                    <th width="10">Telefono</th>
-                    <th width="6">Empresa</th>
-                    <th width="10">Accion</th>
-                  </thead>
-                  @foreach($usersAdmin as $user)
+    <div class="main">
+        <div class="accordion">
+          <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-1">Administradores</a>
+              <div id="accordion-1" class="accordion-section-content">
+              <h4>Administradores</h4>
+              <div id="table" class="table-editable">
+                <div class="forms">
+                <div class="form-body">
+                  <!--aqui va la tabla-->
+                  <table class="table-editable" id="table1" border="1" cellpadding="25" cellspacing="2">
+                    <thead>
+                      <th width="20">Nombre</th>
+                      <th width="7">Email</th>
+                      <th width="10">Celular</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="7">Estado</th>
+                      <th width="10">Accion</th>
+                    </thead>
+                    @foreach($usersAdmin as $user)
                   <tbody>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->firstlastname}}</td>
-                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->state}}</td>
-                    <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
                     <td>
                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
                     </td>
@@ -89,7 +85,7 @@
                 <script>
                   var table1_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_6: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -110,50 +106,50 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table class="table-editable" id="table2" border="1" cellpadding="25" cellspacing="2">
-                    <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
-                      <th width="10">Zona</th>
+
+                     <thead>
+                      <th width="20">Nombre</th>
+                      <th width="7">Email</th>
+                      <th width="15">Centro SCT</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersReG as $user)
-                    <tbody>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->firstlastname}}</td>
-                      <td>{{$user->secondlastname}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->state}}</td>
-                      <td>{{$user->zone}}</td>
-                      <td>{{$user->celphone}}</td>
-                      <td>{{$user->phone}}</td>
-                      <td>{{$user->enterprice['nameemp']}}</td>
-                      <td>
-                       {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                       </td>
-                      </tbody>
-                      @endforeach
-                    </table>
-                    <script>
-                      var table2_Props = {
-                          col_0: "input",
-                          col_9: "none",
-                          display_all_text: " [ Show all ] ",
-                          sort_select: true
-                      };
-                      var tf2 = setFilterGrid("table2", table2_Props);
-                    </script>
-                  </div>
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                 <script>
+                  var table2_Props = {
+                      col_0: "input",
+                      col_10: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf2 = setFilterGrid("table2", table2_Props);
+                </script>
                 </div>
-              </div><!--end .accordion-section-->
-            </div>
+              </div>
+            </div><!--end .accordion-section-->
           </div>
-        </div>
+      </div>
+    </div>
       <div class="accordion">
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
@@ -163,44 +159,47 @@
                 <div class="form-body">
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table3" border="1" cellpadding="25" cellspacing="2">
-                    <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+
+                     <thead>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersSup as $user)
-                    <tbody>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->firstlastname}}</td>
-                      <td>{{$user->secondlastname}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->state}}</td>
-                      <td>{{$user->zone}}</td>
-                      <td>{{$user->celphone}}</td>
-                      <td>{{$user->phone}}</td>
-                      <td>{{$user->enterprice['nameemp']}}</td>
-                      <td>
-                        {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                       </td>
-                    </tbody>
-                    @endforeach
-                  </table>
-                  <script>
-                    var table3_Props = {
-                        col_0: "input",
-                        col_9: "none",
-                        display_all_text: " [ Show all ] ",
-                        sort_select: true
-                    };
-                    var tf3 = setFilterGrid("table3", table3_Props);
-                  </script>
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
+                </table>
+                 <script>
+                  var table3_Props = {
+                      col_0: "input",
+                      col_10: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf3 = setFilterGrid("table3", table3_Props);
+                </script>
                 </div>
               </div>
             </div><!--end .accordion-section-->
@@ -217,38 +216,41 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table4" border="1" cellpadding="25" cellspacing="2">
                      <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersResOb as $user)
-                    <tbody>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->firstlastname}}</td>
-                      <td>{{$user->secondlastname}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->state}}</td>
-                      <td>{{$user->zone}}</td>
-                      <td>{{$user->celphone}}</td>
-                      <td>{{$user->phone}}</td>
-                      <td>{{$user->enterprice['nameemp']}}</td>
-                      <td>
-                       {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                       </td>
-                    </tbody>
+
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
                   @endforeach
                 </table>
                 <script>
                   var table4_Props = {
                       col_0: "input",
-                      col_9: "none",
+                      col_10: "none",
                       display_all_text: " [ Show all ] ",
                       sort_select: true
                   };
@@ -270,42 +272,45 @@
                   <!--aqui va la tabla-->
                   <table  class="table-editable" id="table5" border="1" cellpadding="25" cellspacing="2">
                     <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
                     </thead>
                     @foreach($usersCent as $user)
-                    <tbody>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->firstlastname}}</td>
-                      <td>{{$user->secondlastname}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->state}}</td>
-                      <td>{{$user->zone}}</td>
-                      <td>{{$user->celphone}}</td>
-                      <td>{{$user->phone}}</td>
-                      <td>{{$user->enterprice['nameemp']}}</td>
-                      <td>
-                       {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                       </td>
-                    </tbody>
-                    @endforeach
+
+                  <tbody>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
+                  </tbody>
+                  @endforeach
                 </table>
-                <script>
-                    var table5_Props = {
-                        col_0: "input",
-                        col_9: "none",
-                        display_all_text: " [ Show all ] ",
-                        sort_select: true
-                    };
-                    var tf5 = setFilterGrid("table5", table1_Props);
+                 <script>
+                  var table5_Props = {
+                      col_0: "input",
+                      col_10: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
+                  };
+                  var tf5 = setFilterGrid("table5", table1_Props);
                 </script>
               </div>
             </div>
@@ -321,42 +326,46 @@
             <div class="forms">
               <div class="form-body">
                   <!--aqui va la tabla-->
-                <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
-                  <thead>
-                      <th width="6">Nombre</th>
-                      <th width="6">Apellido P.</th>
-                      <th width="6">Apellido M.</th>
-                      <th width="6">Email</th>
-                      <th width="20">Estado</th>
+
+                  <table  class="table-editable" id="table6" border="1" cellpadding="25" cellspacing="2">
+                    <thead>
+                      <th width="7">Nombre</th>
+                      <th width="7">Apellido P.</th>
+                      <th width="7">Apellido M.</th>
+                      <th width="7">Email</th>
+                      <th width="15">Estado</th>
                       <th width="10">Zona</th>
                       <th width="10">Celular</th>
-                      <th width="10">Telefono</th>
-                      <th width="6">Empresa</th>
+                      <th width="8">Telefono</th>
+                      <th width="7">Empresa</th>
+                      <th width="6">Estado</th>
                       <th width="10">Accion</th>
-                  </thead>
-                  @foreach($usersAdmin as $user)
+                    </thead>
+                    @foreach($usersJef as $user)
                   <tbody>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->firstlastname}}</td>
-                      <td>{{$user->secondlastname}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->state}}</td>
-                      <td>{{$user->zone}}</td>
-                      <td>{{$user->celphone}}</td>
-                      <td>{{$user->phone}}</td>
-                      <td>{{$user->enterprice['nameemp']}}</td>
-                      <td>
-                       {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
-                       </td>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->firstlastname}}</td>
+                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->state}}</td>
+                    <td>{{$user->zone}}</td>
+                    <td>{{$user->celphone}}</td>
+                    <td>{{$user->phone}}</td>
+                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->status}}</td>
+                    <td>
+                     {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}
+                     </td>
                   </tbody>
                   @endforeach
                 </table>
                 <script>
                   var table6_Props = {
-                    col_0: "input",
-                    col_9: "none",
-                    display_all_text: " [ Show all ] ",
-                    sort_select: true
+
+                      col_0: "input",
+                      col_10: "none",
+                      display_all_text: " [ Show all ] ",
+                      sort_select: true
                   };
                   var tf6 = setFilterGrid("table6", table6_Props);
                 </script>

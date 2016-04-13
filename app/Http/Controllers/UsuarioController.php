@@ -9,6 +9,7 @@ use Sisec\Http\Controllers\Controller;
 use Sisec\User;
 use Sisec\Role;
 use Sisec\Enterprice;
+use Sisec\State;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
@@ -63,7 +64,8 @@ class UsuarioController extends Controller
     public function create()
     {   $roles = Role::lists('desc', 'id');
         $enterprices = Enterprice::lists('nameemp', 'id');
-        return view('usuario.create',compact('roles','enterprices'));
+        $namestates = State::lists('namestate', 'id');
+        return view('usuario.create',compact('roles','enterprices','namestates'));
     }
     /**
      * Store a newly created resource in storage.
@@ -73,8 +75,24 @@ class UsuarioController extends Controller
      */
     public function store(UserCreateRequest $request)
     {   $usuario = new User($request->all());
-        $usuario->id_curp=substr($usuario->name, 0, 2).$usuario->role_id.substr($usuario->firstlastname, 0, 2).$usuario->enterprice_id.substr($usuario->secondlastname, 0, 2);
-        $usuario->save();
+        if($usuario->role_id==1)
+        {
+            $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3)."2016".substr($usuario->secondlastname, 0, 3);
+            $usuario->save(); 
+        }
+        else{
+            if($usuario->role_id==2)
+            {  $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3).$usuario->enterprice_id.substr($usuario->secondlastname, 0, 3);
+                $usuario->save(); 
+            }
+            else{
+                $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3).$usuario->state.substr($usuario->secondlastname, 0, 3);
+            $usuario->save();
+
+            }         
+
+        }
+        
         
         Session::flash('message','Usuario Creado Correctamente');
         return Redirect::to('/usuario');
