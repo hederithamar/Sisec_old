@@ -96,8 +96,7 @@ class EmpresaController extends Controller
     public function edit($id)
     {
         $enterprices = Enterprice::lists('nameemp', 'id');
-        return view('empresa.edit',compact('enterprices'),['enterprice'=>$this->enterprice]);
-        
+        return view('empresa.edit',compact('enterprices'),['enterprice'=>$this->enterprice]);   
     }
 
     /**
@@ -131,4 +130,5 @@ class EmpresaController extends Controller
     /**
         *A
     */
+
 }

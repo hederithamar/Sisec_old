@@ -9,6 +9,7 @@
   {!!Html::script('js/modernizr.custom.js')!!}
   {!!Html::script('js/accordion.js')!!}
 
+
 @section('content')
 	<div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
@@ -21,24 +22,20 @@
               </p>
               <div id="table" class="table-editable">
                 <div class="forms">
-                <div class="form-body">
+                <div id="players" class="form-body" >
                   <!--aqui va la tabla-->
-                  <table class="table">
+                  <table id="RankingPlayers" class="table">
                     <thead>
-                     
-										<TH>Tipo de Doc.</TH>
+										<th>Tipo de Doc.</th>
                     <!--TH>Tipo de Proceso</TH-->
                     <th>E.P.</th>
                     <TH>Nombre</TH>
                     <TH>Descripcion</TH>
                     <th>Formato</th>
                     <th>Peso</th>
-
-												</thead>
-
-           @foreach($integrations as $integration)
-									<tbody>
-										
+										</thead>
+                    @foreach($integrations as $integration)
+									 <tbody>	
 										<td>{{$integration->typecontract}}</td>
                     <td>{{$integration->ep}}</td>
 										<td>{{$integration->name}}</td>
@@ -47,20 +44,15 @@
 										<td>{{$integration->weight}}</td>
                     <td>{{$integration->route}}</td>                  
 										<td>
-
-
 											{!!link_to_route('expediente.edit', $title = 'Editar', $parameters = $integration, $attributes = ['class'=>'btn btn-primary'])!!}
 										</td>
 									</tbody>
 								@endforeach
-
-          
                 </table>
+                {!!$integrations->render()!!}
                 </div>
               </div>
               </div><!--end .accordion-section-->
-
-
          </div>
         </div>
       </div>

@@ -8,8 +8,8 @@
 			<div class="form-title">
 				<h4>Catalógos Roles :</h4>
 			</div>
-			<div class="form-body">
-				<table class="table">
+			<div id="rol1" class="form-body">
+				<table id="" class="table">
 					<thead>
 						<th>Id</th>
 						<th>Descripción</th>
@@ -20,8 +20,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="grids widget-shadow">
-	</div>
+
 	@endsection
 
 	@section('scripts')

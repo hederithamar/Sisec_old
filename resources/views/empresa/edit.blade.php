@@ -1,16 +1,21 @@
 @extends('layouts.admin')
 	@section('content')
 	@include('alerts.request')
+	<!--/sub-heard-part-->
+	<div class="outter-wp">
+  	<div class="sub-heard-part">
+    	<ol class="breadcrumb m-b-0">
+      		<li><a href="{!!URL::to('admin')!!}">Home</a></li>
+      		<li><a href="{!!URL::to('empresa')!!}">Empresas</a></li>
+      		<li class="active">Actualizar Empresa</li>
+    	</ol>
+  	</div>  
+  	<!--/sub-heard-part-->  
+  	<div class="forms-main">
+		<h2 class="inner-tittle">Actualizar Empresa</h2>
 
-	<div class="forms">
-		<h3 class="title1">Catalogos Empresas</h3>
-		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 			
-			<div class="form-title">
-				<h4>Actualizar empresa:</h4>
-			</div>
-			<div class="form-body">
-				<div class="forms-grids">
-					<div class="my-div">
+			<div class="validation-form">
+				<div class="my-div">
 
 						{!!Form::model($enterprice,['route'=>['empresa.update',$enterprice],'method'=>'PUT'])!!}
 						@include('empresa.forms.emp')				
@@ -25,8 +30,9 @@
 						{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
 						{!!Form::close()!!}
 					</div>
-				</div>
+				<!---->
 			</div>
-		</div>
+			<div class="clearfix"></div>
+		</div> 
 	</div>
 	@endsection

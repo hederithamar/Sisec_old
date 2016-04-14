@@ -26,9 +26,9 @@ class IntegracionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $integrations = Integration::paginate(25);
+        $integrations = Integration::paginate(2);
         
         return view('integra.index',compact('integrations'));
         
