@@ -1,5 +1,4 @@
 <?php
-
 namespace Sisec\Http\Controllers;
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
@@ -86,13 +85,10 @@ class IntegracionController extends Controller
      */
     public function update(IntegrationUpdateRequest $request, $id)
     {
-
         $this->integration->fill($request->all());
         $this->integration->save();
         Session::flash('message','E.P. Actualizada');
         return Redirect::to('/expediente');
-
     }
    
-
 }

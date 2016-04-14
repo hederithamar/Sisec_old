@@ -1,5 +1,4 @@
 <?php
-
 namespace Sisec\Http\Controllers;
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
@@ -26,23 +25,22 @@ class EmpresaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
     /*public function listing(){
         $enterprices = Enterprice::all();
         return response()->json(
                 $enterprices->toArray()
             );
     }*/
-
     public function index()
     {
+        $enterpricesSup = Enterprice::Type("Supervisora")->paginate(15,['*'],'pag-1');
+        $enterpricesCons = Enterprice::Type("Constructora")->paginate(15 ,['*'],'pag-2');
+        return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
 
-        $enterpricesSup = Enterprice::Type("Supervisora")->orderBy('id', 'DESC')->paginate(5);
-        $enterpricesCons = Enterprice::Type("Constructora")->orderBy('id', 'DESC')->paginate(5);
 
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
-    }
 
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -52,9 +50,7 @@ class EmpresaController extends Controller
     {
         $enterprices = Enterprice::lists('rfc', 'id');
         return view('empresa.create',compact('enterprices'));
-
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -77,7 +73,6 @@ class EmpresaController extends Controller
                 return Redirect::to('rol')->withErrors('Error');
             }*/
     }
-
     /**
      * Display the specified resource.
      *
@@ -88,7 +83,6 @@ class EmpresaController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -101,7 +95,6 @@ class EmpresaController extends Controller
         return view('empresa.edit',compact('enterprices'),['enterprice'=>$this->enterprice]);
         
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -116,7 +109,6 @@ class EmpresaController extends Controller
         Session::flash('message','Empresa Actualizada Correctamente');
         return Redirect::to('/empresa');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -129,7 +121,6 @@ class EmpresaController extends Controller
         Session::flash('message','Empresa Eliminada Correctamente');
         return Redirect::to('/empresa');
     }
-
     /**
         *Aqui se crea el filtro de empresas
     */

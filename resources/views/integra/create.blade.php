@@ -8,18 +8,17 @@
 		<div class="sub-heard-part">
 			<ol class="breadcrumb m-b-0">
 				<li><a href="{!!URL::to('admin')!!}">Home</a></li>
-				<li><a href="{!!URL::to('expediente')!!}">Integracion Expediente</a></li>
+				<li><a href="{!!URL::to('expediente')!!}">Integración Expediente</a></li>
 				<li class="active">Nueva Integración de  Expediente</li>
 			</ol>
 		</div>	
 <!--/sub-heard-part-->	
 		<!--/forms-->
 	<div class="forms-main">
-		<h3 class="inner-tittle">Catalogos Expedientes</h3>
+		<h3 class="inner-tittle">Nueva Integración de  Expediente</h3>
 		<div class="validation-form">
 		<!--div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 			<div class="form-title"-->
-				<h4>Agregar Nuevo Documento E.P. </h4>
 			</div>
 			<div class="form-body">
 

@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -28,3 +27,4 @@ Route::get('logout','LogController@logout');
 Route::resource('excelempcons','ExcelController@importempcons');
 Route::resource('excelempsup','ExcelController@importempsup');
 Route::get('import','ExcelController@import');
+

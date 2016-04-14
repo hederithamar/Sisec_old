@@ -8,7 +8,7 @@
 			<ol class="breadcrumb m-b-0">
 				<li><a href="{!!URL::to('admin')!!}">Home</a></li>
 				<li><a href="{!!URL::to('empresa')!!}">Empresas</a></li>
-				<li class="active">Crear Empresas</li>
+				<li class="active">Crear Empresa</li>
 			</ol>
 		</div>	
 		<!--/sub-heard-part-->	
@@ -35,8 +35,5 @@
 </div>
 	<!--//outer-wp-->
 	@endsection
-
 	@section('scripts')
-		
-		
 	@endsection

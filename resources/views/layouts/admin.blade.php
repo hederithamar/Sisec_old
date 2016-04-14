@@ -265,7 +265,7 @@
                         <li id="menu-academico-avaliacoes" ><a href="{!!URL::to('empresa')!!}"><i class="lnr lnr-apartment"></i>Empresas</a></li>
                         <li id="menu-academico-boletim" ><a href="{!!URL::to('usuario')!!}"><i class="lnr lnr-users"></i>Usuarios</a></li>
                       <li id="menu-academico-boletim" ><a href="{!!URL::to('expediente')!!}"><i class="lnr lnr-paperclip"></i>Integración de expedientes</a></li>
-                      <li id="menu-academico-boletim" ><a href="{!!URL::to('documentos')!!}"><i class="lnr lnr-layers"></i>Documentos previos</a></li>
+                      <li id="menu-academico-boletim" ><a href="{!!URL::to('documento')!!}"><i class="lnr lnr-layers"></i>Documentos previos</a></li>
                       </ul>
                    </li>
                    <li id="menu-academico" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i> <span>Contrato</span> <span class="fa fa-angle-right" style="float: right"></span></a>
@@ -323,6 +323,8 @@
   @section('scripts')
   @show
   <!-- Bootstrap Core JavaScript -->
+  @section('scripts')
+  @show
   
 </body>
 </html>

@@ -104,6 +104,7 @@
                   var tf1 = setFilterGrid("table1", table1_Props);
                 </script>
               </div>
+              {!!$usersAdmin->render()!!}
             </div>
           </div>
         </div>
@@ -167,6 +168,7 @@
                   var tf2 = setFilterGrid("table2", table2_Props);
                 </script>
                 </div>
+                {!!$usersReG->render()!!}
               </div>
             </div><!--end .accordion-section-->
           </div>
@@ -236,6 +238,7 @@
                 </script>
                 </div>
               </div>
+              {!!$usersSup->render()!!}
             </div><!--end .accordion-section-->
           </div>
         </div>
@@ -297,6 +300,7 @@
                   var tf4 = setFilterGrid("table4", table4_Props);
                 </script>
                 </div>
+                {!!$usersResOb->render()!!}
               </div>
             </div>
           </div>
@@ -359,6 +363,7 @@
                   var tf5 = setFilterGrid("table5", table1_Props);
                 </script>
               </div>
+              {!!$usersCent->render()!!}
             </div>
           </div><!--end .accordion-section-->
         </div>
@@ -423,6 +428,7 @@
                   var tf6 = setFilterGrid("table6", table6_Props);
                 </script>
               </div>
+              {!!$usersJef->render()!!}
             </div>
           </div><!--end .accordion-section-->
         </div>
