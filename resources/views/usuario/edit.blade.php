@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 	@section('content')
-	@include('alerts.request')
 	<div class="outter-wp">
 	<!--/sub-heard-part-->
   	<div class="sub-heard-part">
@@ -11,6 +10,7 @@
     	</ol>
   	</div>  
   	<!--/sub-heard-part-->  
+  	@include('alerts.request')
   	<div class="forms-main">
 		<h2 class="inner-tittle">Actualizar Usuario</h2>
 

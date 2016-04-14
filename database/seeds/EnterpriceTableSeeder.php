@@ -53,41 +53,16 @@ class EnterpriceTableSeeder extends Seeder
             'namestate'           => 'Chiapas'
             ));
         //manda datos ficticios pero definidos manual 2
-        factory(Sisec\Enterprice::class, 10)-> create([
+        factory(Sisec\Enterprice::class, 2)-> create([
             'type' => 'Constructora'
             ]);
         //10 datos fiticios de empresas supervisoras
-        factory(Sisec\Enterprice::class, 10)->create();
+        factory(Sisec\Enterprice::class, 2)->create();
 
         //$enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
 
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '1',
-            'enterprice_id' => '1',
-            ]);
+        factory(Sisec\User::class, 15)-> create();
 
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '2',
-            'enterprice_id' => '2',
-            ]);
-        
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '3',
-            'enterprice_id' => '3',
-            ]);
-
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '4',
-            'enterprice_id' => '4',
-            ]);
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '5',
-            'enterprice_id' => '5',
-            ]);
-        factory(Sisec\User::class, 15)-> create([
-            'role_id' => '6',
-            'enterprice_id' => '6',
-            ]);
         /*\DB::table('users')->insert(array(
             'name' => ,
             'firstlastname' => $faker->lastname,

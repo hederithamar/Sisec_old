@@ -1,16 +1,16 @@
 @extends('layouts.admin')
 	@section('content')
-	@include('alerts.request')
 	<div class="outter-wp">
 		<!--/sub-heard-part-->
 	  	<div class="sub-heard-part">
 	    	<ol class="breadcrumb m-b-0">
 	      		<li><a href="{!!URL::to('admin')!!}">Home</a></li>
-	      		<li><a href="{!!URL::to('empresa')!!}">Usuarios</a></li>
+	      		<li><a href="{!!URL::to('usuario')!!}">Usuarios</a></li>
 	      		<li class="active">Crear Usuario</li>
 	    	</ol>
 	  	</div>  
 	  	<!--/sub-heard-part-->  
+	  	@include('alerts.request')
 	  	<div class="forms-main">
 			<h2 class="inner-tittle">Crear Usuario</h2>
 

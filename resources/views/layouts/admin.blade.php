@@ -52,11 +52,11 @@
       <div class="header-section">
             <!--menu-right-->
             <div class="top_menu">
-                <div class="main-search">
+                 <!--<div class="main-search">
                   <center><h5>SISTEMA DE SEGUIMIENTO Y CONTROL</h5></center>
                   <div class="close"><img src="images/cross.png" /></div>
                 </div>
-                  <div class="srch"><button></button></div>
+                  <div class="srch"><button></button></div>menu-right-->
                   <script type="text/javascript">
                      $('.main-search').hide();
                     $('button').click(function (){
@@ -251,9 +251,9 @@
                     <a href="{!!URL::to('admin')!!}"><span class=" name-caret">Usuario 1</span></a>
                    <p>Administrator</p>
                   <ul>
-                  <li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
-                    <li><a class="tooltips" href="index.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
-                    <li><a class="tooltips" href="index.html"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
+                  <li><a class="tooltips" href="index.html"><span>Perfil</span><i class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>Ajustes</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>Salir</span><i class="lnr lnr-power-switch"></i></a></li>
                     </ul>
                   </div>
                  <!--//down-->
@@ -297,24 +297,24 @@
                 <div class="clearfix"></div>    
               </div>
               <script>
-              var toggle = true;
+                var toggle = true;
                     
-              $(".sidebar-icon").click(function() {                
+                $(".sidebar-icon").click(function() {                
                 if (toggle)
-                {
-                $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
-                $("#menu span").css({"position":"absolute"});
-                }
-                else
-                {
-                $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
-                setTimeout(function() {
-                  $("#menu span").css({"position":"relative"});
-                }, 400);
-                }
-                      
-                      toggle = !toggle;
-                    });
+                  {
+                    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                    $("#menu span").css({"position":"absolute"});
+                  }
+                  else
+                  {
+                    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                    setTimeout(function() {
+                      $("#menu span").css({"position":"relative"});
+                    }, 400);
+                  }
+                        
+                  toggle = !toggle;
+                });
               </script>
   <!--js -->
   
