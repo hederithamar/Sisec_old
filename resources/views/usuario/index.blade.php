@@ -1,5 +1,4 @@
 @extends('layouts.admin')
-@include('alerts.success')
 
   <!--libreria para manipular los acordeones -->
   {!!Html::style('css/normalize.css')!!}
@@ -46,14 +45,29 @@
         <div class="clearfix"> </div> 
       </div>
     </div>
-    <!--//custom-ruta-->    
+    <!--//custom-ruta-->
+    @include('alerts.success')
   <div clas="container" id="Layer1" overflow: scroll;>
     <div class="main">
         <div class="accordion">
           <div class="accordion-section">
               <a class="accordion-section-title" href="#accordion-1">Administradores</a>
               <div id="accordion-1" class="accordion-section-content">
-              <h4>Administradores</h4>
+                <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
               <div id="table" class="table-editable">
                 <div class="forms">
                 <div class="form-body">
@@ -99,6 +113,21 @@
       <div class="accordion-section">
         <a class="accordion-section-title" href="#accordion-2">Residentes Generales</a>
         <div id="accordion-2" class="accordion-section-content">
+        <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -147,6 +176,21 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-3">SuperIntendentes de Servicio</a>
           <div id="accordion-3" class="accordion-section-content">
+          <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -200,6 +244,21 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-4">Residentes de Obra</a>
           <div id="accordion-4" class="accordion-section-content">
+          <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -247,6 +306,21 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-5">Centro SCT</a>
           <div id="accordion-5" class="accordion-section-content">
+          <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -294,6 +368,21 @@
       <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-6">Jefe de Oficina Técnica</a>
         <div id="accordion-6" class="accordion-section-content">
+        <!--//boton flotante-->    
+                <div class="float-right">
+                <div class="dropdown">
+                <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog icon_8"></i>
+                  <i class="fa fa-chevron-down icon_8"></i>
+                  <div class="ripple-wrapper"></div></a>
+                  <ul class="dropdown-menu float-right">
+                    <li>
+                      <a href="#">
+                      <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!--//fin boton float-->
           <div id="table" class="table-editable">
             <div class="forms">
               <div class="form-body">
@@ -341,6 +430,4 @@
     </div>
   </div>
 </div>
-  
-
 @endsection

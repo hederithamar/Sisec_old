@@ -1,5 +1,4 @@
-@extends('layouts.admin')
-@include('alerts.success')
+  @extends('layouts.admin')
 
   <!--libreria para manipular los acordeones -->
   {!!Html::style('css/normalize.css')!!}
@@ -31,19 +30,34 @@
           <div class="col-md-3 widget states-last"></div>
           <div class="col-md-3 widget states-last"></div>
           <div class="col-md-3 widget states-thrd">
-            {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn btn-primary'])!!}
-            <a href="excel">Exportar excel</a>
+            {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn green'])!!}
             <div class="clearfix"> </div> 
           </div>
         <div class="clearfix"> </div> 
       </div>
     </div>
-    <!--//custom-ruta-->    
+    <!--//custom-ruta-->
+    @include('alerts.success')
     <div clas="container" id="Layer1" overflow: scroll;>
       <div class="accordion">
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-1">Empresas Supervisoras</a>
           <div id="accordion-1" class="accordion-section-content">
+            <!--//boton flotante-->    
+            <div class="float-right">
+              <div class="dropdown">
+              <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-cog icon_8"></i>
+                <i class="fa fa-chevron-down icon_8"></i>
+                <div class="ripple-wrapper"></div></a>
+                <ul class="dropdown-menu float-right">
+                  <li>
+                    <a href="excelempsup">
+                    <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--//fin boton float-->    
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -67,7 +81,7 @@
                       <td >{{$enterprice->email}}</td>
                       <td >{{$enterprice->address}}</td>
                       <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
+                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
                       </td>
                     </tbody>
                     @endforeach
@@ -92,6 +106,21 @@
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
           <div id="accordion-2" class="accordion-section-content">
+          <!--//boton flotante-->    
+            <div class="float-right">
+              <div class="dropdown">
+              <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-cog icon_8"></i>
+                <i class="fa fa-chevron-down icon_8"></i>
+                <div class="ripple-wrapper"></div></a>
+                <ul class="dropdown-menu float-right">
+                  <li>
+                    <a href="excelempcons">
+                    <i class="fa fa-download icon_9"></i>Descargar Excel</a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--//fin boton float-->    
             <div id="table" class="table-editable">
               <div class="forms">
                 <div class="form-body">
@@ -115,7 +144,7 @@
                       <td >{{$enterprice->email}}</td>
                       <td >{{$enterprice->address}}</td>
                       <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn btn-primary'])!!}
+                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
                       </td>
                     </tbody>
                     @endforeach

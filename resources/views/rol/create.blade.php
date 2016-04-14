@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 	@section('content')
-	@include('alerts.request')
+	
 	<!--/sub-heard-part-->
   <div class="sub-heard-part">
     <ol class="breadcrumb m-b-0">
       <li><a href="{!!URL::to('admin')!!}">Home</a></li>
       <li class="active">Roles</li>
     </ol>
-  </div>  
+  </div> 
   <!--/sub-heard-part-->  
-
+  @include('alerts.request')
 	<div class="forms">
 		<h3 class="title1">Catalogos Roles</h3>
 		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 

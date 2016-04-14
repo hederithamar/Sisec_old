@@ -1,8 +1,6 @@
-@extends('layouts.admin')
-	
-	@include('alerts.request')
+	@extends('layouts.admin')
 	@section('content')
-<div class="graph">
+	<div class="graph">
 	<!--//outer-wp-->
 	<div class="outter-wp">
 		<!--/sub-heard-part-->
@@ -14,6 +12,7 @@
 			</ol>
 		</div>	
 		<!--/sub-heard-part-->	
+		@include('alerts.request')
 		<!--/forms-->
 		<div class="forms-main">
 			<h2 class="inner-tittle">Crear Empresa</h2>

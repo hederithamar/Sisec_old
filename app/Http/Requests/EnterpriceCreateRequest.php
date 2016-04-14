@@ -21,15 +21,17 @@ class EnterpriceCreateRequest extends Request
      *
      * @return array
      */
+
     public function rules()
     {
         return [
             'rfc' => 'required|unique:enterprices',
             'nameemp' => 'required',
             'type' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
             'status' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
         ];
     }
 }

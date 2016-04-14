@@ -587,7 +587,7 @@ li#menu-mensagens-enviadas,li#menu-mensagens,li#menu-academico-avaliacoes,li#men
   background:rgba(0, 0, 0, 0.02);
 }
 li.dropdown.note {
-    background: #009688;
+    background: #00bfa5;
     border-left: 1px solid rgba(1, 189, 206, 0.93);
     display: inline-block;
     float: left;
@@ -1163,7 +1163,7 @@ ul.dropdown {
 
 
 .header-section {
-    background:#009688;
+    background: #00bfa5;
   box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
       -webkit-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
     -moz-box-shadow: 2px 0 6px rgba(1, 70, 76, 0.68);
@@ -3854,7 +3854,7 @@ button.btn.btn-default.tip {
 .profile-widget {
     margin: 0 auto;
     text-align: center;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #00bfa5;
         padding: 43px 0 24px 0;
     background: #009688;
 }

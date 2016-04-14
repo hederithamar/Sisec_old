@@ -1,6 +1,5 @@
-@extends('layouts.admin')
+	@extends('layouts.admin')
 	@section('content')
-	@include('alerts.request')
 	<!--/sub-heard-part-->
 	<div class="outter-wp">
   	<div class="sub-heard-part">
@@ -11,6 +10,7 @@
     	</ol>
   	</div>  
   	<!--/sub-heard-part-->  
+  	@include('alerts.request')
   	<div class="forms-main">
 		<h2 class="inner-tittle">Actualizar Empresa</h2>
 
@@ -21,13 +21,13 @@
 						@include('empresa.forms.emp')				
 					</div>
 					
-					<div class="col-md-2 grid_box1">
-						{!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+					<div class="col-md-2">
+						{!!Form::submit('Actualizar',['class'=>'btn green'])!!}
 						{!!Form::close()!!}
 					</div>
-					<div class="col-md-2 grid_box1">
+					<div class="col-md-2">
 						{!!Form::open(['route'=>['empresa.destroy', $enterprice], 'method' => 'DELETE'])!!}
-						{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
+						{!!Form::submit('Eliminar',['class'=>'btn red'])!!}
 						{!!Form::close()!!}
 					</div>
 				<!---->
