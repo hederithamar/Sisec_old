@@ -246,8 +246,6 @@
         </header>
       <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div>
       <!--/down-->
-
-
               <div class="down">  
                     <a href="{!!URL::to('admin')!!}"><img src="/images/in10.jpg"></a>
                     <a href="{!!URL::to('admin')!!}"><span class=" name-caret">Usuario 1</span></a>
@@ -267,7 +265,7 @@
                         <li id="menu-academico-avaliacoes" ><a href="{!!URL::to('empresa')!!}"><i class="lnr lnr-apartment"></i>Empresas</a></li>
                         <li id="menu-academico-boletim" ><a href="{!!URL::to('usuario')!!}"><i class="lnr lnr-users"></i>Usuarios</a></li>
                       <li id="menu-academico-boletim" ><a href="{!!URL::to('expediente')!!}"><i class="lnr lnr-paperclip"></i>Integración de expedientes</a></li>
-                      <li id="menu-academico-boletim" ><a href="{!!URL::to('documentos')!!}"><i class="lnr lnr-layers"></i>Documentos previos</a></li>
+                      <li id="menu-academico-boletim" ><a href="{!!URL::to('documento')!!}"><i class="lnr lnr-layers"></i>Documentos previos</a></li>
                       </ul>
                    </li>
                    <li id="menu-academico" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i> <span>Contrato</span> <span class="fa fa-angle-right" style="float: right"></span></a>
@@ -322,6 +320,8 @@
   
   {!!Html::script('js/scripts.js')!!}
   {!!Html::script('js/bootstrap.min.js')!!}
+  @section('scripts')
+  @show
   <!-- Bootstrap Core JavaScript -->
   @section('scripts')
   @show

@@ -1,5 +1,4 @@
 <?php
-
 namespace Sisec\Http\Controllers;
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
@@ -26,9 +25,9 @@ class IntegracionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $integrations = Integration::paginate(2);
+        $integrations = Integration::paginate(10);
         
         return view('integra.index',compact('integrations'));
         
@@ -53,7 +52,7 @@ class IntegracionController extends Controller
     {
         Integration::create($request->all());
         Session::flash('message','E.P. Creada Correctamente');
-        return Redirect::to('/integra'); 
+        return Redirect::to('/expediente'); 
             
     }
     /**
@@ -86,25 +85,10 @@ class IntegracionController extends Controller
      */
     public function update(IntegrationUpdateRequest $request, $id)
     {
-
         $this->integration->fill($request->all());
         $this->integration->save();
         Session::flash('message','E.P. Actualizada');
         return Redirect::to('/expediente');
-
     }
    
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $this->integration->delete();
-        Session::flash('message','Usuario Eliminado Correctamente');
-        return Redirect::to('/expediente');
-    }
-    
 }

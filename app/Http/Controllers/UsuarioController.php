@@ -9,6 +9,7 @@ use Sisec\Http\Controllers\Controller;
 use Sisec\User;
 use Sisec\Role;
 use Sisec\Enterprice;
+use Sisec\State;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
@@ -31,27 +32,27 @@ class UsuarioController extends Controller
     {
         $usersAdmin = User::Emp('1')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-1');
 
         $usersSup = User::Emp('2')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-2');
 
         $usersReG = User::Emp('6')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-3');
 
         $usersResOb = User::Emp('3')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-4');
 
         $usersCent = User::Emp('4')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-5');
 
         $usersJef = User::Emp('5')->with(['enterprice','role' => function($query){
                 $query->with('users');
-            }])->Paginate(5);
+            }])->paginate(10 ,['*'],'pag-6');
 
         return view('usuario.index',compact('usersAdmin','usersReG','usersSup','usersResOb','usersCent','usersJef'));
     }
@@ -63,7 +64,8 @@ class UsuarioController extends Controller
     public function create()
     {   $roles = Role::lists('desc', 'id');
         $enterprices = Enterprice::lists('nameemp', 'id');
-        return view('usuario.create',compact('roles','enterprices'));
+        $namestates = State::lists('namestate', 'id');
+        return view('usuario.create',compact('roles','enterprices','namestates'));
     }
     /**
      * Store a newly created resource in storage.
@@ -73,8 +75,24 @@ class UsuarioController extends Controller
      */
     public function store(UserCreateRequest $request)
     {   $usuario = new User($request->all());
-        $usuario->id_curp=substr($usuario->name, 0, 2).$usuario->role_id.substr($usuario->firstlastname, 0, 2).$usuario->enterprice_id.substr($usuario->secondlastname, 0, 2);
-        $usuario->save();
+        if($usuario->role_id==1)
+        {
+            $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3)."2016".substr($usuario->secondlastname, 0, 3);
+            $usuario->save(); 
+        }
+        else{
+            if($usuario->role_id==2)
+            {  $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3).$usuario->enterprice_id.substr($usuario->secondlastname, 0, 3);
+                $usuario->save(); 
+            }
+            else{
+                $usuario->id_curp=substr($usuario->name, 0, 3).$usuario->role_id.substr($usuario->firstlastname, 0, 3).$usuario->state.substr($usuario->secondlastname, 0, 3);
+            $usuario->save();
+
+            }         
+
+        }
+        
         
         Session::flash('message','Usuario Creado Correctamente');
         return Redirect::to('/usuario');

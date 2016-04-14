@@ -27,14 +27,11 @@ class UserCreateRequest extends Request
             'name' => 'required',
             'firstlastname' => 'required',
             'secondlastname' => 'required',
-            'celphone' => 'required',
-            'phone' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
             'role_id' => 'required',
             'enterprice_id' => 'required',
             'state' => 'required',
-            'zone' => 'required',
            
         ];
     }

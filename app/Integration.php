@@ -1,14 +1,9 @@
 <?php
-
 namespace Sisec;
-
 use Illuminate\Database\Eloquent\Model;
-
 class Integration extends Model
 {
-    
     protected $table = 'integrations';
 	protected $dates = ['deleted_at'];
- 	protected $fillable = ['typecontract','ep','name','description','fort','weight'];
- 	protected $guarded = array('id');
+ 	protected $fillable = ['ep','type','name','description','format','weight','route'];
 }

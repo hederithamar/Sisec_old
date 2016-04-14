@@ -1,28 +1,42 @@
 @extends('layouts.admin')
 @include('alerts.success')
 
-	@section('content')
-	<div class="forms">
-		<h3 class="title1"> </h3>
-		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
-			<div class="form-title">
-				<h4>Catalógos Roles :</h4>
-			</div>
-			<div id="rol1" class="form-body">
-				<table id="" class="table">
-					<thead>
-						<th>Id</th>
-						<th>Descripción</th>
-						<th>Operación</th>
-					</thead>
-					<tbody id ="datos"></tbody>
-				</table>
-			</div>
+@section('content')
+	<div class="graph">
+		<!--//outer-wp-->
+		<div class="outter-wp">
+			<!--/sub-heard-part-->
+			<div class="sub-heard-part">
+				<ol class="breadcrumb m-b-0">
+					<li><a href="{!!URL::to('admin')!!}">Home</a></li>
+					<li><a href="{!!URL::to('rol')!!}">Roles</a></li>
+					<li class="active">Crear Roles</li>
+				</ol>
+			</div>	
+			<!--/sub-heard-part-->	
+			<!--/forms-->
+			<div class="forms-main">
+				<h2 class="inner-tittle">Roles</h2>
+					<div class="validation-form">
+					<!---->
+					<table class="table-editable">
+						<thead>
+							<th>Id</th>
+							<th>Descripción</th>
+							<th>Operación</th>
+						</thead>
+						<tbody id ="datos"></tbody>
+					</table>
+					<!---->
+					</div>
+			</div> 
+		<div class="clearfix"></div>
+		<!--//forms-->											   
 		</div>
 	</div>
 
-	@endsection
+@endsection
 
-	@section('scripts')
-		{!!Html::script('js/listrol.js')!!}
-	@endsection
+@section('scripts')
+	{!!Html::script('js/listrol.js')!!}
+@endsection
