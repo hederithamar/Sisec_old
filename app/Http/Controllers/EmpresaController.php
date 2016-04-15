@@ -37,9 +37,6 @@ class EmpresaController extends Controller
         $enterpricesCons = Enterprice::Type("Constructora")->paginate(15 ,['*'],'pag-2');
         return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
 
-
-        return view('empresa.index',compact('enterpricesSup',"enterpricesCons"));
-
     }
     /**
      * Show the form for creating a new resource.
@@ -59,7 +56,7 @@ class EmpresaController extends Controller
      */
     public function store(EnterpriceCreateRequest $request)
     {
-         Enterprice::create($request->all());
+        Enterprice::create($request->all());
         Session::flash('message','Empresa Creada Correctamente');
         return Redirect::to('/empresa'); 
         /*$message = 'Empresa Creada Correctamente';

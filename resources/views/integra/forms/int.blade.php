@@ -2,8 +2,8 @@
 <script>
 	function llenarSelect(valor)
 	{
-		var tipoEp4 = ["Planeacion General","Programacion","Presupuestacion","Licitacion","Proceso de Contratacion de la Obra"];   
-		var tipoEp1 = ["Uno","dos","Tres"]; 
+		var tipoEp1 = ["Planeacion General","Programacion","Presupuestacion","Licitacion","Proceso de Contratacion de la Obra"];   
+		var tipoEp4 = ["Ejecución","Ajuste de costos","Convenios","Terminacion de los trabajos","Terminación anticipada o rescisión","Sanciones incorfamidades y conciliaciones"];
 
 		document.getElementById("type").options.length=0;
 		if(valor==04){		

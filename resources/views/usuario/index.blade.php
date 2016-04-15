@@ -62,7 +62,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusradmi">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
@@ -123,7 +123,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusrresi">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
@@ -187,7 +187,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusrsupint">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
@@ -256,7 +256,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusrresiobr">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
@@ -319,7 +319,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusrcent">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
@@ -382,7 +382,7 @@
                   <div class="ripple-wrapper"></div></a>
                   <ul class="dropdown-menu float-right">
                     <li>
-                      <a href="#">
+                      <a href="excelusrjefe">
                       <i class="fa fa-download icon_9"></i>Descargar Excel</a>
                     </li>
                   </ul>
