@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Sisec\Http\Requests;
 use Sisec\Http\Controllers\Controller;
 use Sisec\Enterprice;
+use Sisec\User;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -22,7 +23,191 @@ class ExcelController extends Controller
     {
         
     }
+    //generador de archivs excel para usuarios con sus respectivoss perfiles.
+    //Usuarios administradores.
+    public function importusradmi()
+    {
+        Excel::create('Usuarios Administradores', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '1')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
+    //Usuarios residentes generales.
+    public function importusrresi()
+    {
+        Excel::create('Usuarios Residentes', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '2')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
+    //Usuarios Superintendente de sevicio.
+    public function importusrsupint()
+    {
+        Excel::create('Usuarios Superintendente', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '3')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
+    //Usuarios Residente de Obra.
+    public function importusrresiobr()
+    {
+        Excel::create('Usuarios Residente de Obra', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '4')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
+    
+    //Usuarios Centro SCT.
+    public function importusrcent()
+    {
+        Excel::create('Usuarios Centro SCT', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '5')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
 
+    //Usuarios Jefe de oficina tecnica.
+    public function importusrjefe()
+    {
+        Excel::create('Usuarios Jefe de Oficina', function($excel) 
+        {
+            $excel->sheet('Usuarios', function($sheet) 
+            {
+                $user = User::select('id_curp','name','firstlastname','secondlastname','email','state','celphone','phone','zone')->where('role_id', '=', '6')->get();
+                $sheet->cells('A1:I1', function($cells) 
+                {
+                    $cells->setBackground('##0080FF');
+                    // Set with font color
+                    $cells->setFontColor('#000000');
+                    // Set font family
+                    $cells->setFontFamily('Calibri');
+                    // Set font size
+                    $cells->setFontSize(12);
+                    // Set font weight to bold
+                    $cells->setFontWeight('bold');
+                    $cells->setAlignment('center');
+                    // Set font
+                    $cells->setFont(array(
+                      'family'     => 'Calibri',
+                        'size'       => '12',
+                        'bold'       =>  true));
+                });
+                $sheet->fromArray($user);
+            });
+        })->export('xls');
+    }
+
+    //Empresas Constructoras.
     public function importempcons()
     {
         Excel::create('Empresas Constructoras', function($excel) 
