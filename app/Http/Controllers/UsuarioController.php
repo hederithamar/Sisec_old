@@ -117,7 +117,8 @@ class UsuarioController extends Controller
     {   
         $roles = Role::lists('desc', 'id');
         $enterprices = Enterprice::lists('nameemp', 'id');
-        return view('usuario.edit',compact('roles','enterprices'),['user'=>$this->user]);
+        $namestates = State::lists('namestate', 'id');
+        return view('usuario.edit',compact('roles','enterprices','namestates'),['user'=>$this->user]);
     }
     /**
      * Update the specified resource in storage.

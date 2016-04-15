@@ -68,7 +68,7 @@
 		{!!Form::select('role_id', $roles, null, ['onchange'=>'habilitarCombo(this.value)','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 	<!--Empresa a la que pertenece usuario-->
-	<div id="empresas"class="col-md-6 form-group" style='display:none;'>
+	<div id="empresas"class="col-md-6 form-group" style='style.visibility = "hidden"; height: 600px;'>
 		{!!Form::label('enterprice_id','Empresa:')!!}
 		<br>
 		{!!Form::select('enterprice_id', $enterprices, null, ['id' => 'enterprice_id','class' => 'js-example-basic-single js-states form-control']);!!}

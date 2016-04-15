@@ -30,8 +30,7 @@ class UserCreateRequest extends Request
             'email' => 'required|unique:users',
             'password' => 'required',
             'role_id' => 'required',
-            'enterprice_id' => 'required',
-            'state' => 'required',
+            'status'=>'required',
            
         ];
     }
