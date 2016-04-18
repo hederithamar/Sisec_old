@@ -7,7 +7,7 @@ use Sisec\Http\Requests\DocCreateRequest;
 use Sisec\Http\Requests\DocUpdateRequest;
 use Sisec\Http\Controllers\Controller;
 use Sisec\Doc;
-use Sisec\Enterprice;
+use Sisec\Enterprise;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;

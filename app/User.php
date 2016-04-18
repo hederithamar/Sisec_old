@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['id_curp', 'name', 'firstlastname', 'secondlastname', 'cellphone', 'phone','email', 'password', 'role_id', 'enterprice_id', 'state', 'zone', 'status'];
+    protected $fillable = ['id_curp', 'name', 'firstlastname', 'secondlastname', 'cellphone', 'phone','email', 'password', 'role_id', 'enterprise_id', 'state', 'zone', 'status'];
     
     /**
      * The attributes excluded from the model's JSON form.
@@ -46,9 +46,9 @@ class User extends Model implements AuthenticatableContract,
         }
     }
 
-    public function enterprice()
+    public function enterprise()
     {
-        return $this->belongsTo('Sisec\Enterprice');
+        return $this->belongsTo('Sisec\Enterprise');
     }
 
     public function role()

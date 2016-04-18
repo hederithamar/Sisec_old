@@ -71,7 +71,7 @@
 	<div id="empresas"class="col-md-6 form-group" style='display:none;'>
 		{!!Form::label('enterprice_id','Empresa:')!!}
 		<br>
-		{!!Form::select('enterprice_id', $enterprices, null, ['id' => 'enterprice_id','class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('enterprice_id', $enterprises, null, ['id' => 'enterprice_id','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 <!--Estado al que pertenece el usuario-->
 	<div id="centros" class="col-md-6 form-group" style='display:none;'>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Sisec\Http\Requests;
 use Sisec\Http\Controllers\Controller;
-use Sisec\Enterprice;
+use Sisec\Enterprise;
 use Sisec\User;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -214,7 +214,7 @@ class ExcelController extends Controller
         {
             $excel->sheet('Empresas', function($sheet) 
             {
-                $enterprice = Enterprice::select('nameemp','legalagent','type','status','email','address','phone')->where('type', '=', 'Constructora')->get();
+                $enterprise = Enterprise::select('nameemp','legalagent','type','status','email','address','phone')->where('type', '=', 'Constructora')->get();
 
                 $sheet->cells('A1:G1', function($cells) 
                 {
@@ -235,7 +235,7 @@ class ExcelController extends Controller
                         'bold'       =>  true
                                     ));
                 });
-                $sheet->fromArray($enterprice);
+                $sheet->fromArray($enterprise);
             });
         })->export('xls');
     }
@@ -246,7 +246,7 @@ class ExcelController extends Controller
         {
             $excel->sheet('Empresas', function($sheet) 
             {
-                $enterprice = Enterprice::select('nameemp','legalagent','type','status','email','address','phone')->where('type', '=', 'Supervisora')->get();
+                $enterprise = Enterprise::select('nameemp','legalagent','type','status','email','address','phone')->where('type', '=', 'Supervisora')->get();
 
                 $sheet->cells('A1:G1', function($cells) 
                 {
@@ -267,28 +267,28 @@ class ExcelController extends Controller
                         'bold'       =>  true
                                     ));
                 });
-                $sheet->fromArray($enterprice);
+                $sheet->fromArray($enterprise);
             });
         })->export('xls');
     }
 
     public function import()
     {
-        Excel::load('enterprices.csv', function($reader) {
-            foreach ($reader->get() as $enterprice) {
-                Enterprice::create([
-                    'rfc' => $enterprice->rfc,
-                    'nameemp' =>$enterprice->nameemp,
-                    'legalagent' =>$enterprice->legalagent,
-                    'type' =>$enterprice->type,
-                    'status' =>$enterprice->status,
-                    'email' =>$enterprice->email,
-                    'address' =>$enterprice->address,
-                    'phone' =>$enterprice->phone
+        Excel::load('enterprises.csv', function($reader) {
+            foreach ($reader->get() as $enterprise) {
+                Enterprise::create([
+                    'rfc' => $enterprise->rfc,
+                    'nameemp' =>$enterprise->nameemp,
+                    'legalagent' =>$enterprise->legalagent,
+                    'type' =>$enterprise->type,
+                    'status' =>$enterprise->status,
+                    'email' =>$enterprise->email,
+                    'address' =>$enterprise->address,
+                    'phone' =>$enterprise->phone
                 ]);
             }
         });
-        return Enterprice::all();
+        return Enterprise::all();
     }
 
 

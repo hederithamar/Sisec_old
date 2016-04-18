@@ -17,7 +17,7 @@
 			<div class="validation-form">
 				<div class="my-div">
 
-						{!!Form::model($enterprice,['route'=>['empresa.update',$enterprice],'method'=>'PUT'])!!}
+						{!!Form::model($enterprise,['route'=>['empresa.update',$enterprise],'method'=>'PUT'])!!}
 						@include('empresa.forms.emp')				
 					</div>
 					
@@ -26,7 +26,7 @@
 						{!!Form::close()!!}
 					</div>
 					<div class="col-md-2">
-						{!!Form::open(['route'=>['empresa.destroy', $enterprice], 'method' => 'DELETE'])!!}
+						{!!Form::open(['route'=>['empresa.destroy', $enterprise], 'method' => 'DELETE'])!!}
 						{!!Form::submit('Eliminar',['class'=>'btn red'])!!}
 						{!!Form::close()!!}
 					</div>

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class EnterpriceTableSeeder extends Seeder
+class EnterpriseTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -53,11 +53,11 @@ class EnterpriceTableSeeder extends Seeder
             'namestate'           => 'Chiapas'
             ));
         //manda datos ficticios pero definidos manual 2
-        factory(Sisec\Enterprice::class, 2)-> create([
+        factory(Sisec\Enterprise::class, 2)-> create([
             'type' => 'Constructora'
             ]);
         //10 datos fiticios de empresas supervisoras
-        factory(Sisec\Enterprice::class, 2)->create();
+        factory(Sisec\Enterprise::class, 2)->create();
 
         //$enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
 
