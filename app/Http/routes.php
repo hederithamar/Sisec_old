@@ -26,5 +26,12 @@ Route::resource('log','LogController');
 Route::get('logout','LogController@logout');
 Route::resource('excelempcons','ExcelController@importempcons');
 Route::resource('excelempsup','ExcelController@importempsup');
+Route::resource('excelusradmi','ExcelController@importusradmi');
+Route::resource('excelusrresi','ExcelController@importusrresi');
+Route::resource('excelusrsupint','ExcelController@importusrsupint');
+Route::resource('excelusrresiobr','ExcelController@importusrresiobr');
+Route::resource('excelusrcent','ExcelController@importusrcent');
+Route::resource('excelusrjefe','ExcelController@importusrjefe');
 Route::get('import','ExcelController@import');
+
 
