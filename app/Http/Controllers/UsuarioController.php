@@ -32,27 +32,27 @@ class UsuarioController extends Controller
     {
         $usersAdmin = User::Emp('1')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-1');
+            }])->get();
 
         $usersSup = User::Emp('2')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-2');
+            }])->get();
 
         $usersResOb = User::Emp('3')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-4');
+            }])->get();
 
         $usersCent = User::Emp('4')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-5');
+            }])->get();
 
         $usersJef = User::Emp('5')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-6');
-        
+            }])->get();
+
         $usersReG = User::Emp('6')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-3');
+            }])->get();
 
         return view('usuario.index',compact('usersAdmin','usersReG','usersSup','usersResOb','usersCent','usersJef'));
     }

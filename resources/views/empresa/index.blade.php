@@ -1,43 +1,16 @@
-  @extends('layouts.admin')
+ @extends('layouts.admin')
 
   <!--libreria para manipular los acordeones -->
   {!!Html::style('css/normalize.css')!!}
   {!!Html::style('css/demo.css')!!}
   {!!Html::style('css/filtergrid.css')!!}
-  {!!Html::style('http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css')!!}
-  {!!Html::style('http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')!!}
+  {!!Html::style('css/jquery-ui.css')!!}
   {!!Html::style('css/demo.css')!!}
-  {!!Html::script('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')!!}
+  {!!Html::script('js/jquery-1.11.1.min.js')!!}
   {!!Html::script('js/accordion.js')!!}
-  {!!Html::script('js/tablefilter_all_min.js')!!}
-
+  {!!Html::style('css/jquery.dataTables.css')!!}
+  
   @section('content')
-  <div class="graph">
-    <!--custom-rata-->
-    <div class="custom-widgets">
-      <div class="row-one">
-          <div class="col-md-3 widget">
-            <!--/sub-heard-part-->
-            <div class="sub-heard-part">
-              <ol class="breadcrumb m-b-0">
-                <li><a href="{!!URL::to('admin')!!}">Home</a></li>
-                <li class="active">Empresas</li>
-              </ol>
-            </div>
-            <!--/sub-heard-part-->  
-            <div class="clearfix"> </div> 
-          </div>
-          <div class="col-md-3 widget states-last"></div>
-          <div class="col-md-3 widget states-last"></div>
-          <div class="col-md-3 widget states-thrd">
-            {!!link_to_route('empresa.create', $title = 'Nuevo', $parameters = "", $attributes =   ['class'=>'btn green'])!!}
-            <div class="clearfix"> </div> 
-          </div>
-        <div class="clearfix"> </div> 
-      </div>
-    </div>
-    <!--//custom-ruta-->
-    @include('alerts.success')
     <div clas="container" id="Layer1" overflow: scroll;>
       <div class="accordion">
         <div class="accordion-section">
@@ -72,36 +45,36 @@
                       <th >Direccion</th>
                       <th >Acción</th>
                     </thead>
-                    @foreach($enterprisesSup as $enterprise)
                     <tbody>
-                      <td >{{$enterprise->rfc}}</td>
-                      <td >{{$enterprise->nameemp}}</td>
-                      <td >{{$enterprise->legalagent}}</td>
-                      <td >{{$enterprise->phone}}</td>
-                      <td >{{$enterprise->email}}</td>
-                      <td >{{$enterprise->address}}</td>
-                      <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
-                      </td>
+                      @foreach($enterprisesSup as $enterprise)
+                      <tr>
+                        <td >{{$enterprise->rfc}}</td>
+                        <td >{{$enterprise->nameemp}}</td>
+                        <td >{{$enterprise->legalagent}}</td>
+                        <td >{{$enterprise->phone}}</td>
+                        <td >{{$enterprise->email}}</td>
+                        <td >{{$enterprise->address}}</td>
+                        <td>
+                          {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
+                        </td>
+                      </tr>
+                      @endforeach
                     </tbody>
-                    @endforeach
                   </table>
-                  <script>
-                    var table1_Props = {
-                    col_0: "input",
-                    col_6: "none",
-                    display_all_text: " [ Show all ] ",
-                    sort_select: true
-                    };
-                    var tf1 = setFilterGrid("table1", table1_Props);
-                  </script>
                 </div>
-                {!!$enterprisesSup->render()!!}
+                {!!Html::script('js/jquery.dataTables.js')!!}
+                
+                <script type="text/javascript">
+                $(document).ready(function(){
+                  $('#table1').DataTable();
+                });
+                </script>
               </div>
             </div>
           </div>
         </div>
       </div><!--end .accordion-section-->
+      
       <div class="accordion">
         <div class="accordion-section">
           <a class="accordion-section-title" href="#accordion-2">Empresas Constructoras</a>
@@ -135,36 +108,35 @@
                       <th >Direccion</th>
                       <th >Acción</th>
                     </thead>
-                    @foreach($enterprisesCons as $enterprise)
                     <tbody>
-                      <td >{{$enterprise->rfc}}</td>
-                      <td >{{$enterprise->nameemp}}</td>
-                      <td >{{$enterprise->legalagent}}</td>
-                      <td >{{$enterprise->phone}}</td>
-                      <td >{{$enterprise->email}}</td>
-                      <td >{{$enterprise->address}}</td>
-                      <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
-                      </td>
+                      @foreach($enterprisesCons as $enterprise)
+                      <tr>
+                        <td >{{$enterprise->rfc}}</td>
+                        <td >{{$enterprise->nameemp}}</td>
+                        <td >{{$enterprise->legalagent}}</td>
+                        <td >{{$enterprise->phone}}</td>
+                        <td >{{$enterprise->email}}</td>
+                        <td >{{$enterprise->address}}</td>
+                        <td>
+                          {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
+                        </td>
+                      </tr>
+                      @endforeach
                     </tbody>
-                    @endforeach
                   </table>
-                  <script>
-                    var table2_Props = {
-                    col_0: "input",
-                    col_6: "none",
-                    display_all_text: " [ Show all ] ",
-                    sort_select: true
-                    };
-                    var tf2 = setFilterGrid("table2", table2_Props);
-                  </script>
                 </div>
-                {!!$enterprisesCons->render()!!}
               </div>
+              {!!Html::script('js/jquery.dataTables.js')!!}
+                
+                <script type="text/javascript">
+                $(document).ready(function()
+                {
+                 $('#table2').DataTable();
+                });
+              </script>
             </div>
           </div>
         </div>
       </div><!--end .accordion-section-->
     </div>
-  </div>
   @endsection

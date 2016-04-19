@@ -34,3 +34,4 @@ Route::resource('excelusrcent','ExcelController@importusrcent');
 Route::resource('excelusrjefe','ExcelController@importusrjefe');
 Route::get('import','ExcelController@import');
 
+

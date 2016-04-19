@@ -12,46 +12,13 @@ class EnterpriseTableSeeder extends Seeder
     public function run()
 
     {
-        //Datos para la tabla rol secrean 4 roles manuales
 
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Administrador'
-            ));
-
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Superintendente de Servicio'
-            ));
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Residente de Obra'
-            ));
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Centro SCT'
-            ));
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Jefe de Oficina Técnica'
-            ));
-
-        \DB::table('roles')->insert(array(
-            'desc'           => 'Residente General'
-            ));
-        //$role_id = Sisec\Role::where('id', '=', '1')->get();
-        //Datos para la tabla estado secrean 4 roles manuales
-        \DB::table('states')->insert(array(
-            'namestate'           => 'Aguascalientes'
-            ));
-        \DB::table('states')->insert(array(
-            'namestate'           => 'Baja California'
-            ));
-        \DB::table('states')->insert(array(
-            'namestate'           => 'Baja California Sur'
-            ));
-        \DB::table('states')->insert(array(
-            'namestate'           => 'Campeche'
-            ));
-
-        \DB::table('states')->insert(array(
-            'namestate'           => 'Chiapas'
-            ));
+        factory(Sisec\Enterprise::class)-> create([
+            'rfc' => 'SCTADMIN',
+            'nameemp' => 'SCT',
+            'status' => 'Activa',
+            'email' => 'sct@admin.com'
+            ]);
         //manda datos ficticios pero definidos manual 2
         factory(Sisec\Enterprise::class, 2)-> create([
             'type' => 'Constructora'
@@ -60,23 +27,6 @@ class EnterpriseTableSeeder extends Seeder
         factory(Sisec\Enterprise::class, 2)->create();
 
         //$enterprice_id = Sisec\Enterprice::where('id', '=', '1')->get();
-
-        factory(Sisec\User::class, 15)-> create();
-
-        /*\DB::table('users')->insert(array(
-            'name' => ,
-            'firstlastname' => $faker->lastname,
-            'secondlastname' => $faker->lastname,
-            'email' => $faker->email,
-            'state' => $faker->state,
-            'zone' => $faker->regexify('Norte|Sur'),
-            'celphone' => $faker->phoneNumber,
-            'phone' => $faker->phoneNumber,
-            'role_id' => $role_id,
-            'enterprice_id' => $enterprice_id,
-            'id_curp' => $faker->name,
-            'password' => bcrypt(str_random(10)),
-        ));*/
 
     }
 }

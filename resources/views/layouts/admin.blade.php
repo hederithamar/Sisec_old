@@ -24,6 +24,7 @@
   <!--select-->
   {!!Html::style('css/select2.min.css')!!}
   {!!Html::script('js/select2.full.min.js')!!}
+  
   <script type="text/javascript">
     $('select').select2();
   </script>

@@ -9,6 +9,7 @@ use Sisec\Enterprise;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
+use Yajra\Datatables\Facades\Datatables;
 
 class EmpresaController extends Controller
 {
@@ -33,10 +34,9 @@ class EmpresaController extends Controller
     }*/
     public function index()
     {
-        $enterprisesSup = Enterprise::Type("Supervisora")->paginate(15,['*'],'pag-1');
-        $enterprisesCons = Enterprise::Type("Constructora")->paginate(15 ,['*'],'pag-2');
-        return view('empresa.index',compact('enterprisesSup',"enterprisesCons"));
-
+        $enterprisesSup = Enterprise::Type("Supervisora")->get();
+        $enterprisesCons = Enterprise::Type("Constructora")->get();
+        return view('empresa.index', compact('enterprisesSup','enterprisesCons'));
     }
     /**
      * Show the form for creating a new resource.
@@ -118,7 +118,5 @@ class EmpresaController extends Controller
         Session::flash('message','Empresa Eliminada Correctamente');
         return Redirect::to('/empresa');
     }
-    /**
-        *Aqui se crea el filtro de empresas
-    */
+    
 }
