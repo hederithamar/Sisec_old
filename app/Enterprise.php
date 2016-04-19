@@ -4,9 +4,9 @@ namespace Sisec;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Enterprice extends Model
+class Enterprise extends Model
 {
-    protected $table = "enterprices";
+    protected $table = "enterprises";
 
     protected $dates = ['deleted_at'];
 

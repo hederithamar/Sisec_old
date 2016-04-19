@@ -214,7 +214,7 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
-                    <td>{{$user->enterprice['nameemp']}}</td>
+                    <td>{{$user->enterprise['nameemp']}}</td>
                     <td>{{$user->status}}</td>
                     <td>
                      {!!link_to_route('usuario.edit', $title = 'Editar', $parameters = $user, $attributes = ['class'=>'btn btn-primary'])!!}

@@ -72,16 +72,16 @@
                       <th >Direccion</th>
                       <th >Acción</th>
                     </thead>
-                    @foreach($enterpricesSup as $enterprice)
+                    @foreach($enterprisesSup as $enterprise)
                     <tbody>
-                      <td >{{$enterprice->rfc}}</td>
-                      <td >{{$enterprice->nameemp}}</td>
-                      <td >{{$enterprice->legalagent}}</td>
-                      <td >{{$enterprice->phone}}</td>
-                      <td >{{$enterprice->email}}</td>
-                      <td >{{$enterprice->address}}</td>
+                      <td >{{$enterprise->rfc}}</td>
+                      <td >{{$enterprise->nameemp}}</td>
+                      <td >{{$enterprise->legalagent}}</td>
+                      <td >{{$enterprise->phone}}</td>
+                      <td >{{$enterprise->email}}</td>
+                      <td >{{$enterprise->address}}</td>
                       <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
+                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
                       </td>
                     </tbody>
                     @endforeach
@@ -96,7 +96,7 @@
                     var tf1 = setFilterGrid("table1", table1_Props);
                   </script>
                 </div>
-                {!!$enterpricesSup->render()!!}
+                {!!$enterprisesSup->render()!!}
               </div>
             </div>
           </div>
@@ -135,16 +135,16 @@
                       <th >Direccion</th>
                       <th >Acción</th>
                     </thead>
-                    @foreach($enterpricesCons as $enterprice)
+                    @foreach($enterprisesCons as $enterprise)
                     <tbody>
-                      <td >{{$enterprice->rfc}}</td>
-                      <td >{{$enterprice->nameemp}}</td>
-                      <td >{{$enterprice->legalagent}}</td>
-                      <td >{{$enterprice->phone}}</td>
-                      <td >{{$enterprice->email}}</td>
-                      <td >{{$enterprice->address}}</td>
+                      <td >{{$enterprise->rfc}}</td>
+                      <td >{{$enterprise->nameemp}}</td>
+                      <td >{{$enterprise->legalagent}}</td>
+                      <td >{{$enterprise->phone}}</td>
+                      <td >{{$enterprise->email}}</td>
+                      <td >{{$enterprise->address}}</td>
                       <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
+                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
                       </td>
                     </tbody>
                     @endforeach
@@ -159,7 +159,7 @@
                     var tf2 = setFilterGrid("table2", table2_Props);
                   </script>
                 </div>
-                {!!$enterpricesCons->render()!!}
+                {!!$enterprisesCons->render()!!}
               </div>
             </div>
           </div>
