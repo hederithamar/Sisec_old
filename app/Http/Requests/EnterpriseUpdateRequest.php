@@ -4,7 +4,7 @@ namespace Sisec\Http\Requests;
 
 use Sisec\Http\Requests\Request;
 
-class EnterpriceCreateRequest extends Request
+class EnterpriseUpdateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,17 +21,10 @@ class EnterpriceCreateRequest extends Request
      *
      * @return array
      */
-
     public function rules()
     {
         return [
-            'rfc' => 'required|unique:enterprices',
-            'nameemp' => 'required',
-            'type' => 'required',
-            'status' => 'required',
-            'email' => 'required',
-            'address' => 'required',
-            'phone' => 'required',
+            //
         ];
     }
 }

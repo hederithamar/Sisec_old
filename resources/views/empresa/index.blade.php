@@ -46,16 +46,16 @@
                       <th >Acción</th>
                     </thead>
                     <tbody>
-                      @foreach($enterpricesSup as $enterprice)
+                      @foreach($enterprisesSup as $enterprise)
                       <tr>
-                        <td >{{$enterprice->rfc}}</td>
-                        <td >{{$enterprice->nameemp}}</td>
-                        <td >{{$enterprice->legalagent}}</td>
-                        <td >{{$enterprice->phone}}</td>
-                        <td >{{$enterprice->email}}</td>
-                        <td >{{$enterprice->address}}</td>
+                        <td >{{$enterprise->rfc}}</td>
+                        <td >{{$enterprise->nameemp}}</td>
+                        <td >{{$enterprise->legalagent}}</td>
+                        <td >{{$enterprise->phone}}</td>
+                        <td >{{$enterprise->email}}</td>
+                        <td >{{$enterprise->address}}</td>
                         <td>
-                          {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
+                          {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
                         </td>
                       </tr>
                       @endforeach
@@ -68,7 +68,7 @@
                 $(document).ready(function(){
                   $('#table1').DataTable();
                 });
-              </script>
+                </script>
               </div>
             </div>
           </div>
@@ -107,19 +107,21 @@
                       <th >Direccion</th>
                       <th >Acción</th>
                     </thead>
-                    @foreach($enterpricesCons as $enterprice)
                     <tbody>
-                      <td >{{$enterprice->rfc}}</td>
-                      <td >{{$enterprice->nameemp}}</td>
-                      <td >{{$enterprice->legalagent}}</td>
-                      <td >{{$enterprice->phone}}</td>
-                      <td >{{$enterprice->email}}</td>
-                      <td >{{$enterprice->address}}</td>
-                      <td>
-                        {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprice, $attributes = ['class'=>'btn blue'])!!}
-                      </td>
+                      @foreach($enterprisesCons as $enterprise)
+                      <tr>
+                        <td >{{$enterprise->rfc}}</td>
+                        <td >{{$enterprise->nameemp}}</td>
+                        <td >{{$enterprise->legalagent}}</td>
+                        <td >{{$enterprise->phone}}</td>
+                        <td >{{$enterprise->email}}</td>
+                        <td >{{$enterprise->address}}</td>
+                        <td>
+                          {!!link_to_route('empresa.edit', $title = 'Editar', $parameters = $enterprise, $attributes = ['class'=>'btn blue'])!!}
+                        </td>
+                      </tr>
+                      @endforeach
                     </tbody>
-                    @endforeach
                   </table>
                 </div>
               </div>

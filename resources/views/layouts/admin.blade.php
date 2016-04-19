@@ -16,6 +16,7 @@
   <!-- jQuery -->
   <!--webfonts-->
   {!!Html::style('//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400')!!}
+  {!!Html::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')!!}
   <!-- lined-icons -->
   {!!Html::style('css/icon-font.min.css')!!}
   <!-- /js -->
@@ -271,10 +272,10 @@
                    </li>
                    <li id="menu-academico" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i> <span>Contrato</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                        <ul id="menu-academico-sub" >
-                        <li id="menu-academico-avaliacoes" ><a href="{!!URL::to('#')!!}">Titulo 1</a></li>
-                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}">Titulo 2</a></li>
-                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}">Titulo 3</a></li>
-                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}">Titulo 4</a></li>
+                        <li id="menu-academico-avaliacoes" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i>Contrato de Obra</a></li>
+                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i>Contrato de Supervición</a></li>
+                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-text-o"></i>Contrato de Supervición Ambiental</a></li>
+                        <li id="menu-academico-boletim" ><a href="{!!URL::to('#')!!}"><i class="fa fa-file-archive-o"></i>Carga de Documentos</a></li>
                         </ul>
                      </li>
                      <li id="menu-academico" ><a href="{!!URL::to('#')!!}"><i class="fa fa-table"></i> <span> Tablero de Control</span> <span class="fa fa-angle-right" style="float: right"></span></a>

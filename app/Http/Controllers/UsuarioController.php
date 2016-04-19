@@ -8,7 +8,7 @@ use Sisec\Http\Requests\UserUpdateRequest;
 use Sisec\Http\Controllers\Controller;
 use Sisec\User;
 use Sisec\Role;
-use Sisec\Enterprice;
+use Sisec\Enterprise;
 use Sisec\State;
 use Session;
 use Redirect;
@@ -30,29 +30,29 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usersAdmin = User::Emp('1')->with(['enterprice','role' => function($query){
+        $usersAdmin = User::Emp('1')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-1');
+            }])->get();
 
-        $usersSup = User::Emp('2')->with(['enterprice','role' => function($query){
+        $usersSup = User::Emp('2')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-2');
+            }])->get();
 
-        $usersReG = User::Emp('6')->with(['enterprice','role' => function($query){
+        $usersReG = User::Emp('6')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-3');
+            }])->get();
 
-        $usersResOb = User::Emp('3')->with(['enterprice','role' => function($query){
+        $usersResOb = User::Emp('3')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-4');
+            }])->get();
 
-        $usersCent = User::Emp('4')->with(['enterprice','role' => function($query){
+        $usersCent = User::Emp('4')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-5');
+            }])->get();
 
-        $usersJef = User::Emp('5')->with(['enterprice','role' => function($query){
+        $usersJef = User::Emp('5')->with(['enterprise','role' => function($query){
                 $query->with('users');
-            }])->paginate(10 ,['*'],'pag-6');
+            }])->get();
 
         return view('usuario.index',compact('usersAdmin','usersReG','usersSup','usersResOb','usersCent','usersJef'));
     }
@@ -63,9 +63,9 @@ class UsuarioController extends Controller
      */
     public function create()
     {   $roles = Role::lists('desc', 'id');
-        $enterprices = Enterprice::lists('nameemp', 'id');
+        $enterprises = Enterprise::lists('nameemp', 'id');
         $namestates = State::lists('namestate', 'id');
-        return view('usuario.create',compact('roles','enterprices','namestates'));
+        return view('usuario.create',compact('roles','enterprises','namestates'));
     }
     /**
      * Store a newly created resource in storage.
@@ -116,9 +116,9 @@ class UsuarioController extends Controller
     public function edit($id)
     {   
         $roles = Role::lists('desc', 'id');
-        $enterprices = Enterprice::lists('nameemp', 'id');
+        $enterprises = Enterprise::lists('nameemp', 'id');
         $namestates = State::lists('namestate', 'id');
-        return view('usuario.edit',compact('roles','enterprices','namestates'),['user'=>$this->user]);
+        return view('usuario.edit',compact('roles','enterprises','namestates'),['user'=>$this->user]);
     }
     /**
      * Update the specified resource in storage.

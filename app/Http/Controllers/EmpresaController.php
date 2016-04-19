@@ -2,10 +2,10 @@
 namespace Sisec\Http\Controllers;
 use Illuminate\Http\Request;
 use Sisec\Http\Requests;
-use Sisec\Http\Requests\EnterpriceCreateRequest;
-use Sisec\Http\Requests\EnterpriceUpdateRequest;
+use Sisec\Http\Requests\EnterpriseCreateRequest;
+use Sisec\Http\Requests\EnterpriseUpdateRequest;
 use Sisec\Http\Controllers\Controller;
-use Sisec\Enterprice;
+use Sisec\Enterprise;
 use Session;
 use Redirect;
 use Illuminate\Routing\Route;
@@ -19,7 +19,7 @@ class EmpresaController extends Controller
         $this->beforeFilter('@find',['only' => ['edit','update','destroy']]);
     }
     public function find(Route $route){
-        $this->enterprice = Enterprice::find($route->getParameter('empresa'));
+        $this->enterprise = Enterprise::find($route->getParameter('empresa'));
     }
     /**
      * Display a listing of the resource.
@@ -34,10 +34,9 @@ class EmpresaController extends Controller
     }*/
     public function index()
     {
-        $enterpricesSup = Enterprice::Type("Supervisora")->get();
-        $enterpricesCons = Enterprice::Type("Constructora")->get();
-        return view('empresa.index', compact('enterpricesSup','enterpricesCons'));
-
+        $enterprisesSup = Enterprise::Type("Supervisora")->get();
+        $enterprisesCons = Enterprise::Type("Constructora")->get();
+        return view('empresa.index', compact('enterprisesSup','enterprisesCons'));
     }
     /**
      * Show the form for creating a new resource.
@@ -46,8 +45,8 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        $enterprices = Enterprice::lists('rfc', 'id');
-        return view('empresa.create',compact('enterprices'));
+        $enterprises = Enterprise::lists('rfc', 'id');
+        return view('empresa.create',compact('enterprises'));
     }
     /**
      * Store a newly created resource in storage.
@@ -55,14 +54,14 @@ class EmpresaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(EnterpriceCreateRequest $request)
+    public function store(EnterpriseCreateRequest $request)
     {
-        Enterprice::create($request->all());
+        Enterprise::create($request->all());
         Session::flash('message','Empresa Creada Correctamente');
         return Redirect::to('/empresa'); 
         /*$message = 'Empresa Creada Correctamente';
         if($request->ajax()){
-            Enterprice::create($request->all());
+            Enterprise::create($request->all());
             return response()->json([
                 "mensaje" => $message
             ]);
@@ -89,8 +88,8 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        $enterprices = Enterprice::lists('nameemp', 'id');
-        return view('empresa.edit',compact('enterprices'),['enterprice'=>$this->enterprice]);
+        $enterprises = Enterprise::lists('nameemp', 'id');
+        return view('empresa.edit',compact('enterprises'),['enterprise'=>$this->enterprise]);
         
     }
     /**
@@ -100,10 +99,10 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(EnterpriceUpdateRequest $request, $id)
+    public function update(EnterpriseUpdateRequest $request, $id)
     {
-        $this->enterprice->fill($request->all());
-        $this->enterprice->save();
+        $this->enterprise->fill($request->all());
+        $this->enterprise->save();
         Session::flash('message','Empresa Actualizada Correctamente');
         return Redirect::to('/empresa');
     }
@@ -115,7 +114,7 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        $this->enterprice->delete();
+        $this->enterprise->delete();
         Session::flash('message','Empresa Eliminada Correctamente');
         return Redirect::to('/empresa');
     }

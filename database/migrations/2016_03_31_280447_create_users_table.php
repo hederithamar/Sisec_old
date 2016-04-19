@@ -29,8 +29,8 @@ class CreateUsersTable extends Migration
             $table->integer('role_id')->unsigned();
             $table->foreign('role_id')->references('id')->on('roles');
             //Clave foranea referencia al modelo empresas
-            $table->integer('enterprice_id')->unsigned();
-            $table->foreign('enterprice_id')->references('id')->on('enterprices');
+            $table->integer('enterprise_id')->unsigned();
+            $table->foreign('enterprise_id')->references('id')->on('enterprises');
             //Datos adicionales para control de datos
             $table->rememberToken();
             $table->timestamps();
