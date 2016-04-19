@@ -271,7 +271,7 @@
                       <th width="6">Status</th>
                       <th width="10">Accion</th>
                     </thead>
-                    @foreach($usersReG as $user)
+                    @foreach($usersResOb as $user)
                   <tbody>
                     <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
@@ -334,7 +334,7 @@
                       <th width="6">Status</th>
                       <th width="10">Accion</th>
                     </thead>
-                    @foreach($usersReG as $user)
+                    @foreach($usersCent as $user)
                   <tbody>
                     <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
@@ -398,7 +398,7 @@
                       <th width="6">Status</th>
                       <th width="10">Accion</th>
                     </thead>
-                    @foreach($usersReG as $user)
+                    @foreach($usersJef as $user)
                   <tbody>
                     <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>

@@ -38,10 +38,6 @@ class UsuarioController extends Controller
                 $query->with('users');
             }])->paginate(10 ,['*'],'pag-2');
 
-        $usersReG = User::Emp('6')->with(['enterprise','role' => function($query){
-                $query->with('users');
-            }])->paginate(10 ,['*'],'pag-3');
-
         $usersResOb = User::Emp('3')->with(['enterprise','role' => function($query){
                 $query->with('users');
             }])->paginate(10 ,['*'],'pag-4');
@@ -53,6 +49,10 @@ class UsuarioController extends Controller
         $usersJef = User::Emp('5')->with(['enterprise','role' => function($query){
                 $query->with('users');
             }])->paginate(10 ,['*'],'pag-6');
+        
+        $usersReG = User::Emp('6')->with(['enterprise','role' => function($query){
+                $query->with('users');
+            }])->paginate(10 ,['*'],'pag-3');
 
         return view('usuario.index',compact('usersAdmin','usersReG','usersSup','usersResOb','usersCent','usersJef'));
     }
