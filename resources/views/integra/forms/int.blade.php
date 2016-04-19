@@ -27,7 +27,7 @@
 			sel.appendChild(fragment);
 	}
 	window.onload = function () {
-		var valor="<?php echo $integration->ep; ?>"
+		var valor="<?php echo $integration->ep; ?>";
 		llenarSelect(valor);
 
 	var variablejs = "<?php echo $integration->type; ?>" ;

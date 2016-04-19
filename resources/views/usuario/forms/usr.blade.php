@@ -27,7 +27,7 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 	window.onload = function () {
-		var valor="<?php echo $user->role_id; ?>"
+		var valor=document.getElementById('roleUsuario').value;
 		habilitarCombo(valor);
 		//valor
 	}
