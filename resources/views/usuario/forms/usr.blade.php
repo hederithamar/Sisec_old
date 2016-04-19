@@ -16,16 +16,29 @@
 					document.getElementById('empresas').style.display = 'block';
 					document.getElementById('centros').style.display = 'none';
 				}
-				else {
-					document.getElementById('empresas').style.display = 'none';
-					document.getElementById('centros').style.display = 'none';
-					}
 
 			}
 			
 		}
 	}
+	
 </script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+	window.onload = function () {
+		var valor="<?php echo $user->role_id; ?>"
+		habilitarCombo(valor);
+		//valor
+	}
+
+    function alertMessage(){
+     alert ("bienvenida.")
+ 	}
+
+//-->
+</script>
+
 <div class="vali-form form-group1">
 	<!--Nombre del usuario-->
 	<div class="form-group">
@@ -65,16 +78,16 @@
 	<div class="col-md-6 form-group">
 		{!!Form::label('role_id','Rol:')!!}
 		<br>
-		{!!Form::select('role_id', $roles, null, ['onchange'=>'habilitarCombo(this.value)','class' => 'js-example-basic-single js-states form-control']);!!}
+		{!!Form::select('role_id', $roles, null, ['id' => 'roleUsuario','onchange'=>'habilitarCombo(this.value)','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 	<!--Empresa a la que pertenece usuario-->
-	<div id="empresas"class="col-md-6 form-group" style='style.visibility = "hidden"; height: 600px;'>
+	<div id="empresas"class="col-md-6 form-group" >
 		{!!Form::label('enterprice_id','Empresa:')!!}
 		<br>
 		{!!Form::select('enterprice_id', $enterprices, null, ['id' => 'enterprice_id','class' => 'js-example-basic-single js-states form-control']);!!}
 	</div>
 <!--Estado al que pertenece el usuario-->
-	<div id="centros" class="col-md-6 form-group" style='display:none;'>
+	<div id="centros" class="col-md-6 form-group" >
 		{!!Form::label('state','Centro SCT:')!!}
 		<br>
 		{!!Form::select('state', $namestates, null, ['id' => 'state','class' => 'js-example-basic-single js-states form-control']);!!}

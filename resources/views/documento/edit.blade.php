@@ -6,6 +6,7 @@
 		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 			<div class="form-title">
 				<h4>Actualizar Documento</h4>
+				<h2>{{$integration->type}}</h2>
 			</div>
 			<div class="form-body">
 				{!!Form::model($doc,['route'=>['documento.update',$doc],'method'=>'PUT'])!!}

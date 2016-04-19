@@ -202,7 +202,6 @@
                      <thead>
                       <th width="7">Nombre</th>
                       <th width="7">Email</th>
-                      <th width="10">Zona</th>
                       <th width="10">Celular</th>
                       <th width="8">Telefono</th>
                       <th width="7">Empresa</th>
@@ -211,12 +210,8 @@
                     </thead>
                     @foreach($usersSup as $user)
                   <tbody>
-                    <td>{{$user->name}}</td>
-                    <td>{{$user->firstlastname}}</td>
-                    <td>{{$user->secondlastname}}</td>
+                    <td>{{$user->name."  ".$user->firstlastname."  ".$user->secondlastname}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->state}}</td>
-                    <td>{{$user->zone}}</td>
                     <td>{{$user->celphone}}</td>
                     <td>{{$user->phone}}</td>
                     <td>{{$user->enterprice['nameemp']}}</td>

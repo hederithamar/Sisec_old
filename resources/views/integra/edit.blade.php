@@ -16,6 +16,7 @@
 		<div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
 			<div class="form-title">
 				<h4>Actualiza E.P. :</h4>
+				
 			</div>
 			<div class="validation-form">
 				<div class="my-div">
@@ -24,6 +25,10 @@
 					@include('integra.forms.int')
 					
 			</div>
+			<script>
+				var selectRol = $(“select#type”);
+				selectRol.val($integration->type).attr(‘selected’, ‘selected’);
+			</script>
 
 			<div class="col-md-2 grid_box1">
 						{!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}

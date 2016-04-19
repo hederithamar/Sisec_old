@@ -1,4 +1,3 @@
-
 <script>
 	function llenarSelect(valor)
 	{
@@ -6,32 +5,35 @@
 		var tipoEp4 = ["Ejecución","Ajuste de costos","Convenios","Terminacion de los trabajos","Terminación anticipada o rescisión","Sanciones incorfamidades y conciliaciones"];
 
 		document.getElementById("type").options.length=0;
-		if(valor==04){		
 		var sel = document.getElementById('type');
 		var fragment = document.createDocumentFragment();
-		tipoEp4.forEach(function(tipoDoc, index) {
-    	var opt = document.createElement('option');
-    	opt.innerHTML = tipoDoc;
-    	opt.value = tipoDoc;
-    	fragment.appendChild(opt);});
-    	sel.appendChild(fragment);
+		if(valor==04){		
+				tipoEp4.forEach(function(tipoDoc, index) {
+		    	var opt = document.createElement('option');
+		    	opt.innerHTML = tipoDoc;
+		    	opt.value = tipoDoc;
+		    	fragment.appendChild(opt);});	    	
 		}
 		else {
 					if(valor==01){		
-					var sel = document.getElementById('type');
-					var fragment = document.createDocumentFragment();
 					tipoEp1.forEach(function(tipoDoc, index) {
 			    	var opt = document.createElement('option');
 			    	opt.innerHTML = tipoDoc;
 			    	opt.value = tipoDoc;
 			    	fragment.appendChild(opt);});
-			    	sel.appendChild(fragment);
 			    	}
-			    	else{
-
-			    	}
+			    	else{}
 			}
+			sel.appendChild(fragment);
 	}
+	window.onload = function () {
+		var valor="<?php echo $integration->ep; ?>"
+		llenarSelect(valor);
+
+	var variablejs = "<?php echo $integration->type; ?>" ;
+    $('#type > option[value="'+variablejs+'"]').attr('selected', 'selected');    
+	}
+
 </script>		
 <div class="vali-form form-group1">
 	
@@ -40,8 +42,6 @@
 		<br>
 		{!!Form::select('ep', array(' 01' => '01', '04' => '04'), null, ['id'=>'ep','onchange'=>'llenarSelect(this.value)','class' => 'js-example-basic-single js-states form-control']);!!}
 		</div>
-
-
 
 	<div id="tipo" class="col-md-6">
 		{!!Form::label('type','Tipo de Documento')!!}
